@@ -85,6 +85,16 @@ From `studio/`: `npx remotion render src/index.ts <Id> ../outputs/<slug>.mp4 --c
 - Over ~30 MB? Also make a share copy: `ffmpeg -i in.mp4 -c:v libx264 -crf 24 -preset slow -pix_fmt yuv420p -colorspace bt709 -color_primaries bt709 -color_trc bt709 -c:a aac -b:a 192k -movflags +faststart out-preview.mp4`
 - Report: length, scene list, audio numbers (LUFS, true peak, onset check), deviations from the brief, and that the mix hasn't been listened to.
 
+## 7b. Team mode: the Motion Orchestrator
+
+If the user wants to choose **which model does which job**, cap spending, use cheap or free models, or split the work across agents, use `orchestrator/` instead of building alone. It's vendor-neutral and runs with any AI:
+- **Roles:** director, builders, reviewer and escalation.
+- **Connections:** paid APIs, free tiers, local models, or `host` (you, through `claim_job` / `submit_job`).
+- **Gates:** automatic checks on every job.
+- **Budget:** a hard cap.
+
+Drive it through its MCP tools, its HTTP API (`GET /api/ops` lists them) or the CLI (`node orchestrator/bin/mvo.ts`). Setup is in `orchestrator/README.md`. In team mode, you collect the inputs from §1 and the orchestrator does §2–§7.
+
 ## 8. Feature tours: "every feature is a whole world"
 
 For products with many features, give each feature its own world: own accent color, optical illusion, visual language and music style, on the brand base and one 120 BPM grid. Template: `studio/src/mkv/` (MK Voice — Nine Worlds, 90 s), brief `briefs/mk-voice-worlds.md`. Its scaffold:

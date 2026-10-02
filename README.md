@@ -70,6 +70,20 @@ npx remotion render src/index.ts MkVoice ../outputs/mk-voice.mp4
 
 `node scripts/mk/music.ts` regenerates the music WAVs, which aren't stored in git.
 
+## Orchestrator: a team of agents
+
+[`orchestrator/`](orchestrator/README.md) runs the skill as a team:
+- a **director** plans the video
+- **builders** make the segments in parallel
+- a **reviewer** checks the stills
+- an **escalation** model retakes failing jobs
+
+You choose the model for each role. It can be on any provider, a free tier, a local model, or the agent you're already using. Automatic gates check every job, and a budget cap applies. The orchestrator works with any AI and can be driven by any AI: through an MCP server (Claude Code, Codex, Gemini CLI, Cursor, Claude Desktop), an HTTP JSON API, or the `mvo` CLI. A local dashboard is included too.
+
+```bash
+cd orchestrator && npm install && node bin/mvo.ts dashboard
+```
+
 ## Repo layout
 
 ```

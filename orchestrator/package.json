@@ -1,0 +1,25 @@
+{
+  "name": "motion-orchestrator",
+  "version": "0.1.0",
+  "description": "Run the motion-video skill as a team of AI agents: any model in any role (API, free tier or MCP host), budget-aware, with strict gates.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "mvo": "bin/mvo.ts"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "mvo": "node bin/mvo.ts",
+    "test": "node test/run-all.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "typescript": "^5.9.3"
+  }
+}

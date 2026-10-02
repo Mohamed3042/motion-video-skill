@@ -1,0 +1,46 @@
+{
+  "slug": "mvo-e2e-test",
+  "title": "Lumen: e2e test reel",
+  "seconds": 8,
+  "fps": 60,
+  "format": "16:9",
+  "width": 1280,
+  "height": 720,
+  "bpm": 120,
+  "brand": {
+    "name": "Lumen",
+    "colors": {"bg": "#0B0D12", "fg": "#F4F6FA", "primary": "#5B8CFF"},
+    "fonts": {"display": "Inter", "mono": "JetBrains Mono"},
+    "tagline": "Light for your notes.",
+    "facts": ["Notes sync across your devices", "Works offline"]
+  },
+  "intro": {"endFrame": 120, "brief": "The word Lumen fades up from black on a soft blue glow.", "music": "Pad swell, riser into the first scene."},
+  "outro": {"startFrame": 360, "brief": "End card: Lumen, tagline underneath.", "music": "Impact on the card, held resolve chord."},
+  "segments": [
+    {
+      "id": "sync",
+      "name": "Sync",
+      "startFrame": 120,
+      "endFrame": 240,
+      "accent": "#5B8CFF",
+      "brief": "Two device outlines; a note card slides from one to the other on beat 2 (local 30), lands with a hit at local 60.",
+      "music": "Kick on every beat, glass pluck on the slide, hit at local 60.",
+      "copy": ["Notes sync across your devices"],
+      "entrance": "blue glow",
+      "exit": "the card turns into a circle"
+    },
+    {
+      "id": "offline",
+      "name": "Offline",
+      "startFrame": 240,
+      "endFrame": 360,
+      "accent": "#FFB547",
+      "brief": "A circle (the card) becomes a cloud icon that is crossed out; the note keeps glowing. Impact at local 30.",
+      "music": "Kick on every beat, impact at local 30, bell on the last beat.",
+      "copy": ["Works offline"],
+      "entrance": "a circle",
+      "exit": "the glow collapses into the end card"
+    }
+  ],
+  "truthRules": ["Only the two facts may be claimed.", "No user counts, prices or ratings."]
+}

@@ -122,3 +122,38 @@ Model IDs and endpoints change. If a default stops working, check the provider's
 - **A good first video:** a 20–30 s product promo from the `mk` template.
 - **Longer tours:** use the `mkv` "worlds" template. One world per feature, 6–9 s each.
 - **The mix hasn't been heard:** agents can't listen to audio. They check loudness and hit timing by the numbers, so give the result a listen yourself.
+
+---
+
+## A team of agents: the Motion Orchestrator
+
+Everything above has one agent make the whole video. [`orchestrator/`](../orchestrator/README.md) splits the work across a team:
+- a **director** plans the video
+- **builders** build one segment each, in parallel
+- a **reviewer** scores the stills
+- an **escalation** model retakes any job that keeps failing its gates
+
+Each role can be any model on any connection, or `host`: the agent you're already talking to, which does those jobs with its own subscription and subagents at no extra cost. A budget cap and a cost estimate shown before anything runs keep spending in check.
+
+Every agent drives it with the same 14 operations, over MCP, HTTP or the CLI:
+
+```bash
+cd orchestrator && npm install
+# Claude Code
+claude mcp add --scope user motion -- node /path/to/motion-video-skill/orchestrator/bin/mvo.ts mcp
+# OpenAI Codex
+codex mcp add motion -- node /path/to/motion-video-skill/orchestrator/bin/mvo.ts mcp
+# Gemini CLI
+gemini mcp add --scope user motion node /path/to/motion-video-skill/orchestrator/bin/mvo.ts mcp
+# any HTTP agent: start the API + dashboard, then discover the operations
+node bin/mvo.ts dashboard
+curl -s http://127.0.0.1:4317/api/ops
+```
+
+Then ask your agent, for example: *"Use the motion tools: plan a 30 second promo for my app, show me the plan and cost, then build it. Do the builder jobs yourself with subagents (claim_job → edit → submit_job)."*
+
+[`orchestrator/README.md`](../orchestrator/README.md) covers the rest:
+- configs for Cursor and Claude Desktop, and the environment variables each client needs
+- free mode (Gemini free tier + host = $0)
+- how the budget works
+- security settings
