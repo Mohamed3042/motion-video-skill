@@ -1,0 +1,34 @@
+{
+  "name": "video-motion-lab-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/postprocessing": "^2.19.1",
+    "@remotion/cli": "4.0.532",
+    "@remotion/google-fonts": "4.0.532",
+    "@remotion/media-utils": "^4.0.532",
+    "@remotion/motion-blur": "4.0.532",
+    "@remotion/noise": "^4.0.532",
+    "@remotion/paths": "4.0.532",
+    "@remotion/shapes": "4.0.532",
+    "@remotion/three": "4.0.532",
+    "@remotion/transitions": "^4.0.532",
+    "opentype.js": "^1.3.4",
+    "postprocessing": "^6.39.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.532",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/three": "^0.170.0",
+    "typescript": "^5.6.3"
+  }
+}
