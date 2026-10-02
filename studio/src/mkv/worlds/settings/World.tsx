@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {ACCENT, C, FONT, MONO} from '../../brand';
+import {ACCENT, C, FONT} from '../../brand';
 import {useWorldFrame} from '../../frame';
 import {Card, EXPO, EXPO_IN, IN_OUT, Label, lerp, MarkBars, mix, pop, pulse, WorldTitle} from '../evolution/kit';
 import {T} from './timing';
@@ -162,7 +162,6 @@ const FaceDetail: React.FC<{id: Face['id']}> = ({id}) => {
   );
 };
 
-type Skin = {id: Face['id']; c: V3[]; nv: V3};
 // draws one face: affine map of a 100×100 local square onto the projected parallelogram
 const FaceSkin: React.FC<{p: V2[]; id: Face['id']; nv: V3; opacity: number}> = ({p, id, nv, opacity}) => {
   // local origin = corner 3, u → corner 2, v → corner 0 (keeps front-face art upright)

@@ -13,7 +13,7 @@ export const COMP = [0, 45, 90];
 
 export const EVENTS: WorldEvent[] = [
   {f: PEAK, kind: 'hit'},
-  {f: DETACH, kind: 'whoosh'},
+  {f: 222, kind: 'whoosh'}, // whooshes are marked at their peak: mid-flight of the contour
   {f: CARD, kind: 'hit', shake: 5},
   {f: TABS[1], kind: 'blip'},
   {f: TABS[2], kind: 'blip'},
@@ -21,7 +21,7 @@ export const EVENTS: WorldEvent[] = [
   {f: CHARS[0], kind: 'hit', shake: 7},
   {f: CHARS[1], kind: 'hit'},
   {f: CHARS[2], kind: 'hit'},
-  {f: 452, kind: 'whoosh'},
+  {f: 466, kind: 'whoosh'}, // the line pivots into the stair edge
 ];
 // Local frame the finale montage freezes on (most iconic frame of this world).
 export const HERO_FRAME = 140;

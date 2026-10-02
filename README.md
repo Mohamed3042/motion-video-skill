@@ -11,6 +11,21 @@ The skill works with Claude Code, OpenAI Codex, Gemini CLI, and, through the bun
 
 ## Made with this skill
 
+[![MK Voice: Nine Worlds](outputs/mk-voice-worlds.jpg)](outputs/mk-voice-worlds.mp4)
+
+**[MK Voice: Nine Worlds](outputs/mk-voice-worlds.mp4)** is a 90 s feature tour where every feature is its own world, with its own color, optical illusion and music style:
+- Rubin's vase
+- a Penrose staircase paired with an endlessly rising Shepard–Risset tone
+- peripheral drift
+- anamorphic type
+- a Droste zoom
+- a scintillating grid
+- a moiré reveal
+- a Necker cube
+- Kanizsa contours
+
+It was built by 5 parallel agents on one shared timing contract: all 47 sound hits land within ±1 frame, and the nine worlds are loudness-matched to within 0.3 LU. Brief: [`briefs/mk-voice-worlds.md`](briefs/mk-voice-worlds.md).
+
 | | |
 |---|---|
 | [![MK Voice](outputs/mk-voice.jpg)](outputs/mk-voice.mp4) **[MK Voice](outputs/mk-voice.mp4)**: 20 s product reel | [![Montage Pro](outputs/mk-montage.jpg)](outputs/mk-montage.mp4) **[Montage Pro](outputs/mk-montage.mp4)**: 20 s product reel |

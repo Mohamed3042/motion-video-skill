@@ -113,7 +113,7 @@ export const World: React.FC = () => {
   const facesIn = 1 - ramp(f, -10, 24, EXPO);
   const facesOut = ramp(f, 440, 462, EXPO_IN);
   const faceDx = (facesIn * 0.95 + facesOut * 0.8) as number;
-  const faceOpacity = 1 - ramp(f, 448, 462);
+  const faceOpacity = ramp(f, -10, 6) * (1 - ramp(f, 448, 462));
   const discOpacity = ramp(f, -12, 2) * (1 - ramp(f, 450, 468));
   const decorOpacity = ramp(f, 4, 40) * (1 - ramp(f, EXIT, EXIT + 16));
   const morph = f >= 444; // exit: the contour leaves the medallion and straightens
@@ -246,9 +246,10 @@ export const World: React.FC = () => {
 
         {/* entrance: the intro's amber ring rushes past the camera */}
         {f < 20 ? (
-          <g opacity={1 - ramp(f, -2, 18)} fill="none">
+          <g opacity={1 - ramp(f, 2, 18)} fill="none">
             {[0, 1].map((k) => {
-              const r = mix(560, 1500, ramp(f + k * 5, -14, 18, EXPO)) - k * 90;
+              // constant-speed dive: the radius grows exponentially, so the ring rushes past the camera
+              const r = 420 * (1600 / 420) ** ramp(f + k * 6, -12, 14, (t) => t) - k * 60;
               return (
                 <g key={k}>
                   <circle cx={960} cy={540} r={r} stroke={AMB} strokeWidth={r * 0.045} opacity={0.14} />
@@ -338,6 +339,33 @@ export const World: React.FC = () => {
             </div>
           </div>
         </>
+      ) : null}
+
+      {/* ---------- bar 2: the illusion's caption, lit with whichever reading the shading favours ---------- */}
+      {f > PEAK - 4 && f < 214 ? (
+        <div
+          style={{
+            position: 'absolute',
+            left: 1436,
+            top: 468,
+            fontFamily: MONO,
+            fontWeight: 700,
+            letterSpacing: '0.3em',
+            opacity: ramp(f, PEAK + 4, PEAK + 18) * (1 - ramp(f, 192, 204)),
+            transform: `translateX(${(1 - ramp(f, PEAK + 4, PEAK + 24)) * 24}px)`,
+          }}
+        >
+          <div style={{fontSize: 15, color: '#7d6646', marginBottom: 14}}>FIG. 01</div>
+          {(['FACES', 'VASE'] as const).map((w, i) => {
+            const on = i ? 1 - mode : mode;
+            return (
+              <div key={w} style={{display: 'flex', alignItems: 'center', gap: 14, fontSize: 26, lineHeight: 1.5, color: mixColor('#5e4c34', AMB, on)}}>
+                <span style={{width: 9, height: 9, borderRadius: 5, background: AMB, opacity: on, boxShadow: `0 0 12px ${AMB}`}} />
+                {w}
+              </div>
+            );
+          })}
+        </div>
       ) : null}
 
       {/* ---------- bar 3: pill tabs ---------- */}

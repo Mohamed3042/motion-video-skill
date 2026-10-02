@@ -45,7 +45,7 @@ export const EVENTS: WorldEvent[] = [
   {f: READY_EN, kind: 'blip'},
   {f: READY_AR, kind: 'blip'},
   {f: TRAIN, kind: 'impact', shake: 7},
-  {f: SPIN, kind: 'whoosh'},
+  {f: 466, kind: 'whoosh'}, // marked at its peak: mid-spin
 ];
 // Local frame the finale montage freezes on (most iconic frame of this world).
-export const HERO_FRAME = 300;
+export const HERO_FRAME = 440;

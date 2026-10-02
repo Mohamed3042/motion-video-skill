@@ -7,3 +7,6 @@ studio/public/**/*.wav
 # verification stills / scratch
 stills/
 *.log
+
+# motion orchestrator run state
+.motion/

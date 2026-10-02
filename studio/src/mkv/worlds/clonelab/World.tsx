@@ -67,7 +67,7 @@ const lastLandOn = (f: number, k: number) => {
 const LABEL_OFF: Pt[] = [
   [175, -150], // SET UP: up-right
   [70, 190], // RECORD: below
-  [-150, 120], // CALIBRATE: down-left
+  [-118, 132], // CALIBRATE: down-left
   [-170, -80], // TRAIN: up-left
 ];
 const LABELS = FLIGHTS.map((fl, i) => {
@@ -284,7 +284,7 @@ const DUST = Array.from({length: 46}, () => ({x: rnd() * 1920, y: rnd() * 1080, 
 
 export const World: React.FC = () => {
   const f = useWorldFrame();
-  const titleOut = 104;
+  const titleOut = 92;
   const uiOut = ramp(f, SPIN - 10, SPIN + 6, EXPO_IN);
   const labelsIn = ramp(f, 70, 92);
   const blur = f >= SPIN + 4 && f <= END + 2;
@@ -377,13 +377,13 @@ export const World: React.FC = () => {
       {/* title moment */}
       {f < titleOut + 30 ? (
         <div style={{position: 'absolute', left: 1080, top: 300}}>
-          <div style={{display: 'flex', alignItems: 'center', gap: 18, ...enter(f, 40, titleOut - 4)}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 18, ...enter(f, 32, titleOut - 4)}}>
             <div style={{fontFamily: MONO, fontWeight: 700, fontSize: 22, letterSpacing: '0.42em', color: ICE}}>02 / 09</div>
-            <div style={{width: 120 * ramp(f, 44, 70), height: 2, background: ICE, opacity: 0.6}} />
+            <div style={{width: 120 * ramp(f, 36, 62), height: 2, background: ICE, opacity: 0.6}} />
           </div>
-          <Letters f={f} text="CLONE" at={44} out={titleOut} size={156} color="#f2fdff" stagger={3} style={{marginTop: 26}} />
-          <Letters f={f} text="LAB" at={52} out={titleOut + 4} size={156} color={ICE} stagger={3} style={{marginTop: 4}} />
-          <div style={{marginTop: 30, fontFamily: FONT, fontWeight: 500, fontSize: 40, letterSpacing: '-0.01em', color: '#cdeef5', ...enter(f, 62, titleOut + 6)}}>
+          <Letters f={f} text="CLONE" at={36} out={titleOut} size={156} color="#f2fdff" stagger={3} style={{marginTop: 26}} />
+          <Letters f={f} text="LAB" at={44} out={titleOut + 4} size={156} color={ICE} stagger={3} style={{marginTop: 4}} />
+          <div style={{marginTop: 30, fontFamily: FONT, fontWeight: 500, fontSize: 40, letterSpacing: '-0.01em', color: '#cdeef5', ...enter(f, 54, titleOut + 8)}}>
             One main task at a time.
           </div>
         </div>

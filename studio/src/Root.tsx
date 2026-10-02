@@ -2,6 +2,7 @@ import {Composition} from 'remotion';
 import {OpusReel} from './opus/Reel';
 import {MkVoiceReel, MkMontageReel, MkSuiteReel} from './mk/Reels';
 import {MkvReel, MkvWorldSolo} from './mkv/Reel';
+// <mvo:imports> (motion orchestrator inserts generated imports below this line)
 
 const hd = {fps: 60, width: 1920, height: 1080} as const;
 
@@ -14,5 +15,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="MkVoiceWorlds" component={MkvReel} durationInFrames={5400} {...hd} />
     {/* debug: one world alone; local frame 0 = composition frame 12 */}
     <Composition id="MkvWorld" component={MkvWorldSolo} durationInFrames={504} defaultProps={{id: 'myvoice' as const}} {...hd} />
+    {/* <mvo:compositions> (motion orchestrator inserts generated compositions below this line) */}
   </>
 );
