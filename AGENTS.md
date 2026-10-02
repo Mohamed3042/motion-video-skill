@@ -11,6 +11,10 @@ This repo makes motion-graphics videos entirely in code: Remotion (React) for ev
 
 ## Layout
 
+For an edit to the MK Suite film, read [`docs/mk-suite/EDITING.md`](docs/mk-suite/EDITING.md) before touching code. V2's entry point is `studio/src/mk-suite-workflows/entry.ts`; V1 is preserved separately. The repository-root npm scripts preview, render and verify V2. Product scenes must demonstrate inputs, deliberate controls and resulting states. Keep demo labels and product capability limits. Do not replace these workflows with abstract icons or name cards.
+
+If this is the extracted MK Suite source ZIP, only the complete V1/V2 film projects are included. Use the root npm commands and standalone entries in the editing guide. The upstream templates, runner, orchestrator and original studio entry described elsewhere in this file apply to a full repository clone.
+
 - `skills/motion-video/SKILL.md`: the skill (Agent Skills format).
 - `studio/`: the Remotion 4 project. Templates are in `studio/src/{mk,mkv,opus}`, with music and check scripts in `studio/scripts/{mk,mkv,opus}`.
 - `briefs/`: one brief per video, written before any code.

@@ -1,0 +1,23 @@
+{
+  "name": "mk-suite-film-workspace",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Editable MK Suite product workflow film, built with motion-video-skill v0.2.0",
+  "engines": {"node": ">=22.18.0"},
+  "scripts": {
+    "setup": "npm --prefix studio ci",
+    "dev": "node tools/mk-suite/film.mjs studio",
+    "music": "node tools/mk-suite/film.mjs music",
+    "check": "node tools/mk-suite/film.mjs check",
+    "stills": "node tools/mk-suite/film.mjs review worlds",
+    "transitions": "node tools/mk-suite/film.mjs review transitions",
+    "render": "node tools/mk-suite/film.mjs render",
+    "share": "node tools/mk-suite/film.mjs share",
+    "verify": "node tools/mk-suite/film.mjs verify",
+    "delivery": "node tools/mk-suite/delivery.mjs",
+    "report": "node tools/mk-suite/report.mjs",
+    "package:check": "node tools/mk-suite/package.mjs --check",
+    "package": "node tools/mk-suite/package.mjs"
+  }
+}

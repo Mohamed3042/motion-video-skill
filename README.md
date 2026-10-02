@@ -1,5 +1,17 @@
 # motion-video-skill
 
+## MK Suite product workflow film
+
+**[Watch / download the upgraded 90-second film](https://github.com/Mohamed3042/motion-video-skill/releases/tag/mk-suite-film-v2)** · [Chaptered local player](outputs/mk-suite-workflows/index.html) · [Verification](docs/mk-suite/PRODUCTION.md)
+
+[![MK Suite: See what you can do](outputs/mk-suite-workflows/review/framework-144.png)](outputs/mk-suite-workflows.mp4)
+
+The new MK Suite film demonstrates 23 products through animated inputs, controls and outcomes. The complete editable project is included: [AI editing guide](docs/mk-suite/EDITING.md), [V2 brief](briefs/mk-suite-workflows.md), [visual source](studio/src/mk-suite-workflows), [sound source](studio/scripts/mk-suite-workflows), and [production tools](tools/mk-suite).
+
+From this repository's root, run `npm run setup`, `npm run music`, `npm run check`, then `npm run dev`. Run `npm run render` for the 90-second 1080p60 movie. V1 is preserved under `studio/src/mk-suite-worlds/`. These are illustrated product workflows using demo data; product availability varies.
+
+**Using the film source ZIP?** It contains the complete MK Suite V1/V2 film project and the commands above. The upstream templates, orchestrator, runner and example movies described below belong to the full GitHub repository and are intentionally outside that film archive. Follow `docs/mk-suite/EDITING.md` for the archive's standalone entry points.
+
 **An AI-agent skill for making motion-graphics videos where every frame and every sound is code.**
 
 You give an agent an idea, a length in seconds and your brand, and it hands back a finished 1080p60 MP4:

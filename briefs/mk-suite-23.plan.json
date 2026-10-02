@@ -1,0 +1,535 @@
+{
+  "slug": "mk-suite-worlds",
+  "title": "MK Suite - Every idea has a world",
+  "seconds": 90,
+  "fps": 60,
+  "format": "16:9",
+  "width": 1920,
+  "height": 1080,
+  "bpm": 150,
+  "brand": {
+    "name": "MK Suite",
+    "colors": {
+      "bg": "#10121A",
+      "fg": "#F9F5EC",
+      "primary": "#EE6045",
+      "sub": "#ACAEB9"
+    },
+    "fonts": {
+      "display": "Space Grotesk",
+      "body": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tagline": "One suite. One monthly subscription.",
+    "facts": [
+      "One suite. One monthly subscription.",
+      "Subscription concept; product availability varies.",
+      "Free cores remain free.",
+      "Voice library",
+      "Voice conversion",
+      "Training controls",
+      "Melody correction",
+      "Instrument sketches",
+      "WAV + MIDI exports",
+      "Multicamera alignment",
+      "Camera + audio selection",
+      "XML + captions + markers",
+      "Box + pouch layouts",
+      "Artwork + font checks",
+      "Printer approval handoffs",
+      "Character import + preview",
+      "Garment colour variants",
+      "Forge Atlas: assets + Blender",
+      "Cake design + print prep",
+      "Customer approvals",
+      "Order + production workflow",
+      "Curriculum contexts",
+      "Reviewed source pages",
+      "Arabic + English workspace",
+      "Queue + pause + resume",
+      "Schedules + speed controls",
+      "Browser companion",
+      "Record keyboard + mouse",
+      "Edit macros + hotkeys",
+      "Profiles + conditions",
+      "Disk-space analysis",
+      "Large files + duplicates",
+      "Reviewed cleaning plans",
+      "Job-source research",
+      "Evidence-based matching",
+      "Geography + skill gaps",
+      "Company research + sources",
+      "Opportunity discovery",
+      "Cost + time scenarios",
+      "Candidate + role evidence",
+      "Human review",
+      "Regional planning",
+      "Listings + saved items",
+      "Model + condition comparison",
+      "New + used price evidence",
+      "Orders + inventory",
+      "Bookings + replenishment",
+      "Reports + forecasts",
+      "Bilingual quotations",
+      "A4 PDF export",
+      "Company document history",
+      "Role-checked approvals",
+      "Retries + audit records",
+      "Marketing: campaigns + follow-ups",
+      "Repository indexing",
+      "File + line + commit citations",
+      "Evidence-based answers",
+      "Flock + lifecycle records",
+      "Costs + worker updates",
+      "Attributed change history",
+      "Business intake + AI review",
+      "Visual references",
+      "Tasks + release records",
+      "Game library + showcases",
+      "Signed updates + rollback",
+      "Phone browse companion",
+      "23 software worlds",
+      "Asset + project library",
+      "Geometry previews",
+      "Blender handoff",
+      "Contacts + consent",
+      "Campaign drafts",
+      "Follow-up planning",
+      "Prepared-character preview",
+      "Discovery-led templates"
+    ]
+  },
+  "intro": {
+    "endFrame": 192,
+    "brief": "Immediate bold hook EVERY IDEA / HAS A WORLD. Twenty-three chromatic orbit arcs explode from a tiny coral MK monogram and become a gigantic typographic MK SUITE. Hold name by1.2sec; reveal CREATE / WORK / GROW at2.1sec. Tactile near-black cinematic identity, 72px safe margins.",
+    "music": "Sub opening pulse, airy chord bloom; impacts at frames30 and120; ascending glass motif leads first portal."
+  },
+  "outro": {
+    "startFrame": 5280,
+    "brief": "Fast constellation converges into large MK SUITE wordmark. Exact line One suite. One monthly subscription. Legible small footer Subscription concept; product availability varies. Free cores remain free. No price, URL, buy button or available-now claim.",
+    "music": "Resolved wide major-nine chord and restrained sparkling tail with fade last0.15s."
+  },
+  "segments": [
+    {
+      "id": "voice",
+      "name": "MK Voice",
+      "startFrame": 192,
+      "endFrame": 480,
+      "accent": "#46E7AB",
+      "brief": "Emerald acoustic observatory. Horizontal light filament vibrates into a giant three-dimensional-looking interference sphere. Orbiting record arcs lock as three labeled signal bands illuminate. Giant waveform architecture, no dashboard. Background #071914. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Rubin negative-space microphone",
+      "music": "Warm dub pulse with glass harmonics; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MK Voice",
+        "Voice library",
+        "Voice conversion",
+        "Training controls"
+      ],
+      "entrance": "Emerald aperture from suite mark",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "tones",
+      "name": "MK Tones",
+      "startFrame": 480,
+      "endFrame": 768,
+      "accent": "#ED823C",
+      "brief": "Warm ivory piano city. Oversized piano keys build a diagonal staircase; falling amber note tiles bounce and become an ascending editable melody. Shadowed geometric keys fill the frame. Background #FFF3DC. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Impossible piano staircase",
+      "music": "Playful plucked FM marimba with swung clicks; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MK Tones",
+        "Melody correction",
+        "Instrument sketches",
+        "WAV + MIDI exports"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "montage",
+      "name": "Montage Pro",
+      "startFrame": 768,
+      "endFrame": 1056,
+      "accent": "#FF536A",
+      "brief": "Crimson cutting room. Three enormous film strips slide from different directions and snap to one white playhead. Frames are abstract landscape gradient compositions. Film sprockets, track geometry, elastic stop. Background #1B0711. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Film-strip perspective tunnel",
+      "music": "Tight electronic breakbeat with shutter clicks; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "Montage Pro",
+        "Multicamera alignment",
+        "Camera + audio selection",
+        "XML + captions + markers"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "editor",
+      "name": "MK Editor",
+      "startFrame": 1056,
+      "endFrame": 1248,
+      "accent": "#476EFF",
+      "brief": "Electric blue paper engineering studio. A large packaging dieline draws itself and folds into an isometric box. Orange registration crosses travel around it. Technical outlines morph into tactile paper surfaces. Background #F1F3FF. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Anamorphic folded package",
+      "music": "Crisp minimal electro with paper flick percussion; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MK Editor",
+        "Box + pouch layouts",
+        "Artwork + font checks",
+        "Printer approval handoffs"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "charforge",
+      "name": "CharForge Studio",
+      "startFrame": 1248,
+      "endFrame": 1440,
+      "accent": "#C395FF",
+      "brief": "Violet holographic character atelier. Abstract faceted mannequin rotates slowly on concentric turntable with layered floating garment plates changing hue. Thin mesh rings and triangular planes, no human face. Background #160D25. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Necker wireframe turntable",
+      "music": "Granular-sounding synthesized metallic arpeggio; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "CharForge Studio",
+        "Character import + preview",
+        "Garment colour variants",
+        "Prepared-character preview"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "forgeatlas",
+      "name": "Forge Atlas",
+      "accent": "#6DC8FA",
+      "brief": "Icy blue architectural asset vault on dark #0B1927. A faceted low-poly mountain rotates inside an exploded wireframe cube. Geometric asset sheets spiral into a neatly constructed library. Three-dimensional projection, cyan blueprint details, crisp industrial typography. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Exploded axonometric vault",
+      "music": "Glassy metallic synth with measured percussion",
+      "copy": [
+        "Forge Atlas",
+        "Asset + project library",
+        "Geometry previews",
+        "Blender handoff"
+      ],
+      "entrance": "Violet wireframe ring",
+      "exit": "A blueprint cube expands into a pink circular cake plate",
+      "startFrame": 1440,
+      "endFrame": 1632
+    },
+    {
+      "id": "cake",
+      "name": "Cake Studio",
+      "startFrame": 1632,
+      "endFrame": 1824,
+      "accent": "#ED6A9B",
+      "brief": "Rose patisserie sculpture garden. Giant tiered cake made of clean ellipses assembles from floating pink sugar discs; piped dots orbit the top; proof sheet slips beneath, approval star clicks into place. Elegant candy typography. Background #FFE9ED. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Stacking impossible ellipses",
+      "music": "Celesta waltz-like triplet decorations over150BPM; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "Cake Studio",
+        "Cake design + print prep",
+        "Customer approvals",
+        "Order + production workflow"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "educate",
+      "name": "MK Educate",
+      "startFrame": 1824,
+      "endFrame": 2112,
+      "accent": "#526CBB",
+      "brief": "Editorial blue and parchment learning world. Giant open book unfolds radial pages like architectural wings, words become ruled lines and connected source references; rotating sun and school-geometry arcs. Generous paper space. Background #F5EEDC. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Book page fan optical depth",
+      "music": "Warm Rhodes and soft wooden ticks; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MK Educate",
+        "Curriculum contexts",
+        "Reviewed source pages",
+        "Arabic + English workspace"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "downloader",
+      "name": "MK Downloader",
+      "startFrame": 2112,
+      "endFrame": 2304,
+      "accent": "#43DDF1",
+      "brief": "Cyan fluid transit system. Multiple luminous ribbons carry rectangular file packets through tall glass gates; packets merge into one solid file monolith. Sweeping camera and clean vertical kinetic arrows. Background #061C35. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Flow-field conduit tunnel",
+      "music": "Liquid synth bass with bright syncopated plinks; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MK Downloader",
+        "Queue + pause + resume",
+        "Schedules + speed controls",
+        "Browser companion"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "macroforge",
+      "name": "MacroForge",
+      "startFrame": 2304,
+      "endFrame": 2496,
+      "accent": "#FF824B",
+      "brief": "Orange mechanical choreography. Oversized keyboard keycaps form a curving domino chain, pressing one after another sends a ribbon through switch and loop mechanisms. Eye-catching tactile shadows and moving cursor path. Background #291406. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Domino keyboard cascade",
+      "music": "Clockwork percussion and analog pluck; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MacroForge",
+        "Record keyboard + mouse",
+        "Edit macros + hotkeys",
+        "Profiles + conditions"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "reclaim",
+      "name": "Reclaim",
+      "startFrame": 2496,
+      "endFrame": 2688,
+      "accent": "#93AC5B",
+      "brief": "Pale sage spatial decluttering. A packed treemap of solid cuboids breathes apart, duplicates align into matching pairs, selected tiles lift into tidy stacks revealing vast negative space. Slow satisfying reorganization. Background #F0F3E5. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Treemap depth reversal",
+      "music": "Sparse minimal house with muted bass and airy chime; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "Reclaim",
+        "Disk-space analysis",
+        "Large files + duplicates",
+        "Reviewed cleaning plans"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "orbit",
+      "name": "Job Engine / Orbit",
+      "startFrame": 2688,
+      "endFrame": 2880,
+      "accent": "#F4B15E",
+      "brief": "Amber career planetarium. Large tilted orbital ellipse, candidate evidence becomes central star; opportunity planets connect into navigable constellation, compass sweep finds a path. Typography sits in astronomical negative space. Background #091526. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Orbital parallax constellation",
+      "music": "Space arpeggio and half-time drum pulse; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "Job Engine / Orbit",
+        "Job-source research",
+        "Evidence-based matching",
+        "Geography + skill gaps"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "business",
+      "name": "MK Business OS",
+      "startFrame": 2880,
+      "endFrame": 3168,
+      "accent": "#F08F66",
+      "brief": "Copper strategic city. Isometric company towers rise on map contours; glowing research traces join businesses; transparent evidence planes rotate into a solution chain. Architectural typography and strong diagonal composition. Background #221211. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Isometric impossible city",
+      "music": "Confident percussive techno with copper FM tones; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MK Business OS",
+        "Company research + sources",
+        "Opportunity discovery",
+        "Cost + time scenarios"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "talent",
+      "name": "Talent Atlas",
+      "startFrame": 3168,
+      "endFrame": 3360,
+      "accent": "#AB8CF0",
+      "brief": "Lavender prismatic atlas. Faceted transparent gem floats above a topographic globe; evidence points refract into three clean beams reaching role silhouettes made from geometric tokens. No names or fake scores. Background #EEE9FF. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Prismatic refraction illusion",
+      "music": "Airy bell layers and restrained pulse; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "Talent Atlas",
+        "Candidate + role evidence",
+        "Human review",
+        "Regional planning"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "marketplace",
+      "name": "MK Marketplace",
+      "startFrame": 3360,
+      "endFrame": 3552,
+      "accent": "#F4C94C",
+      "brief": "Golden product exhibition. A rotating elliptical showroom of abstract device silhouettes on staggered plinths; magnifying ring scans product outlines and fans out source slips. Luxury editorial catalogue design. Background #2C2610. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Turntable forced perspective",
+      "music": "Disco bass pulse and bright muted chord stabs; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MK Marketplace",
+        "Listings + saved items",
+        "Model + condition comparison",
+        "New + used price evidence"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "retail",
+      "name": "Retail Ops Hub",
+      "startFrame": 3552,
+      "endFrame": 3744,
+      "accent": "#2DAF96",
+      "brief": "Mint miniature logistics district. Isometric shelves and stock cubes march between store blocks, calendar wheel rotates, stock bars refill like physical containers. Small readable Preview tag. Background #E7F7EF. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Isometric stock tessellation",
+      "music": "Light bouncy synth funk; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "Retail Ops Hub",
+        "Orders + inventory",
+        "Bookings + replenishment",
+        "Reports + forecasts"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "quotes",
+      "name": "Quotation Builder",
+      "startFrame": 3744,
+      "endFrame": 3936,
+      "accent": "#D7B064",
+      "brief": "Midnight and gold paper atelier. Oversized quotation page rises from fine golden baselines; parallel language columns draw in; stamped abstract seal locks and page folds into archival stack. Use no private company marks. Background #0D2139. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Paper extrusion and folding",
+      "music": "Soft cinematic piano with golden plinks; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "Quotation Builder",
+        "Bilingual quotations",
+        "A4 PDF export",
+        "Company document history"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "workflows",
+      "name": "Managed Workflows",
+      "startFrame": 3936,
+      "endFrame": 4128,
+      "accent": "#A194EF",
+      "brief": "Lilac approval ballet. Approval tokens travel through a sculptural branching tube network, halt at a gate then pass after review ring completes. Campaign tiles fan from approved branch; human review clearly retained. Background #F3F0FF. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Braided loop paths",
+      "music": "Polyrhythmic clicks and mellow synth sequencer; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "Managed Workflows",
+        "Role-checked approvals",
+        "Retries + audit records",
+        "Discovery-led templates"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing Automation",
+      "accent": "#F47352",
+      "brief": "Coral and navy campaign poster printing world on #F8E8D7. Huge expressive concentric megaphone cones project clean typography waves; campaign draft pages fan outward across arcing consent pathways. Editorial paper collage, asymmetry and giant kinetic letterforms. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Concentric typographic sound cones",
+      "music": "Warm syncopated brassy FM stabs",
+      "copy": [
+        "Marketing Automation",
+        "Contacts + consent",
+        "Campaign drafts",
+        "Follow-up planning"
+      ],
+      "entrance": "Lilac review ring becomes coral megaphone",
+      "exit": "Typographic waves become lime code strata",
+      "startFrame": 4128,
+      "endFrame": 4320
+    },
+    {
+      "id": "askrepos",
+      "name": "ask-repos",
+      "startFrame": 4320,
+      "endFrame": 4512,
+      "accent": "#B4F45E",
+      "brief": "Lime code archaeology. Monospaced code strata slide as typographic geological layers, query cursor descends, cited lines lift into a bright answer ribbon connected to source branches. Real generic placeholder code only. Background #101C12. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Nested source tunnel",
+      "music": "Glitchy chiptune accents over restrained bass; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "ask-repos",
+        "Repository indexing",
+        "File + line + commit citations",
+        "Evidence-based answers"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "flock",
+      "name": "Flock Operations",
+      "startFrame": 4512,
+      "endFrame": 4704,
+      "accent": "#C8AD66",
+      "brief": "Olive pastoral map. Flowing contour lines transform into field terraces; abstract sheep tokens traverse a dotted lifecycle ring; leaf-shaped record flags appear in soft sunlit landscape. Mature agricultural editorial design. Background #233A28. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Topographic contour drift",
+      "music": "Organic wooden pluck with warm low drone; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "Flock Operations",
+        "Flock + lifecycle records",
+        "Costs + worker updates",
+        "Attributed change history"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "factory",
+      "name": "MK Factory",
+      "startFrame": 4704,
+      "endFrame": 4992,
+      "accent": "#FF9250",
+      "brief": "Orange robotic idea foundry. Geometric gantry arm moves a glowing idea cube through intake, review lens and assembly press; cube unfolds into a structured project object. Rhythmic cinematic industrial motion. Background #171C26. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Impossible conveyor loop",
+      "music": "Industrial synth percussion and rising arpeggio; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MK Factory",
+        "Business intake + AI review",
+        "Visual references",
+        "Tasks + release records"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "A dominant geometric motif expands into next world"
+    },
+    {
+      "id": "games",
+      "name": "MK Games",
+      "startFrame": 4992,
+      "endFrame": 5280,
+      "accent": "#EF76FF",
+      "brief": "Magenta arcade horizon. Perspective neon racetrack tunnels through rotating game portals; stylized pixel ships and low-poly peaks converge into a library constellation. Four portal geometries imply showcases, never gameplay claims. Background #110A30. Motion arc:0-0.25s reveal;0.25-1.2s primary transformation;1.2-2.4s feature interaction;final0.6s readable hero hold. Product name visible by0.2s. Feature text max3 lines32-38px; 72px margins. Design this entire composition uniquely, never shared dashboard/card templates. Include exact product name and copy. All visuals conceptual illustrations. Product title and 3 feature phrases visible by local frame30 and remain through exit. Use own radically distinct composition. No generic card grids.",
+      "illusion": "Neon vanishing-point portal",
+      "music": "Arcade synthwave with triumphant chord lift; keep a cohesive A-minor/C-major harmonic family and150BPM master beat; one clearly synced hit at localframe60 and optional120.",
+      "copy": [
+        "MK Games",
+        "Game library + showcases",
+        "Signed updates + rollback",
+        "Phone browse companion"
+      ],
+      "entrance": "Incoming colored geometric portal from preceding world",
+      "exit": "Arcade lights converge to coral MK mark"
+    }
+  ],
+  "truthRules": [
+    "Only sourced features from catalog and current local project READMEs; no invented results, user counts or guaranteed outcomes.",
+    "Subscription positioning requested by owner; billing not connected, no available-now claim; finale labels concept and availability variation.",
+    "Free cores remain free. No price per user's explicit selection.",
+    "Illustrative motion graphics, no claims of live application capture. No private data or real people.",
+    "All23 products get distinct visual scenes.21world preliminary plan superseded."
+  ]
+}

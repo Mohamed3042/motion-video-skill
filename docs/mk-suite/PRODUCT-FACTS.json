@@ -1,0 +1,468 @@
+{
+  "checked_date": "2026-10-02",
+  "scope": "Public film claim boundaries; no private endpoints or customer data",
+  "subscription": "Concept only. No price. Product availability varies. Free cores remain free.",
+  "products": [
+    {
+      "id": "voice",
+      "name": "MK Voice",
+      "feature_highlights": [
+        "Voice library",
+        "Voice conversion",
+        "Training controls"
+      ],
+      "illustrated_steps": [
+        "Import a sample",
+        "Choose a voice model",
+        "Preview the conversion"
+      ],
+      "catalog_release_status": "local_preview",
+      "capability_limits": [
+        "Existing owner build; customer distribution is under review.",
+        "Processing depends on compatible hardware and separately authorized models and recordings.",
+        "No voice packs or likeness guarantees are included."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "tones",
+      "name": "MK Tones",
+      "feature_highlights": [
+        "Melody correction",
+        "Instrument sketches",
+        "WAV + MIDI exports"
+      ],
+      "illustrated_steps": [
+        "Load a phrase",
+        "Correct the notes",
+        "Export WAV + MIDI"
+      ],
+      "catalog_release_status": "local_preview",
+      "capability_limits": [
+        "The core remains free and needs no suite subscription.",
+        "The connected 0.2.0 preview is a local build copy; newer source features are separate.",
+        "Sample permissions and target-device acceptance need review before redistribution."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "montage",
+      "name": "Montage Pro",
+      "feature_highlights": [
+        "Multicamera alignment",
+        "Camera + audio selection",
+        "XML + captions + markers"
+      ],
+      "illustrated_steps": [
+        "Drop camera recordings",
+        "Align audio peaks",
+        "Export XML + markers"
+      ],
+      "catalog_release_status": "local_preview",
+      "capability_limits": [
+        "The connected Windows build is 0.5.0; the checked remote release is older.",
+        "Actual Premiere import and Mac runtime acceptance remain unverified in the release receipt.",
+        "Automatic transcription is not included."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "editor",
+      "name": "MK Editor",
+      "feature_highlights": [
+        "Box + pouch layouts",
+        "Artwork + font checks",
+        "Printer approval handoffs"
+      ],
+      "illustrated_steps": [
+        "Place box artwork",
+        "Check fonts + layout",
+        "Send for printer approval"
+      ],
+      "catalog_release_status": "source_preview",
+      "capability_limits": [
+        "Source preview 3.5.0; the separate remote 5.0.1 package was not inspected.",
+        "No Windows application executable was verified in the inspected locations.",
+        "Current handoffs are not certified press-ready PDF/X; content and distribution rights need review."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "charforge",
+      "name": "CharForge Studio",
+      "feature_highlights": [
+        "Character import + preview",
+        "Garment colour variants",
+        "Prepared-character preview"
+      ],
+      "illustrated_steps": [
+        "Import a character",
+        "Switch garment colours",
+        "Review the variation"
+      ],
+      "catalog_release_status": "local_preview",
+      "capability_limits": [
+        "Blender and compatible, authorized character assets are required separately.",
+        "The base launcher does not include arbitrary face reconstruction, character generation or game installation.",
+        "The local 1.0.0 launcher has no vetted public download in this catalog."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "forgeatlas",
+      "name": "Forge Atlas",
+      "feature_highlights": [
+        "Asset + project library",
+        "Geometry previews",
+        "Blender handoff"
+      ],
+      "illustrated_steps": [
+        "Choose an asset",
+        "Inspect its geometry",
+        "Prepare Blender handoff"
+      ],
+      "catalog_release_status": null,
+      "capability_limits": null,
+      "source_basis": "Current product README and verified feature documentation"
+    },
+    {
+      "id": "cake",
+      "name": "Cake Studio",
+      "feature_highlights": [
+        "Cake design + print prep",
+        "Customer approvals",
+        "Order + production workflow"
+      ],
+      "illustrated_steps": [
+        "Compose a cake",
+        "Prepare the print",
+        "Request customer approval"
+      ],
+      "catalog_release_status": "rights_review",
+      "capability_limits": [
+        "Source preview 10.0.0; the separate remote installer is 9.0.2.",
+        "Business-specific branding, assets and code rights require release approval.",
+        "No executable connection was verified; printer and independent-shop acceptance remain separate checks."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "educate",
+      "name": "MK Educate",
+      "feature_highlights": [
+        "Curriculum contexts",
+        "Reviewed source pages",
+        "Arabic + English workspace"
+      ],
+      "illustrated_steps": [
+        "Choose curriculum",
+        "Review a source page",
+        "Build the workspace"
+      ],
+      "catalog_release_status": "review_required",
+      "capability_limits": [
+        "Development product; country structure does not imply approved curriculum coverage or school affiliation.",
+        "Legacy Kuwait corpus permission, page review and specialist release gates remain in force.",
+        "Default preparation compiles source text and a teaching template; full AI lesson synthesis and institution DOCX/PDF release are not verified.",
+        "Pricing is proposed; live payments and commercial entitlements are not connected. No customer installer is released."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "downloader",
+      "name": "MK Downloader",
+      "feature_highlights": [
+        "Queue + pause + resume",
+        "Schedules + speed controls",
+        "Browser companion"
+      ],
+      "illustrated_steps": [
+        "Add files to the queue",
+        "Pause + resume",
+        "Set schedule + speed"
+      ],
+      "catalog_release_status": null,
+      "capability_limits": null,
+      "source_basis": "Current product README and verified feature documentation"
+    },
+    {
+      "id": "macroforge",
+      "name": "MacroForge",
+      "feature_highlights": [
+        "Record keyboard + mouse",
+        "Edit macros + hotkeys",
+        "Profiles + conditions"
+      ],
+      "illustrated_steps": [
+        "Record actions",
+        "Edit steps + hotkey",
+        "Run the sequence"
+      ],
+      "catalog_release_status": "local_preview",
+      "capability_limits": [
+        "The MIT-licensed core remains free with no subscription or licence key.",
+        "The existing executable requires the .NET 8 Desktop Runtime.",
+        "No vetted suite-installable ZIP is available."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "reclaim",
+      "name": "Reclaim",
+      "feature_highlights": [
+        "Disk-space analysis",
+        "Large files + duplicates",
+        "Reviewed cleaning plans"
+      ],
+      "illustrated_steps": [
+        "Scan storage",
+        "Review large + duplicate files",
+        "Build a cleaning plan"
+      ],
+      "catalog_release_status": "local_preview",
+      "capability_limits": [
+        "The installed production executable requires Windows elevation; suite launching has not been exercised.",
+        "The local executable differs from the remote release asset and needs reconciliation before distribution.",
+        "Scan-speed and deletion outcomes were not measured for this catalog."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "orbit",
+      "name": "Job Engine / Orbit",
+      "feature_highlights": [
+        "Job-source research",
+        "Evidence-based matching",
+        "Geography + skill gaps"
+      ],
+      "illustrated_steps": [
+        "Choose sources + region",
+        "Compare role evidence",
+        "Review skill gaps"
+      ],
+      "catalog_release_status": "local_preview",
+      "capability_limits": [
+        "The connected installation is 0.4.1; the inspected 0.4.2 candidate is explicitly not release-approved.",
+        "Job coverage and freshness vary by source; complete market coverage is not claimed.",
+        "Research does not submit applications or guarantee employment."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "business",
+      "name": "MK Business OS",
+      "feature_highlights": [
+        "Company research + sources",
+        "Opportunity discovery",
+        "Cost + time scenarios"
+      ],
+      "illustrated_steps": [
+        "Research a company",
+        "Trace the sources",
+        "Compare cost + time"
+      ],
+      "catalog_release_status": "owner_preview",
+      "capability_limits": [
+        "A separate Business OS app licence is planned; pricing and customer distribution are not finalized.",
+        "Current deployment is a private owner workspace, not a public multi-tenant service.",
+        "OpenAI API billing is separate; no key, credits, guaranteed buyers or measured savings are included.",
+        "Company needs and budgets require validation; no outreach or personnel decisions are automated."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "talent",
+      "name": "Talent Atlas",
+      "feature_highlights": [
+        "Candidate + role evidence",
+        "Human review",
+        "Regional planning"
+      ],
+      "illustrated_steps": [
+        "Compare candidate + role",
+        "Inspect source evidence",
+        "Send to human review"
+      ],
+      "catalog_release_status": null,
+      "capability_limits": null,
+      "source_basis": "Current product README and verified feature documentation"
+    },
+    {
+      "id": "marketplace",
+      "name": "MK Marketplace",
+      "feature_highlights": [
+        "Listings + saved items",
+        "Model + condition comparison",
+        "New + used price evidence"
+      ],
+      "illustrated_steps": [
+        "Browse listings",
+        "Compare model + condition",
+        "Save the shortlist"
+      ],
+      "catalog_release_status": "source_preview",
+      "capability_limits": [
+        "Browser application; no native Windows executable was verified.",
+        "Normal accounts remain free; billing is unavailable and live paid research stays locked.",
+        "Sample listings and reports are demonstrations; prices are not appraisals or buyer protection."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "retail",
+      "name": "Retail Ops Hub",
+      "feature_highlights": [
+        "Orders + inventory",
+        "Bookings + replenishment",
+        "Reports + forecasts"
+      ],
+      "illustrated_steps": [
+        "Review orders + stock",
+        "Spot replenishment needs",
+        "Plan the next order"
+      ],
+      "catalog_release_status": "research_preview",
+      "capability_limits": [
+        "Independent Pet Point-style technical demo; no brand affiliation or customer deployment is implied.",
+        "All business records and provider integrations in the demo are synthetic or mocked.",
+        "Source service only; no verified Windows executable or suite install package."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "quotes",
+      "name": "Quotation Builder",
+      "feature_highlights": [
+        "Bilingual quotations",
+        "A4 PDF export",
+        "Company document history"
+      ],
+      "illustrated_steps": [
+        "Add catalogue items",
+        "Switch Arabic + English",
+        "Export an A4 quotation"
+      ],
+      "catalog_release_status": "rights_review",
+      "capability_limits": [
+        "Company code, templates, signatures and stamps are not cleared for general redistribution.",
+        "Source preview 1.4.0; the separate remote release is 1.5.0.",
+        "No executable connection was verified in the inspected locations."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "workflows",
+      "name": "Managed Workflows",
+      "feature_highlights": [
+        "Role-checked approvals",
+        "Retries + audit records",
+        "Discovery-led templates"
+      ],
+      "illustrated_steps": [
+        "Build approval steps",
+        "Review by role",
+        "Trace retries + audit"
+      ],
+      "catalog_release_status": "source_preview",
+      "capability_limits": [
+        "Based on a consulting template system; each client deployment needs configuration and acceptance.",
+        "Shared multi-tenant isolation is not established by the inspected source.",
+        "Demo records are synthetic; no verified desktop executable or connected paid service."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing Automation",
+      "feature_highlights": [
+        "Contacts + consent",
+        "Campaign drafts",
+        "Follow-up planning"
+      ],
+      "illustrated_steps": [
+        "Import consented contacts",
+        "Draft a campaign",
+        "Plan follow-ups"
+      ],
+      "catalog_release_status": null,
+      "capability_limits": null,
+      "source_basis": "Current product README and verified feature documentation"
+    },
+    {
+      "id": "askrepos",
+      "name": "ask-repos",
+      "feature_highlights": [
+        "Repository indexing",
+        "File + line + commit citations",
+        "Evidence-based answers"
+      ],
+      "illustrated_steps": [
+        "Index a repository",
+        "Ask a code question",
+        "Open file + line citations"
+      ],
+      "catalog_release_status": "source_preview",
+      "capability_limits": [
+        "Answers are limited to the indexed corpus and its recorded revision.",
+        "The documented hosted demo uses a frozen corpus; its current availability was not checked.",
+        "Source service only; no verified Windows executable or suite install package."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "flock",
+      "name": "Flock Operations",
+      "feature_highlights": [
+        "Flock + lifecycle records",
+        "Costs + worker updates",
+        "Attributed change history"
+      ],
+      "illustrated_steps": [
+        "Open flock records",
+        "Log a worker update",
+        "Review costs + history"
+      ],
+      "catalog_release_status": "rights_review",
+      "capability_limits": [
+        "The documented core remains free and needs no suite subscription.",
+        "Company release rights and domain calculations require review before customer distribution.",
+        "Source preview 2.4.0 differs from remote 4.0.0; no executable connection was verified."
+      ],
+      "source_basis": "MK Suite catalog and current product feature documentation"
+    },
+    {
+      "id": "factory",
+      "name": "MK Factory",
+      "feature_highlights": [
+        "Business intake + AI review",
+        "Visual references",
+        "Tasks + release records"
+      ],
+      "illustrated_steps": [
+        "Describe the business",
+        "Review the AI brief",
+        "Approve tasks + releases"
+      ],
+      "catalog_release_status": null,
+      "capability_limits": null,
+      "source_basis": "Current product README and verified feature documentation"
+    },
+    {
+      "id": "games",
+      "name": "MK Games",
+      "feature_highlights": [
+        "Game library + showcases",
+        "Signed updates + rollback",
+        "Phone browse companion"
+      ],
+      "illustrated_steps": [
+        "Browse game showcases",
+        "Review a signed update",
+        "Keep a rollback point"
+      ],
+      "catalog_release_status": null,
+      "capability_limits": null,
+      "source_basis": "Current product README and verified feature documentation"
+    }
+  ]
+}

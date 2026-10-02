@@ -1,0 +1,1339 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "archive": "outputs/mk-suite-workflows/MK-Suite-Workflows-Source.zip",
+  "scope": "Complete editable MK Suite V1 and V2. Exact allowlist; no product-private data or orchestration session state.",
+  "manifestNote": "The audit excludes its own content hash and the ZIP hash to avoid circular digests.",
+  "compositionCounts": [
+    {
+      "slug": "mk-suite-worlds",
+      "worlds": 23,
+      "timingModules": 23,
+      "audioModules": 23
+    },
+    {
+      "slug": "mk-suite-workflows",
+      "worlds": 23,
+      "timingModules": 23,
+      "audioModules": 23
+    }
+  ],
+  "relativeImportsChecked": 617,
+  "missingImports": [],
+  "hygiene": [],
+  "dependencies": [
+    "@remotion/bundler",
+    "@remotion/cli/config",
+    "@remotion/google-fonts/Inter",
+    "@remotion/google-fonts/JetBrainsMono",
+    "@remotion/google-fonts/NotoSansArabic",
+    "@remotion/google-fonts/SpaceGrotesk",
+    "@remotion/renderer",
+    "react",
+    "remotion"
+  ],
+  "audio": [
+    {
+      "path": "studio/public/mk-suite-worlds/music.wav",
+      "seconds": 90,
+      "channels": 2,
+      "sampleRate": 44100,
+      "bits": 16
+    },
+    {
+      "path": "studio/public/mk-suite-workflows/music.wav",
+      "seconds": 90,
+      "channels": 2,
+      "sampleRate": 44100,
+      "bits": 16
+    }
+  ],
+  "manifest": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2286,
+      "sha256": "2354783f188ce44e18593ec7f16589b21e19b397d063f97db62879e3d01dbe0f"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1313,
+      "sha256": "c215e2b431bbb8161279534737f4ef70b5e7d7c5c5bd500c4c45f90248c19bff"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7386,
+      "sha256": "09bdc4b881f44437448ae2b5834c192d9a0023d59d9b8ba5c486443675fe751a"
+    },
+    {
+      "path": "briefs/mk-suite-23.plan.json",
+      "bytes": 36163,
+      "sha256": "8fabe7a8e36133112bfc09dd6246d2bf8e27bc4132b1d187422b6bac5441dd78"
+    },
+    {
+      "path": "briefs/mk-suite-workflows.md",
+      "bytes": 7601,
+      "sha256": "caf942097dcc78d90ce29f4fdb9aa2af569d66e46f521e74bbc98edf1aa24dd1"
+    },
+    {
+      "path": "briefs/mk-suite-workflows.plan.json",
+      "bytes": 39640,
+      "sha256": "81c888d3416b2fc2db7845193adbcd65cb57df06056001046364b18f041c3690"
+    },
+    {
+      "path": "briefs/mk-suite-worlds.md",
+      "bytes": 3445,
+      "sha256": "693abbda6d4a5d64f175d004050ac0421c8417be0941e981832139f36c239ba7"
+    },
+    {
+      "path": "docs/mk-suite/EDITING.md",
+      "bytes": 9678,
+      "sha256": "489d5429ac0d2aacd351ecfe0d84de16779903e92d3716112a890a1e6cd9b028"
+    },
+    {
+      "path": "docs/mk-suite/PRODUCT-FACTS.json",
+      "bytes": 16753,
+      "sha256": "6f2c6c014ca9abf243454045c299f8ec391eb17de62f81563636cacc6e56221b"
+    },
+    {
+      "path": "docs/mk-suite/PRODUCTION.md",
+      "bytes": 5609,
+      "sha256": "9b8c5cf9220016fe315e18e13d87827f8c2dae41f99b9397004eda1cd1b0f257"
+    },
+    {
+      "path": "docs/mk-suite/REBUILD-CHECK.md",
+      "bytes": 935,
+      "sha256": "ced4bacd468833e88e4204a14d42aa0ef8fd18d729587b731d46c77be3ec907f"
+    },
+    {
+      "path": "docs/mk-suite/RELEASE-NOTES.md",
+      "bytes": 1798,
+      "sha256": "9797dad518247dec6bf69be11bd2040718f0c1814d1f026664fadbf99ad9fb02"
+    },
+    {
+      "path": "docs/mk-suite/VALIDATION.json",
+      "bytes": 1200,
+      "sha256": "c9b24e6ce8f3938375929ca5926fe36ad5f4136196de3dea566f665f944a41df"
+    },
+    {
+      "path": "package.json",
+      "bytes": 946,
+      "sha256": "de5a863d02b7c59d7c28165e0863fec9395a2d77db7103fea344882e3ce0ca94"
+    },
+    {
+      "path": "production-delivery.mjs",
+      "bytes": 6990,
+      "sha256": "2b6d4e0b07fccd4122b17c91bda8ed6f0f570f229adf4412a180484290f12588"
+    },
+    {
+      "path": "production-package.mjs",
+      "bytes": 3075,
+      "sha256": "e188025faa07fe39b181ea3418f28c34430bb9c4f46ac2b9cb0e4e0a5006fae2"
+    },
+    {
+      "path": "production-report.mjs",
+      "bytes": 6598,
+      "sha256": "4f939af247852d2cab8888bc433fd678a610307b8f2820ad570e0e9c9a299bb0"
+    },
+    {
+      "path": "production-review.mjs",
+      "bytes": 2407,
+      "sha256": "9655f0d899488c210585a657b48c43dd92ef9ef4a1f99ee5d7a958a35e1ff293"
+    },
+    {
+      "path": "production-video-qc.mjs",
+      "bytes": 12430,
+      "sha256": "274ad75bef08614ca9a4c7f5132eeda3e42bb22ac790ed4789cef2513563813e"
+    },
+    {
+      "path": "skills/motion-video/SKILL.md",
+      "bytes": 11206,
+      "sha256": "18d38c8d2414ea90da426beaa51c17eb68707af04ca88d121a30722dc83960a3"
+    },
+    {
+      "path": "studio/package-lock.json",
+      "bytes": 178427,
+      "sha256": "c4b3e604388b97dc8c492751afb8c584a3325b2642b2131323661a7e4da4a32a"
+    },
+    {
+      "path": "studio/package.json",
+      "bytes": 926,
+      "sha256": "3c4d5719726a62a40d9d7fc4c153a3dde5d79e574e95d37685984ee2377ef237"
+    },
+    {
+      "path": "studio/public/mk-suite-workflows/music.wav",
+      "bytes": 15876044,
+      "sha256": "5ad3e4eb4b86f18b65e72506d6c0b07eb26ad3517b6b1a4b43dcedeb140a4797"
+    },
+    {
+      "path": "studio/public/mk-suite-worlds/music.wav",
+      "bytes": 15876044,
+      "sha256": "5ad3e4eb4b86f18b65e72506d6c0b07eb26ad3517b6b1a4b43dcedeb140a4797"
+    },
+    {
+      "path": "studio/remotion.config.ts",
+      "bytes": 504,
+      "sha256": "b46b6ab5552fd9adad55d1f1e42e3ca0fa41aaf9de0332d40f6f34612701c108"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/check.ts",
+      "bytes": 3084,
+      "sha256": "6275266f9fa5117bee32c49db2049c5633177e1358536f17beaee79c3c044c55"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/dsp.ts",
+      "bytes": 19641,
+      "sha256": "d42bc1e48543c69bef1e8dfdb768b1b08bd6b19f76be9ec1b44b06abecbc5c37"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/music.ts",
+      "bytes": 11082,
+      "sha256": "fc69af9569bdeace667bb0b9bf6d5fae35308e5cf37ea026d28f248f62cbf3ba"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/askrepos.json",
+      "bytes": 19,
+      "sha256": "f398e9b6e07916d9ae460c7fda03beb02eac19acf5a24c6cfb11439db015f27e"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/business.json",
+      "bytes": 19,
+      "sha256": "11ac35201b097196c6b40ffccb6db8bdb778e81bc7c4ee0d4ff902d106d77b62"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/cake.json",
+      "bytes": 15,
+      "sha256": "196faf56b04e6b75754f9b5972077bcd044e68d2b3015424f93a98f1920f5da4"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/charforge.json",
+      "bytes": 20,
+      "sha256": "2eb5ef34a4a3855d95505fc6df488ce245db3b9aed39ab16f25a7f4ac0f4f5a2"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/downloader.json",
+      "bytes": 21,
+      "sha256": "1acc07b0761f1a4af085fdda6b67bf474859e925aec0bebadaac91cb897e4c17"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/editor.json",
+      "bytes": 17,
+      "sha256": "5d36f90d7242d61ff65db9cb19d41f15a1226d104a3f0a5892ee0d1dd393c8ae"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/educate.json",
+      "bytes": 18,
+      "sha256": "7c3afec23176c108b9e1373457c8a6bab59bb0613b551fd15f780c29fd300c00"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/factory.json",
+      "bytes": 18,
+      "sha256": "35a6f8374731dce882f2a7ef2f1cfe2926865bc40b26a8ee0c6e694a5b388682"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/flock.json",
+      "bytes": 16,
+      "sha256": "917e02d461d1eb60947ebae56452a2ad7334e57a91313dccc5e2653f3b736f2f"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/forgeatlas.json",
+      "bytes": 21,
+      "sha256": "33ab7e01bcdac1d1764da1859df90864d1087e5a1967f87bf25841daa0656a95"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/games.json",
+      "bytes": 16,
+      "sha256": "bc5b66d8c1161676cd8a4658fa3610a02d098511ec073e0493252fbd7ca30c8c"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/macroforge.json",
+      "bytes": 21,
+      "sha256": "e934d0a03403ce3440c9c2a8ae2741e86ba389168ac10c97d5f9594a831100fd"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/marketing.json",
+      "bytes": 20,
+      "sha256": "7705715b27b8573c9a8ef00b6c7253acb44a7e1815f41da03027bb838e486d0b"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/marketplace.json",
+      "bytes": 22,
+      "sha256": "fdbbfe5c6044cf2a23aa188857b15ae6889fca68064899a715536d145da18f2d"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/montage.json",
+      "bytes": 18,
+      "sha256": "e958f38d2653fa9a9ae9bebe6c99db60f1225085cd04d3b115bfbf9cd5b0db5c"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/orbit.json",
+      "bytes": 16,
+      "sha256": "d6dc5633207a2304de68f7433e8462d1f7a5fd6ab9f99354740c37250aab93dc"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/quotes.json",
+      "bytes": 17,
+      "sha256": "4221a1a2a156cf8d7a64fb00ffdfc270206551bc069e2f7569fda8c5abf0a497"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/reclaim.json",
+      "bytes": 18,
+      "sha256": "363057c1c65422fdd81d50e00e8918bdfcb2df075c083b18ed6a1c1e27c5042e"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/retail.json",
+      "bytes": 17,
+      "sha256": "fe727896d8a40d6454a2dbf48af7bc2dca9ba2edc4f889c6c231e0355ed3bc41"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/talent.json",
+      "bytes": 17,
+      "sha256": "d3dee1bae4aec335ebf11383741cef1ef3f5315184d1a892dbde0c4e92dfadaa"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/tones.json",
+      "bytes": 16,
+      "sha256": "15c6a5265057f14b2173412aa9cb080d31008e788532d362fdb16bb2960c94b1"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/voice.json",
+      "bytes": 16,
+      "sha256": "cb3bc638312ddc1afc92264a466bb7c11713c458f90c15eb3db1fd3c6c725c4f"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/props/workflows.json",
+      "bytes": 20,
+      "sha256": "1543b17d8e5d5b88ec8efb9286d94c706a0d7d9e33c0744516e78cde975b9087"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/askrepos.ts",
+      "bytes": 762,
+      "sha256": "1aa10ed14f13ca74f0dbb2ccbb4a3e7c6635fa12913ca5adc346656ee9bac9ea"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/business.ts",
+      "bytes": 919,
+      "sha256": "2498d34993e8b67bf6347e02692de70c3fd65a51c9f778f33f2649b409905589"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/cake.ts",
+      "bytes": 728,
+      "sha256": "dc6b208da57ad6eaa0c81799a6f0fbddfba7c7cac38fabf96845628156cff504"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/charforge.ts",
+      "bytes": 704,
+      "sha256": "33c77b0e7af49848d0c124817c3ea7abe88af1637e5940b9b7fe6f95a0630f7e"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/downloader.ts",
+      "bytes": 942,
+      "sha256": "9d5b011a4e88986ff392ab2d239edda74f206bd5657b378f79dc90dbcafb8b21"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/editor.ts",
+      "bytes": 811,
+      "sha256": "2159dd501122e366af2cff331ae7190edb916cba2c1c66a49a07381dd3aedab7"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/educate.ts",
+      "bytes": 805,
+      "sha256": "c4c8e1236462ed35f5caf1c427b2a603eca5c7ef70f1e9b35bd5929b6c5eeff3"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/factory.ts",
+      "bytes": 825,
+      "sha256": "fc71763271e06adc50533526d8004076f2e6ee9854cbb5c7de5365b2107276a6"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/flock.ts",
+      "bytes": 812,
+      "sha256": "71e196ec8a6ad3a94c5fa5541cc52403db9c5a8d50289b3010ecf65cb855559f"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/forgeatlas.ts",
+      "bytes": 832,
+      "sha256": "cbb106b77c33ad2134593253332c08f106d6996ebe2a948c4196886e3704f20b"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/games.ts",
+      "bytes": 887,
+      "sha256": "8ab14c0507ec27fc39b4a9d1db4276352847c8537c01bd0339221f0dda69b831"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/macroforge.ts",
+      "bytes": 926,
+      "sha256": "64f38b1731526600b9b2ebe1bd957d5fad0251f30d916f8fff42eea757d50ea5"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/marketing.ts",
+      "bytes": 888,
+      "sha256": "2285901216d0e646d06b2d052a1391ba3830fb539c82177351bbd4886341798e"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/marketplace.ts",
+      "bytes": 893,
+      "sha256": "1bfead6bea408809c5e0f187e0a11509b91ee0c0cfc2e6a6d1262ab62020b134"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/montage.ts",
+      "bytes": 834,
+      "sha256": "b82c247b5715ca2c5ff819f0b3d55c1063576f032c42d5549276806b026bb8f6"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/orbit.ts",
+      "bytes": 871,
+      "sha256": "719d70339551fc77c6f4684305740a8d751af72dca6896aa8f295fc75f25b6e5"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/quotes.ts",
+      "bytes": 741,
+      "sha256": "cfb7649ae5718053a651305dee4ed109977d4e48fd1c7d50d581558951e4fc2e"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/reclaim.ts",
+      "bytes": 852,
+      "sha256": "715bb32da8624079829b9b4d40b2169c28dd605f7a0aaa9b4b8fc3ac44cee5d0"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/retail.ts",
+      "bytes": 915,
+      "sha256": "896b40c3c338ada324b86b30e24ba90d0fb748dbf6a43c100948777896a51922"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/talent.ts",
+      "bytes": 856,
+      "sha256": "3588ec155d8fdd8094b936a9a5743df48bbdcb5d4e72eb881c748f2313134476"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/tones.ts",
+      "bytes": 748,
+      "sha256": "ff9a19b0cfce83b4d0187e8ee2009a10306e48d3cd84de92b9afb06a554cbbb6"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/voice.ts",
+      "bytes": 803,
+      "sha256": "ddfddae75a7ef2eb5a8bcc62e1583e7d40e25624432d22d3e296d37efca41dad"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/segments/workflows.ts",
+      "bytes": 791,
+      "sha256": "48fdf3187d0efbe1d4f1f6b5149c4289d3a83814e341defd868e39c370373e95"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/solo.ts",
+      "bytes": 2470,
+      "sha256": "08d53a6f74f5e44afae708c9632214161b2629bd247d292ef2699bc90996b359"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/stage.ts",
+      "bytes": 3755,
+      "sha256": "08eae2eb8cca04afcd765113765e61a28ff74f0eb61bfb944cbc247f60b348a7"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/stills.ts",
+      "bytes": 1819,
+      "sha256": "5d10a465326b2ccc14f4c0fa44a64c46d6886d00e0e50273f6e080b12e0ec987"
+    },
+    {
+      "path": "studio/scripts/mk-suite-workflows/types.ts",
+      "bytes": 979,
+      "sha256": "4f6911eb41913dc37c791d471b00ee1666ef9fadf69ac2ab29767ae886365d3d"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/check.ts",
+      "bytes": 3066,
+      "sha256": "92de38d71e75ad5ff736538ce2f0eb473454285bdfa6190d6fd8dea3232174cf"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/dsp.ts",
+      "bytes": 19638,
+      "sha256": "789792665077713c81e7b484ea79d45051441ef77dc10cfc33b8ce8f62a0aa0d"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/music.ts",
+      "bytes": 11064,
+      "sha256": "50e25b38343d179ce71e32aa6abe72b96ef58fed4be174ba489404063243a017"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/askrepos.json",
+      "bytes": 19,
+      "sha256": "f398e9b6e07916d9ae460c7fda03beb02eac19acf5a24c6cfb11439db015f27e"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/business.json",
+      "bytes": 19,
+      "sha256": "11ac35201b097196c6b40ffccb6db8bdb778e81bc7c4ee0d4ff902d106d77b62"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/cake.json",
+      "bytes": 15,
+      "sha256": "196faf56b04e6b75754f9b5972077bcd044e68d2b3015424f93a98f1920f5da4"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/charforge.json",
+      "bytes": 20,
+      "sha256": "2eb5ef34a4a3855d95505fc6df488ce245db3b9aed39ab16f25a7f4ac0f4f5a2"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/downloader.json",
+      "bytes": 21,
+      "sha256": "1acc07b0761f1a4af085fdda6b67bf474859e925aec0bebadaac91cb897e4c17"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/editor.json",
+      "bytes": 17,
+      "sha256": "5d36f90d7242d61ff65db9cb19d41f15a1226d104a3f0a5892ee0d1dd393c8ae"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/educate.json",
+      "bytes": 18,
+      "sha256": "7c3afec23176c108b9e1373457c8a6bab59bb0613b551fd15f780c29fd300c00"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/factory.json",
+      "bytes": 18,
+      "sha256": "35a6f8374731dce882f2a7ef2f1cfe2926865bc40b26a8ee0c6e694a5b388682"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/flock.json",
+      "bytes": 16,
+      "sha256": "917e02d461d1eb60947ebae56452a2ad7334e57a91313dccc5e2653f3b736f2f"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/forgeatlas.json",
+      "bytes": 21,
+      "sha256": "33ab7e01bcdac1d1764da1859df90864d1087e5a1967f87bf25841daa0656a95"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/games.json",
+      "bytes": 16,
+      "sha256": "bc5b66d8c1161676cd8a4658fa3610a02d098511ec073e0493252fbd7ca30c8c"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/macroforge.json",
+      "bytes": 21,
+      "sha256": "e934d0a03403ce3440c9c2a8ae2741e86ba389168ac10c97d5f9594a831100fd"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/marketing.json",
+      "bytes": 20,
+      "sha256": "7705715b27b8573c9a8ef00b6c7253acb44a7e1815f41da03027bb838e486d0b"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/marketplace.json",
+      "bytes": 22,
+      "sha256": "fdbbfe5c6044cf2a23aa188857b15ae6889fca68064899a715536d145da18f2d"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/montage.json",
+      "bytes": 18,
+      "sha256": "e958f38d2653fa9a9ae9bebe6c99db60f1225085cd04d3b115bfbf9cd5b0db5c"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/orbit.json",
+      "bytes": 16,
+      "sha256": "d6dc5633207a2304de68f7433e8462d1f7a5fd6ab9f99354740c37250aab93dc"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/quotes.json",
+      "bytes": 17,
+      "sha256": "4221a1a2a156cf8d7a64fb00ffdfc270206551bc069e2f7569fda8c5abf0a497"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/reclaim.json",
+      "bytes": 18,
+      "sha256": "363057c1c65422fdd81d50e00e8918bdfcb2df075c083b18ed6a1c1e27c5042e"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/retail.json",
+      "bytes": 17,
+      "sha256": "fe727896d8a40d6454a2dbf48af7bc2dca9ba2edc4f889c6c231e0355ed3bc41"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/talent.json",
+      "bytes": 17,
+      "sha256": "d3dee1bae4aec335ebf11383741cef1ef3f5315184d1a892dbde0c4e92dfadaa"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/tones.json",
+      "bytes": 16,
+      "sha256": "15c6a5265057f14b2173412aa9cb080d31008e788532d362fdb16bb2960c94b1"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/voice.json",
+      "bytes": 16,
+      "sha256": "cb3bc638312ddc1afc92264a466bb7c11713c458f90c15eb3db1fd3c6c725c4f"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/props/workflows.json",
+      "bytes": 20,
+      "sha256": "1543b17d8e5d5b88ec8efb9286d94c706a0d7d9e33c0744516e78cde975b9087"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/askrepos.ts",
+      "bytes": 756,
+      "sha256": "39a623293ae3f0ae663e05e6ff79d317b5be432344932f286085c20a33f2375a"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/business.ts",
+      "bytes": 913,
+      "sha256": "ef841e2612a90e1956f5932a192ae6c27fa5ded3e1798ff7426b1450696e28dc"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/cake.ts",
+      "bytes": 722,
+      "sha256": "be70aed61f9631bc5146e59626eff1efa70a6b7ba21819889aabf2fa1dab0a5b"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/charforge.ts",
+      "bytes": 698,
+      "sha256": "7d536743e188d42f49e9cc68ae77f5c5fd39c88a39106904ec9757d836852bfe"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/downloader.ts",
+      "bytes": 936,
+      "sha256": "5704c8d844c9c0829b7caa342ceb05f8bf2896f8f47dc4ca8bb5b5d1d70ee3c3"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/editor.ts",
+      "bytes": 805,
+      "sha256": "660e82acff1e9f567a24366038fda202e301b8f43228b3d3d4d4c95d13edd0f3"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/educate.ts",
+      "bytes": 799,
+      "sha256": "99e430344045b5f3b4a89007848f6810952b5a56e62540f0a6798bebd818e1b1"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/factory.ts",
+      "bytes": 819,
+      "sha256": "168c642fce4272dd23200a0f55f885659a1f8071b45fc42d19c2cf008314e3b8"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/flock.ts",
+      "bytes": 806,
+      "sha256": "5d0419ae0ae4f0a74b7641fdc2e62426b5fd2eb930aebe8884926ab4515afd61"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/forgeatlas.ts",
+      "bytes": 826,
+      "sha256": "c86ad6a71e95389ff18a3b88f58e9373869f1995907de4c91c73f21424c87b53"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/games.ts",
+      "bytes": 881,
+      "sha256": "f3298843a24cb45dc0c06b6bb4db2ace4be40c39cdedf13debc52ddb55aeefc1"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/macroforge.ts",
+      "bytes": 920,
+      "sha256": "4c6f77d270bcd2bc3972c3e3781bed09d0f6526e9b33c59d42e34aec094ca4cf"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/marketing.ts",
+      "bytes": 882,
+      "sha256": "d0b1c5fb08dfd86253f71b76074077917a405d6349be025a2a4c3409280d5447"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/marketplace.ts",
+      "bytes": 887,
+      "sha256": "05041ef545d0ed7f5305f0981b98dbf54abe5531b264acc03da7a58dc51f0950"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/montage.ts",
+      "bytes": 828,
+      "sha256": "d23460df0a99149342cc394cdd14dc30e3be20cfd76b02862ee899872d9968c6"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/orbit.ts",
+      "bytes": 865,
+      "sha256": "81ff01fa65e57d7d392bef4b5515fea28a2ba906ea377167658ab40369e87e79"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/quotes.ts",
+      "bytes": 735,
+      "sha256": "6aca2fe88257b4e82c4121fb4502268b65de6e98f62e64ce1ed558170320463a"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/reclaim.ts",
+      "bytes": 846,
+      "sha256": "809ceda56d23a7b8d44668918575dd35992d67aa71c0aba86299f0f6a9f2a2e5"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/retail.ts",
+      "bytes": 909,
+      "sha256": "92a42e94356c02b8db47ca21810af90c3806c4b3477c09e802bc8a20ae67cc8a"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/talent.ts",
+      "bytes": 850,
+      "sha256": "315aff29ff306578280d4ba1e5ff147777e5604c41f6bc93e4ed615fde48904c"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/tones.ts",
+      "bytes": 742,
+      "sha256": "d6704d25b1b62e5dfcd32867d78470f267e2b198c37128009ac9ecd7b8d134b4"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/voice.ts",
+      "bytes": 797,
+      "sha256": "6798b53c84ade8dcae368a0c7ac3a7ee752931f22d2dae156241863e1745c0bb"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/segments/workflows.ts",
+      "bytes": 785,
+      "sha256": "a6d0b5704a68c6520581addae49971a533282020902f563041cd06c037e5f4c2"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/solo.ts",
+      "bytes": 2452,
+      "sha256": "f40ce48d724b969d0b1a4a0c489ea03a7312b0507c9a1a3fd42100533ec992f7"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/stage.ts",
+      "bytes": 3749,
+      "sha256": "c471b953801f14e67b412b9019af799f6b934f7e5848b5a6ad2d12e615c1e74b"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/stills.ts",
+      "bytes": 1807,
+      "sha256": "254a44f01fab8969cfd5c35a002d16871911aaca41edeb517f701a6da7888e2b"
+    },
+    {
+      "path": "studio/scripts/mk-suite-worlds/types.ts",
+      "bytes": 976,
+      "sha256": "979c91de2c3ef645578ebb5729c1fc76499bae6d64cf372da48985843585c35c"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/Reel.tsx",
+      "bytes": 3894,
+      "sha256": "8c3b16784b55dcd44b673e614aaa2e71b6263a35f8f7b646b00b12b74b7415fe"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/Root.tsx",
+      "bytes": 930,
+      "sha256": "46220a98150f96d0c5f8defa211f848cd4db142761d36751ee101ed10d4d9082"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/Solo.tsx",
+      "bytes": 529,
+      "sha256": "93449a7109859f1b6c9c6f48603f73c0b7dbf2f6e0e9c469a4d9b67d8e95139b"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/brand.ts",
+      "bytes": 1773,
+      "sha256": "d72bd080e3d2af20333a737acae83b01f49ea151ef4cf72f7cbca4084d25a582"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/entry.ts",
+      "bytes": 231,
+      "sha256": "b5ba15122858c495020d83245dfe72c3d38f8c67384c1ef083de6ff1f85889c7"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/frame.ts",
+      "bytes": 244,
+      "sha256": "150615a0195e3cb48f48ac394cb268d26a68071945252e8f029e1ae2fbdc3f8d"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/intro/Intro.tsx",
+      "bytes": 5135,
+      "sha256": "e823605ae2205ed4adebbef820fe812382121ac5ac378c088c70350f4ab0bb03"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/outro/Outro.tsx",
+      "bytes": 1928,
+      "sha256": "555950a5d87c59849f186e41880a0577123ce35ff17c8dabcb5300a7cd076ec1"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/askrepos/World.tsx",
+      "bytes": 4848,
+      "sha256": "59be561f2fb17cbfebb7ad6264b0ea6eafb38528cc9b755d23f9af492a060f78"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/askrepos/timing.ts",
+      "bytes": 175,
+      "sha256": "1c27a35e0bdb5ab6e00838602ce4d5f1de9bb5a55ca4587e577274968dc3c43c"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/business/World.tsx",
+      "bytes": 5239,
+      "sha256": "4bc95f1bc2f937bd5458dc3dc6e58adb788d7993b2ffae352d7100ed794e24de"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/business/timing.ts",
+      "bytes": 148,
+      "sha256": "ee424472725c7ef66556ba74ad74efe39c4e8cee684e5da62ae7fe592468cf4e"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/cake/World.tsx",
+      "bytes": 4884,
+      "sha256": "b59cb5406a9d0b9de7bd7b12835b58f4d28737cec1562fb9a7db9a7d704d55b8"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/cake/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/charforge/World.tsx",
+      "bytes": 5052,
+      "sha256": "802fe8bc4f55a25486b46ceaee37cecf289ea6c2202fe6e20e40096209e3c2a6"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/charforge/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/downloader/World.tsx",
+      "bytes": 5126,
+      "sha256": "d7f61663cb467687292fc2ec11a50d93ad4447f7d30538f52b3454f4d0dba97b"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/downloader/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/editor/World.tsx",
+      "bytes": 4543,
+      "sha256": "0c80297c153b3bae93e530e8c2736b906474bdf4a4cdf4e52069204e9e48a12d"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/editor/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/educate/World.tsx",
+      "bytes": 5482,
+      "sha256": "41de081aae6f3c7c0f59180fb43f2aa65d7f0b6282e62130edd4ca47c3467d23"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/educate/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/factory/World.tsx",
+      "bytes": 5371,
+      "sha256": "0d37723a7faf6e1d5cf0c87afcbf827b76ec99cbbba8d366ad069b2ccd76b37f"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/factory/timing.ts",
+      "bytes": 175,
+      "sha256": "c4c1c479b89a9e27e1819b679b56f243e649b2d020d8a5dead988a642c3a6539"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/flock/World.tsx",
+      "bytes": 4457,
+      "sha256": "41faa746d4d302885ab1cee1f279ee4b4b6338ebc4b0fdfc81be4935b608b072"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/flock/timing.ts",
+      "bytes": 148,
+      "sha256": "57e3f04d36267b06625e7cbe80a7862dad0ac7730fc64fed07ba51f5ec5dfcaa"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/forgeatlas/World.tsx",
+      "bytes": 5058,
+      "sha256": "64b988382f1fa12dea11fbb53e1df53f9e0653a5f17d02aa8a7622f2da1c4a81"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/forgeatlas/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/games/World.tsx",
+      "bytes": 5661,
+      "sha256": "b23115a348fdc778034411bee5a82d31dd329c799ccaa591753ad81956c0fbe9"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/games/timing.ts",
+      "bytes": 175,
+      "sha256": "c4c1c479b89a9e27e1819b679b56f243e649b2d020d8a5dead988a642c3a6539"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/index.ts",
+      "bytes": 4691,
+      "sha256": "66d1fe938cabb6706c8322d5e79c03ae5d02d880831a1eb96689e084d3f61f95"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/macroforge/World.tsx",
+      "bytes": 4337,
+      "sha256": "870e6d4cb01539b40dfe26fb821c14b833261e8be2f7e8e2e9d9a4ca2a3051c6"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/macroforge/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/marketing/World.tsx",
+      "bytes": 4563,
+      "sha256": "bc32802c5e746da974182bd6ec4f15ae6efb50f0024e018fb8aaf580563f1888"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/marketing/timing.ts",
+      "bytes": 148,
+      "sha256": "03dcc6be8960b5ce8b8efde7a41d076fecf22b77194d18ab4a01320df6014e4b"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/marketplace/World.tsx",
+      "bytes": 4224,
+      "sha256": "b4e6c8d10a5baac2d4807fa2348e3e414743daeab53014b601940f351fe2e78d"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/marketplace/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/montage/World.tsx",
+      "bytes": 4607,
+      "sha256": "79ce6711e8d3c20e6c0cf229164d7aa46a4c1a1b71650753ab1098ec906b3727"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/montage/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/orbit/World.tsx",
+      "bytes": 4819,
+      "sha256": "97fa87a1b74310042fcfd03a913b315c2e3db5124982cc7d00703fd7d2d95bb8"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/orbit/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/quotes/World.tsx",
+      "bytes": 5896,
+      "sha256": "033ddc92069ccc76fa747d895f0602c435dcd24ed02cef589fb4f4ebfef17039"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/quotes/timing.ts",
+      "bytes": 175,
+      "sha256": "1c27a35e0bdb5ab6e00838602ce4d5f1de9bb5a55ca4587e577274968dc3c43c"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/reclaim/World.tsx",
+      "bytes": 4531,
+      "sha256": "d75f446dd5aa19b0d3940ba38f2cac654ef6b8a9432bad850e87d7c5445a166a"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/reclaim/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/retail/World.tsx",
+      "bytes": 4797,
+      "sha256": "d74dbc8a9c070b160ef1ca51fbfb20299b460016be702425d3bae5bfa07050d4"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/retail/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/talent/World.tsx",
+      "bytes": 5132,
+      "sha256": "89f1ec8866b6c4062357612ac9ec7b6a65d05aef9268298bdbb829589cc1838f"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/talent/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/tones/World.tsx",
+      "bytes": 4529,
+      "sha256": "af5d243e0cf8f58f75adbbcb99d108733fbf5c000d7779fd0f417d678364295c"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/tones/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/voice/World.tsx",
+      "bytes": 5175,
+      "sha256": "8c1899185d39422a62e9b0abd43f5c47f9801d27f3eb29ecfd66eb4f6d930f8b"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/voice/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/workflows/World.tsx",
+      "bytes": 4751,
+      "sha256": "f359e30f802d113acf0e6894964bbd3f6922206f2878d3dbc68c3203cd5e517c"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/segments/workflows/timing.ts",
+      "bytes": 148,
+      "sha256": "03dcc6be8960b5ce8b8efde7a41d076fecf22b77194d18ab4a01320df6014e4b"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/shell/Mark.tsx",
+      "bytes": 383,
+      "sha256": "0f5e19e49412c38c08fbac450d2a04e4436e6b6c7612f984852bf3036964a1fa"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/shell/timing.ts",
+      "bytes": 833,
+      "sha256": "554001869e36b83e5db15200f1d067cbd66beb7b72fa0534f2664b5b0d6f9db6"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/timing.ts",
+      "bytes": 3803,
+      "sha256": "0af16f641a2666eafc8116e1858345c880a81ddd9d91c7be85d56b2505f399ea"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/util.ts",
+      "bytes": 1400,
+      "sha256": "aa631a8f9e34d7c9b6a92d767e34db32df60494d65456252d30022af18179133"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/Reel.tsx",
+      "bytes": 3891,
+      "sha256": "81a31b5842507b492cebc1741caffd406c7d4ad8abe3c10f5270512c77c730bb"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/Root.tsx",
+      "bytes": 925,
+      "sha256": "8256689fc9e6a2bb0b1a34d717662ef0965bab2c6f9815f8cc67a2ff2249616b"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/Solo.tsx",
+      "bytes": 529,
+      "sha256": "93449a7109859f1b6c9c6f48603f73c0b7dbf2f6e0e9c469a4d9b67d8e95139b"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/brand.ts",
+      "bytes": 1774,
+      "sha256": "299fe81e76367ea9da7c9760ef34a5f5e278f4907c65ddf421e6c16ef215e911"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/entry.ts",
+      "bytes": 231,
+      "sha256": "b5ba15122858c495020d83245dfe72c3d38f8c67384c1ef083de6ff1f85889c7"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/frame.ts",
+      "bytes": 244,
+      "sha256": "150615a0195e3cb48f48ac394cb268d26a68071945252e8f029e1ae2fbdc3f8d"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/intro/Intro.tsx",
+      "bytes": 2665,
+      "sha256": "9dac06c2bd9c8708479e9bb3aad2d10a844fe92f9caf26758641c4e8a413f39b"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/outro/Outro.tsx",
+      "bytes": 1911,
+      "sha256": "7c39ed1756d7c5fb9a41f2f69c3116d04f5d244e188a8b22adbe6f5248ecc971"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/askrepos/World.tsx",
+      "bytes": 3200,
+      "sha256": "07e9c72bd7f0acba6d0524bfe8b0303f6053f221d8f2113f1e43b65400f204ff"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/askrepos/timing.ts",
+      "bytes": 175,
+      "sha256": "1c27a35e0bdb5ab6e00838602ce4d5f1de9bb5a55ca4587e577274968dc3c43c"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/business/World.tsx",
+      "bytes": 3735,
+      "sha256": "5b8bd10fc83902e8af4f52ce75079083c43c5a1094ebaad0e66892f76df8a6a7"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/business/timing.ts",
+      "bytes": 148,
+      "sha256": "ee424472725c7ef66556ba74ad74efe39c4e8cee684e5da62ae7fe592468cf4e"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/cake/World.tsx",
+      "bytes": 2700,
+      "sha256": "fce93c73c69530aa92215d5085fa62e695f0bf02991a5e6358b4b86a218cf631"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/cake/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/charforge/World.tsx",
+      "bytes": 2993,
+      "sha256": "6546fa6c9b8305a95c53e84a183e80786a70c6b2229a6193bbe01f2749138d2f"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/charforge/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/downloader/World.tsx",
+      "bytes": 3853,
+      "sha256": "1bcd4f8e5ab9710728ae29efe54d1f3ffc27d215a8ca3f71e3c4c06c211f2a63"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/downloader/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/editor/World.tsx",
+      "bytes": 3042,
+      "sha256": "6a8d2c06bff470633ff5f1108e49597ab223784763bac6774ab4030157ae302c"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/editor/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/educate/World.tsx",
+      "bytes": 2767,
+      "sha256": "2554490cab651507a250d0a77e7c1169d887565a5a4e1e6040cd478145b33fc4"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/educate/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/factory/World.tsx",
+      "bytes": 4418,
+      "sha256": "11cc7d2e808a3cc974f00e5938218c8b62d180ed8e15d6364a432dbd43c56ad2"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/factory/timing.ts",
+      "bytes": 175,
+      "sha256": "c4c1c479b89a9e27e1819b679b56f243e649b2d020d8a5dead988a642c3a6539"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/flock/World.tsx",
+      "bytes": 3280,
+      "sha256": "f26752cb204ff8a4b198a994cd769013f993a6718267686946433cd44d703be4"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/flock/timing.ts",
+      "bytes": 148,
+      "sha256": "57e3f04d36267b06625e7cbe80a7862dad0ac7730fc64fed07ba51f5ec5dfcaa"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/forgeatlas/World.tsx",
+      "bytes": 2734,
+      "sha256": "700ec9f23d8b38928b792429d198e51c31ef24fba696c3a19756d317d7320482"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/forgeatlas/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/games/World.tsx",
+      "bytes": 4375,
+      "sha256": "fba79b30a6a742ed45e93405e093b2c501804bfae64169ab609fde3ac1396b30"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/games/timing.ts",
+      "bytes": 175,
+      "sha256": "c4c1c479b89a9e27e1819b679b56f243e649b2d020d8a5dead988a642c3a6539"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/index.ts",
+      "bytes": 4691,
+      "sha256": "66d1fe938cabb6706c8322d5e79c03ae5d02d880831a1eb96689e084d3f61f95"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/macroforge/World.tsx",
+      "bytes": 3241,
+      "sha256": "8c664c13222641f873d752b2be0c3e4393cc7d8ab427e09573f7ec04ea62abe3"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/macroforge/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/marketing/World.tsx",
+      "bytes": 2839,
+      "sha256": "0fea6d58d43a0a1f9135ad519f95e4c76137dab1b04dbcd7d0570a192bc0cdf2"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/marketing/timing.ts",
+      "bytes": 148,
+      "sha256": "03dcc6be8960b5ce8b8efde7a41d076fecf22b77194d18ab4a01320df6014e4b"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/marketplace/World.tsx",
+      "bytes": 4009,
+      "sha256": "034ed5a7503bbc9b72022e9d77ddc372627e94a0215f5f182b27b9337437110c"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/marketplace/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/montage/World.tsx",
+      "bytes": 2548,
+      "sha256": "e056a7b47eaadc2b80924bd89bbd4e7ad66baec27edc289bc4e02327b2661a6a"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/montage/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/orbit/World.tsx",
+      "bytes": 3069,
+      "sha256": "717aed2a3fc861e240d4d523f95c3ff8eaf4ad49ef3a921f2a50a7813831d8dc"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/orbit/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/quotes/World.tsx",
+      "bytes": 3156,
+      "sha256": "3769a74ae316232c59e2653745ecebd929bc437b45f82d5deccee90d18bad18c"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/quotes/timing.ts",
+      "bytes": 175,
+      "sha256": "1c27a35e0bdb5ab6e00838602ce4d5f1de9bb5a55ca4587e577274968dc3c43c"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/reclaim/World.tsx",
+      "bytes": 3115,
+      "sha256": "b66ef2b83a578af29c51cbd7e985410135f8c87b2e33a233a7875e8065bd491c"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/reclaim/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/retail/World.tsx",
+      "bytes": 3539,
+      "sha256": "77f9503a2649700882139a43d4ed30754c991d1a9a138c2bcc94cad59fea6372"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/retail/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/talent/World.tsx",
+      "bytes": 3100,
+      "sha256": "e9fc2d46f896f1207fe4cc4066fb445ab3f85d4f574133551a2639b3dc7d4a5c"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/talent/timing.ts",
+      "bytes": 148,
+      "sha256": "a120f891f3e0c02c87048b94bcacadee3d5708b1d75bc4623b77edfdad4b6ba5"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/tones/World.tsx",
+      "bytes": 2553,
+      "sha256": "1e375969a4153e1df311008fb5161aed7aa025fdea8066ad9b5e489a6ecb2a75"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/tones/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/voice/World.tsx",
+      "bytes": 2955,
+      "sha256": "dd95177a85a1a6650df910bcd5106cfabd807d64e57d1788d500fa07ade1c9ee"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/voice/timing.ts",
+      "bytes": 145,
+      "sha256": "ca13aba695d02613932c3d0d2851fb565656ae0dad5a7a70daa0d4a2cb489a17"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/workflows/World.tsx",
+      "bytes": 3149,
+      "sha256": "97a33c67b877db029c8492a74cd6a234fea1d4ed0ec8515e3252c822e1a01ffa"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/segments/workflows/timing.ts",
+      "bytes": 148,
+      "sha256": "03dcc6be8960b5ce8b8efde7a41d076fecf22b77194d18ab4a01320df6014e4b"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/shell/Mark.tsx",
+      "bytes": 383,
+      "sha256": "0f5e19e49412c38c08fbac450d2a04e4436e6b6c7612f984852bf3036964a1fa"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/shell/timing.ts",
+      "bytes": 827,
+      "sha256": "46bad465fc31348a68f9b2c4127a315f98bcd45cae91d2ecfc39846826b59418"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/timing.ts",
+      "bytes": 3801,
+      "sha256": "9f2fb9a459f0d169de283ff8adb261c8f585439cf65435fcf05a911136da4210"
+    },
+    {
+      "path": "studio/src/mk-suite-worlds/util.ts",
+      "bytes": 1400,
+      "sha256": "aa631a8f9e34d7c9b6a92d767e34db32df60494d65456252d30022af18179133"
+    },
+    {
+      "path": "studio/tsconfig.json",
+      "bytes": 294,
+      "sha256": "7eddb5be324aaaeeffd533803f879a658df431ae3fe643f309a45e51f9b07881"
+    },
+    {
+      "path": "tools/mk-suite/delivery.mjs",
+      "bytes": 15584,
+      "sha256": "10bc66eec27037f92a4a87381bbf1cdda548579fb5122a33d1c3aca02244d051"
+    },
+    {
+      "path": "tools/mk-suite/film.mjs",
+      "bytes": 1941,
+      "sha256": "e4271b5625d0bb95e2db473c0d48cafa0675cb2a9e66b4132d9611250e820c0a"
+    },
+    {
+      "path": "tools/mk-suite/package.mjs",
+      "bytes": 14216,
+      "sha256": "faad31cb65cc4bb81ebe677f4e626c574ee2869ff703fd24721f0e877b80ddf5"
+    },
+    {
+      "path": "tools/mk-suite/report.mjs",
+      "bytes": 6821,
+      "sha256": "2c798129f4a466abc6fad2c5d750d2ba84c7ecacf69c9b33ca96ac2d2152852c"
+    },
+    {
+      "path": "tools/mk-suite/review.mjs",
+      "bytes": 2682,
+      "sha256": "31d26376d87c03fedade0d73173298da081e728682b0af2b312be200bad70af5"
+    },
+    {
+      "path": "tools/mk-suite/verify.mjs",
+      "bytes": 12445,
+      "sha256": "8e011469946ea88426fc261d17fc75748ddf999573a498ae00f3a3d1bac00cdb"
+    }
+  ],
+  "archiveVerification": {
+    "filesVerified": 257,
+    "entryNamesMatchAllowlist": true,
+    "allContentHashesMatchSource": true
+  },
+  "packagedFileCount": 257
+}

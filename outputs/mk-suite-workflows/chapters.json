@@ -1,0 +1,297 @@
+[
+  {
+    "id": "intro",
+    "name": "See what you can do",
+    "description": "Make it happen.",
+    "features": [],
+    "start": 0,
+    "end": 3.2
+  },
+  {
+    "id": "voice",
+    "name": "MK Voice",
+    "description": "Shape a recording.",
+    "features": [
+      "Import a sample",
+      "Choose a voice model",
+      "Preview the conversion"
+    ],
+    "start": 3.2,
+    "end": 8
+  },
+  {
+    "id": "tones",
+    "name": "MK Tones",
+    "description": "Find the melody.",
+    "features": [
+      "Load a phrase",
+      "Correct the notes",
+      "Export WAV + MIDI"
+    ],
+    "start": 8,
+    "end": 12.8
+  },
+  {
+    "id": "montage",
+    "name": "Montage Pro",
+    "description": "Bring every angle together.",
+    "features": [
+      "Drop camera recordings",
+      "Align audio peaks",
+      "Export XML + markers"
+    ],
+    "start": 12.8,
+    "end": 17.6
+  },
+  {
+    "id": "editor",
+    "name": "MK Editor",
+    "description": "From artwork to print.",
+    "features": [
+      "Place box artwork",
+      "Check fonts + layout",
+      "Send for printer approval"
+    ],
+    "start": 17.6,
+    "end": 20.8
+  },
+  {
+    "id": "charforge",
+    "name": "CharForge Studio",
+    "description": "Make a character your own.",
+    "features": [
+      "Import a character",
+      "Switch garment colours",
+      "Review the variation"
+    ],
+    "start": 20.8,
+    "end": 24
+  },
+  {
+    "id": "forgeatlas",
+    "name": "Forge Atlas",
+    "description": "From library to Blender.",
+    "features": [
+      "Choose an asset",
+      "Inspect its geometry",
+      "Prepare Blender handoff"
+    ],
+    "start": 24,
+    "end": 27.2
+  },
+  {
+    "id": "cake",
+    "name": "Cake Studio",
+    "description": "Design it. Approve it. Make it.",
+    "features": [
+      "Compose a cake",
+      "Prepare the print",
+      "Request customer approval"
+    ],
+    "start": 27.2,
+    "end": 30.4
+  },
+  {
+    "id": "educate",
+    "name": "MK Educate",
+    "description": "Teach from your sources.",
+    "features": [
+      "Choose curriculum",
+      "Review a source page",
+      "Build the workspace"
+    ],
+    "start": 30.4,
+    "end": 35.2
+  },
+  {
+    "id": "downloader",
+    "name": "MK Downloader",
+    "description": "Keep downloads moving.",
+    "features": [
+      "Add files to the queue",
+      "Pause + resume",
+      "Set schedule + speed"
+    ],
+    "start": 35.2,
+    "end": 38.4
+  },
+  {
+    "id": "macroforge",
+    "name": "MacroForge",
+    "description": "Turn repetition into a macro.",
+    "features": [
+      "Record actions",
+      "Edit steps + hotkey",
+      "Run the sequence"
+    ],
+    "start": 38.4,
+    "end": 41.6
+  },
+  {
+    "id": "reclaim",
+    "name": "Reclaim",
+    "description": "See what takes the space.",
+    "features": [
+      "Scan storage",
+      "Review large + duplicate files",
+      "Build a cleaning plan"
+    ],
+    "start": 41.6,
+    "end": 44.8
+  },
+  {
+    "id": "orbit",
+    "name": "Job Engine / Orbit",
+    "description": "Find your next move.",
+    "features": [
+      "Choose sources + region",
+      "Compare role evidence",
+      "Review skill gaps"
+    ],
+    "start": 44.8,
+    "end": 48
+  },
+  {
+    "id": "business",
+    "name": "MK Business OS",
+    "description": "Turn research into a decision.",
+    "features": [
+      "Research a company",
+      "Trace the sources",
+      "Compare cost + time"
+    ],
+    "start": 48,
+    "end": 52.8
+  },
+  {
+    "id": "talent",
+    "name": "Talent Atlas",
+    "description": "Keep hiring evidence in view.",
+    "features": [
+      "Compare candidate + role",
+      "Inspect source evidence",
+      "Send to human review"
+    ],
+    "start": 52.8,
+    "end": 56
+  },
+  {
+    "id": "marketplace",
+    "name": "MK Marketplace",
+    "description": "Compare before you choose.",
+    "features": [
+      "Browse listings",
+      "Compare model + condition",
+      "Save the shortlist"
+    ],
+    "start": 56,
+    "end": 59.2
+  },
+  {
+    "id": "retail",
+    "name": "Retail Ops Hub",
+    "description": "See the next store action.",
+    "features": [
+      "Review orders + stock",
+      "Spot replenishment needs",
+      "Plan the next order"
+    ],
+    "start": 59.2,
+    "end": 62.4
+  },
+  {
+    "id": "quotes",
+    "name": "Quotation Builder",
+    "description": "Make every quote clear.",
+    "features": [
+      "Add catalogue items",
+      "Switch Arabic + English",
+      "Export an A4 quotation"
+    ],
+    "start": 62.4,
+    "end": 65.6
+  },
+  {
+    "id": "workflows",
+    "name": "Managed Workflows",
+    "description": "Move work through approval.",
+    "features": [
+      "Build approval steps",
+      "Review by role",
+      "Trace retries + audit"
+    ],
+    "start": 65.6,
+    "end": 68.8
+  },
+  {
+    "id": "marketing",
+    "name": "Marketing Automation",
+    "description": "Plan the next conversation.",
+    "features": [
+      "Import consented contacts",
+      "Draft a campaign",
+      "Plan follow-ups"
+    ],
+    "start": 68.8,
+    "end": 72
+  },
+  {
+    "id": "askrepos",
+    "name": "ask-repos",
+    "description": "Ask. Then inspect the evidence.",
+    "features": [
+      "Index a repository",
+      "Ask a code question",
+      "Open file + line citations"
+    ],
+    "start": 72,
+    "end": 75.2
+  },
+  {
+    "id": "flock",
+    "name": "Flock Operations",
+    "description": "Know what changed on the farm.",
+    "features": [
+      "Open flock records",
+      "Log a worker update",
+      "Review costs + history"
+    ],
+    "start": 75.2,
+    "end": 78.4
+  },
+  {
+    "id": "factory",
+    "name": "MK Factory",
+    "description": "Take an idea into production.",
+    "features": [
+      "Describe the business",
+      "Review the AI brief",
+      "Approve tasks + releases"
+    ],
+    "start": 78.4,
+    "end": 83.2
+  },
+  {
+    "id": "games",
+    "name": "MK Games",
+    "description": "Your library. Ready to explore.",
+    "features": [
+      "Browse game showcases",
+      "Review a signed update",
+      "Keep a rollback point"
+    ],
+    "start": 83.2,
+    "end": 88
+  },
+  {
+    "id": "outro",
+    "name": "One suite. One monthly subscription.",
+    "description": "",
+    "features": [
+      "Subscription concept; product availability varies.",
+      "Free cores remain free."
+    ],
+    "start": 88,
+    "end": 90
+  }
+]

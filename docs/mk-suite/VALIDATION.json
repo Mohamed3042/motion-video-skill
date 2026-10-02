@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "title": "MK Suite — See what you can do",
+  "video": {
+    "seconds": 90,
+    "frames": 5400,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "colorSpace": "bt709"
+  },
+  "files": [
+    {
+      "file": "mk-suite-workflows.mp4",
+      "bytes": 24793035,
+      "sha256": "50f74b424a8b5983ec2ecbf72b7fa7fe8c449c44ad6f7d22354ef9a922c11102"
+    },
+    {
+      "file": "MK-Suite-Workflows-Share.mp4",
+      "bytes": 11319706,
+      "sha256": "30d82ab70a9e9a4ed262fadadbe74ba607ee5b7a67d63a0bf4e82eaec8267719"
+    }
+  ],
+  "master": {
+    "fullDecode": "passed",
+    "decodedFrames": 5400,
+    "blackIntervals": [],
+    "integratedLufs": -14,
+    "truePeakDbTP": -1.1
+  },
+  "share": {
+    "fullDecode": "passed",
+    "integratedLufs": -14.5,
+    "truePeakDbTP": -1.2
+  },
+  "visualReview": {
+    "workflowPairs": 23,
+    "transitionFrames": 23,
+    "finalExportedFrames": 25,
+    "continuousHumanViewing": false
+  },
+  "sound": {
+    "onsetsWithinOneFrame": 53,
+    "listeningReview": false
+  },
+  "source": {
+    "skill": "motion-video-skill v0.2.0",
+    "upstreamCommit": "2da54524f107cd415dad4c7b52ee33e27df8999f"
+  }
+}
