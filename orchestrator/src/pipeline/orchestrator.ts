@@ -317,7 +317,15 @@ export async function createOrchestrator(o?: {configPath?: string}): Promise<Orc
       }
       // return once agents, gates and renders have actually stopped (child processes are killed on abort)
       const task = running.get(runId);
-      if (task) await Promise.race([task, new Promise((r) => setTimeout(r, 60_000))]);
+      if (task) {
+        let timer: ReturnType<typeof setTimeout> | undefined;
+        try {
+          await Promise.race([task, new Promise<void>((resolve) => { timer = setTimeout(resolve, 60_000); })]);
+        } finally {
+          // A stopped run must not keep CLI/test processes alive for the unused timeout.
+          clearTimeout(timer);
+        }
+      }
       return clone(run);
     },
 

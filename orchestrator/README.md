@@ -234,3 +234,7 @@ MVO_FAKE=1 node bin/mvo.ts dashboard        # the UI on an in-memory fake orches
 ```
 
 `MVO_FAKE=1` swaps in `test/fake-orchestrator.ts` for every command (`MVO_FAKE_TICK` sets the simulation speed in ms, `MVO_FAKE_DIR` sets where the fake stills go). `test/interfaces.test.ts` checks every operation over HTTP, MCP (stdio) and the CLI against it.
+
+The pipeline test renders a real 8-second fixture using loopback mock providers, with no external model calls. Its studio source, run state and per-job Git commits live in a disposable `orchestrator/.test-tmp/` repository. It reuses the studio's installed dependencies without editing the working studio or its `Root.tsx`. Node, Git, ffmpeg/ffprobe, studio dependencies and Remotion's browser are required; fonts may be fetched during rendering.
+
+Set `MVO_TEST_KEEP_PROOF=1` when running the suite to retain the verified fixture MP4 and gate report in `.test-tmp/proof/`. The report's usage figures come from mock responses, not real provider spending.
