@@ -1,0 +1,16 @@
+{
+  "samePathExitCode": 1,
+  "existingOutputExitCode": 1,
+  "originalFinalPreserved": true,
+  "videoPacketsPreserved": true,
+  "sourceVideoPacketHash": "SHA256=328913917e0fb2515f03c244acdf0360dbed26b6931744aac6d9a734cd3a4f0b",
+  "wrappedVideoPacketHash": "SHA256=328913917e0fb2515f03c244acdf0360dbed26b6931744aac6d9a734cd3a4f0b",
+  "fullAudioPacketHash": "SHA256=1a5255e41d027cb7c7513dc3945b1e0cdaf9ed87c54e4a00f5868c60e3b909e8",
+  "shareAudioPacketHash": "SHA256=1a5255e41d027cb7c7513dc3945b1e0cdaf9ed87c54e4a00f5868c60e3b909e8",
+  "wrappedAudioPacketHash": "SHA256=1a5255e41d027cb7c7513dc3945b1e0cdaf9ed87c54e4a00f5868c60e3b909e8",
+  "fullAndShareAudioIdentical": true,
+  "wrapperAudioMatchesVerifiedStream": true,
+  "checkerPass": true,
+  "strictTypecheckPass": true,
+  "temporaryMediaRetained": false
+}

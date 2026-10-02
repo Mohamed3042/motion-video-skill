@@ -2,6 +2,7 @@ import {Composition} from 'remotion';
 import {OpusReel} from './opus/Reel';
 import {MkVoiceReel, MkMontageReel, MkSuiteReel} from './mk/Reels';
 import {MkvReel, MkvWorldSolo} from './mkv/Reel';
+import {OrbitReel, OrbitSectionSolo} from './orbit/Reel';
 // <mvo:imports> (motion orchestrator inserts generated imports below this line)
 import {Compositions as MkSuiteWorkflowsCompositions} from './mk-suite-workflows/Root'; // mvo:mk-suite-workflows
 import {Compositions as MkSuiteWorldsCompositions} from './mk-suite-worlds/Root'; // mvo:mk-suite-worlds
@@ -17,6 +18,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="MkVoiceWorlds" component={MkvReel} durationInFrames={5400} {...hd} />
     {/* debug: one world alone; local frame 0 = composition frame 12 */}
     <Composition id="MkvWorld" component={MkvWorldSolo} durationInFrames={504} defaultProps={{id: 'myvoice' as const}} {...hd} />
+    <Composition id="JobOrbit" component={OrbitReel} durationInFrames={7200} {...hd} />
+    <Composition id="OrbitSection" component={OrbitSectionSolo} durationInFrames={744} defaultProps={{id:'profile' as const}} {...hd} />
     {/* <mvo:compositions> (motion orchestrator inserts generated compositions below this line) */}
     <MkSuiteWorkflowsCompositions />{/* mvo:mk-suite-workflows */}
     <MkSuiteWorldsCompositions />{/* mvo:mk-suite-worlds */}

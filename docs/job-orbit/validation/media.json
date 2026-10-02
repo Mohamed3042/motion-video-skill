@@ -1,0 +1,100 @@
+{
+  "checkedUtc": "2026-10-02T22:50:16.4063417Z",
+  "files": [
+    {
+      "name": "full",
+      "file": "MK-Job-Orbit-1080p60.mp4",
+      "bytes": 103538037,
+      "sha256": "43d17281f85810a0977fdfa51d34ff19b459ec37417cc49ed6f2ee2523824cdf",
+      "seconds": 120,
+      "decodedAudioSeconds": 120,
+      "video": {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "60/1",
+        "nb_frames": "7200",
+        "start_time": "0.000000",
+        "duration": "120.000000",
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bit_rate": "320900",
+        "start_time": "0.000000",
+        "duration": "120.000000"
+      },
+      "lufs": -14,
+      "truePeakDbtp": -1.3,
+      "worldSpreadLu": 0.20000000000000107,
+      "impactCount": 65,
+      "failedOnsets": 0,
+      "maximumAbsoluteOffsetFrames": 0.2571428571428571,
+      "minimumJumpDb": 15.35799238653603,
+      "negativeControl": {
+        "injectedShiftFrames": 2,
+        "rejected": 65,
+        "total": 65
+      },
+      "fullDecodeExitCode": 0,
+      "fullDecodeErrorBytes": 0,
+      "pass": true
+    },
+    {
+      "name": "share",
+      "file": "MK-Job-Orbit-720p60.mp4",
+      "bytes": 18947519,
+      "sha256": "9db4f50cccbdf02b4f163f1fd9cc6fa7fedbc2ef3676c9fdd8dc8babe5736d53",
+      "seconds": 120,
+      "decodedAudioSeconds": 120,
+      "video": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "pix_fmt": "yuv420p",
+        "avg_frame_rate": "60/1",
+        "nb_frames": "7200",
+        "start_time": "0.000000",
+        "duration": "120.000000",
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bit_rate": "320900",
+        "start_time": "0.000000",
+        "duration": "120.000000"
+      },
+      "lufs": -14,
+      "truePeakDbtp": -1.3,
+      "worldSpreadLu": 0.20000000000000107,
+      "impactCount": 65,
+      "failedOnsets": 0,
+      "maximumAbsoluteOffsetFrames": 0.2571428571428571,
+      "minimumJumpDb": 15.35799238653603,
+      "negativeControl": {
+        "injectedShiftFrames": 2,
+        "rejected": 65,
+        "total": 65
+      },
+      "fullDecodeExitCode": 0,
+      "fullDecodeErrorBytes": 0,
+      "pass": true
+    }
+  ],
+  "identicalAudioPackets": true,
+  "listened": false,
+  "visualReviewIncluded": false,
+  "physicalPlaybackIncluded": false,
+  "scope": "Technical metadata, full A/V decode and decoded-audio timing/loudness checks only. Earlier job-orbit.mp4 is superseded."
+}

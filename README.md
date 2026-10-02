@@ -1,5 +1,15 @@
 # motion-video-skill
 
+## MK Job Orbit — ten feature worlds
+
+**[Watch / download the 120-second film and editable ZIP](https://github.com/Mohamed3042/motion-video-skill/releases/tag/job-orbit-v1.0)** · [Chaptered local player](outputs/job-orbit/index.html) · [Editing guide](docs/job-orbit/EDITING.md) · [Verification](docs/job-orbit/PRODUCTION.md)
+
+[![MK Job Orbit: Your next chapter has coordinates](outputs/job-orbit/poster.jpg)](outputs/job-orbit/job-orbit-share.mp4)
+
+A 1080p60 journey from job-search overload through profile evidence, the globe, findings, focus, fit, next proof, market research, employers, agents and the private phone companion. Each world has its own optical illusion, accent and musical arrangement. The 18.9 MB repository preview is 720p60; the release contains the 1080p60 master and complete standalone source ZIP.
+
+All 65 declared sound cues pass timing checks within one frame. The interfaces use fictional examples and illustrate capabilities; they are not live product recordings. Audio was measured, not listened to. See the [product truth notes](docs/job-orbit/PRODUCT-TRUTH.md) and [sampled visual review](docs/job-orbit/PRODUCTION.md).
+
 ## MK Suite product workflow film
 
 **[Watch / download the upgraded 90-second film](https://github.com/Mohamed3042/motion-video-skill/releases/tag/mk-suite-film-v2)** · [Chaptered local player](outputs/mk-suite-workflows/index.html) · [Verification](docs/mk-suite/PRODUCTION.md)
