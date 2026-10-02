@@ -4,6 +4,7 @@ const ARABIC=loadFont('normal',{weights:['400','600'],subsets:['arabic']}).fontF
 import {AbsoluteFill} from 'remotion';
 import {FONT,BODY} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease} from '../../util';
 import {EVENTS} from './timing';
 const T:React.FC<{x:number;y:number;children:React.ReactNode;size?:number;fill?:string;bold?:boolean;anchor?:'start'|'middle'|'end';ar?:boolean}>=({x,y,children,size=30,fill='#2A422D',bold=false,anchor='start',ar=false})=><text x={x} y={y} fontFamily={ar?ARABIC:BODY} fontSize={size} fontWeight={bold?650:400} fill={fill} textAnchor={anchor}>{children}</text>;
@@ -32,6 +33,6 @@ export const World:React.FC=()=>{
  <T x={1052} y={838} size={31} bold>Worker A submitted the update</T><T x={1052} y={884} size={30}>Owner reviewed · added to daily log</T><T x={1052} y={925} size={28} fill="#65764B">Previous entries remain in history</T>
  </g>
  {!saved&&<T x={1024} y={835} size={29} fill="#8F957B">Review the update before recording it.</T>}
- <g transform={`translate(${1587-move*143} ${491+move*146})`}><circle r={16+clamp((f-60)/18)*25} stroke="#C8AD66" strokeWidth="4" fill="none" opacity={saved&&f<79?1-clamp((f-60)/18):0}/><path d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#243C29" strokeWidth="3"/></g>
+ <g transform={`translate(${1587-move*143} ${491+move*146})`}><circle r={16+clamp((f-60)/18)*25} stroke="#C8AD66" strokeWidth="4" fill="none" opacity={saved&&f<79?1-clamp((f-60)/18):0}/><path style={cursorOut(f,74)} d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#243C29" strokeWidth="3"/></g>
  </svg></AbsoluteFill>;
 };

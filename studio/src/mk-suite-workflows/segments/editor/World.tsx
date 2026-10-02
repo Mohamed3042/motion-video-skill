@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease,lerp} from '../../util';
 export const World:React.FC=()=>{const f=useSegFrame(),placed=ease.cubicInOut(clamp((f-25)/35)),checked=ease.cubicOut(clamp((f-60)/32)),handoff=ease.cubicOut(clamp((f-97)/24)),pointer=ease.cubicInOut(clamp((f-33)/27)),rip=clamp((f-60)/20);
 return <AbsoluteFill style={{background:'#EAF0FF',fontFamily:FONT}}><svg width="1920" height="1080">
@@ -20,5 +21,5 @@ return <AbsoluteFill style={{background:'#EAF0FF',fontFamily:FONT}}><svg width="
  {['Artwork placed','Font review','Layout review'].map((t,i)=><g key={t} transform={`translate(1375 ${417+i*83})`}><circle cx="17" cy="-9" r="17" fill={checked>.15*i?'#4C77EA':'#D8E0EF'}/>{checked>.15*i&&<path d="M8 -10L15 -3L28 -19" fill="none" stroke="#FFF" strokeWidth="3"/>}<text x="53" y="2" fontSize="34" fill="#3F609A">{t}</text></g>)}
  <g transform={`translate(1371 ${688+(1-handoff)*35})`} opacity={handoff}><rect width="431" height="189" rx="15" fill="#E4ECFF" stroke="#86A1DD" strokeWidth="2"/><text x="25" y="48" fontSize="32" fontWeight="700" fill="#2F5096">Approval handoff</text><text x="25" y="95" fontSize="29" fill="#5D75A7">Printer review requested</text><text x="25" y="146" fontSize="28" fill="#6B83AF">Proof + artwork + checks</text></g>
  <text x="85" y="991" fontSize="33" fill="#5371AE">Place box artwork. Review the details. Prepare approval.</text>
- <g transform={`translate(${lerp(865,1580,pointer)} ${lerp(544,324,pointer)})`}><circle r={10+rip*39} fill="none" stroke="#4269D9" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#204289" stroke="#FFFFFF" strokeWidth="3"/></g>
+ <g transform={`translate(${lerp(865,1580,pointer)} ${lerp(544,324,pointer)})`}><circle r={10+rip*39} fill="none" stroke="#4269D9" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path style={cursorOut(f,74)} d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#204289" stroke="#FFFFFF" strokeWidth="3"/></g>
  </svg></AbsoluteFill>};

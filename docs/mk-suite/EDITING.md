@@ -23,6 +23,7 @@ The first Remotion run downloads its browser. Fonts are loaded by `@remotion/goo
 | --- | --- |
 | Product visuals, interactions, sample data and labels | `studio/src/mk-suite-workflows/segments/<id>/World.tsx` |
 | A product's impact frames | `studio/src/mk-suite-workflows/segments/<id>/timing.ts` |
+| When the pointer leaves after its last click | `cursorOut(f, frame)` in the scene's `World.tsx`; the helper is `studio/src/mk-suite-workflows/shell/cursor.ts` |
 | A product's synthesized audio | `studio/scripts/mk-suite-workflows/segments/<id>.ts` |
 | Film length, frame ranges, beats and segment IDs | `studio/src/mk-suite-workflows/timing.ts` |
 | Product order, written intent, claim limits | `briefs/mk-suite-workflows.plan.json` and `briefs/mk-suite-workflows.md` |

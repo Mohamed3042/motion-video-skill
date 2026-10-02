@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease,lerp} from '../../util';
 const Rock:React.FC<{x:number;y:number;scale:number;solid:number}>=({x,y,scale,solid})=><g transform={`translate(${x} ${y}) scale(${scale})`} stroke="#9CDDF8" strokeWidth="2"><path d="M-220 110L-142 -70L-62 15L26 -220L193 112L0 224Z" fill="#355F76" fillOpacity={solid}/><path d="M26 -220L49 65L0 224L-62 15Z" fill="#7EAABE" fillOpacity={solid}/><path d="M26 -220L193 112L49 65Z" fill="#D2EAF0" fillOpacity={solid}/><path d="M-142 -70L-119 132L-220 110Z" fill="#87ACBF" fillOpacity={solid}/><path d="M-62 15L-119 132L0 224Z" fill="#23465E" fillOpacity={solid}/><path d="M49 65L193 112L0 224Z" fill="#507B91" fillOpacity={solid}/><path d="M-142 -70L-119 132L49 65L193 112M-220 110L0 224L26 -220" fill="none"/></g>;
 export const World:React.FC=()=>{const f=useSegFrame(),selected=ease.cubicOut(clamp((f-60)/29)),hand=ease.cubicOut(clamp((f-96)/24)),pointer=ease.cubicInOut(clamp((f-32)/28)),rip=clamp((f-60)/20);
@@ -19,5 +20,5 @@ return <AbsoluteFill style={{background:'#0A1B2B',fontFamily:FONT}}><svg width="
  <g><text x="113" y="873" fontSize="30" fill="#8EBBD5">Choose an asset</text><rect x="558" y="844" width="506" height="66" rx="12" fill="#5EBCDF"/><text x="811" y="887" fontSize="34" textAnchor="middle" fontWeight="700" fill="#0E344B">Prepare Blender handoff</text></g>
  <g opacity={hand} transform={`translate(${1115+(1-hand)*35} 839)`}><rect width="682" height="81" rx="12" fill="#1F4A60" stroke="#67B8D6"/><path d="M27 22H57V62H27ZM49 22V32H57" fill="none" stroke="#ABE4F5" strokeWidth="2"/><text x="82" y="34" fontSize="29" fill="#DAF5FF">Blender handoff prepared</text><text x="82" y="65" fontFamily={MONO} fontSize="26" fill="#8EC6DE">demo-rock.glb</text></g>
  <text x="84" y="989" fontSize="33" fill="#92BDD8">Choose an asset. Inspect its geometry. Prepare the handoff.</text>
- <g transform={`translate(${lerp(1010,340,pointer)} ${lerp(531,388,pointer)})`}><circle r={9+rip*37} fill="none" stroke="#B7EBFF" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#EEF9FF" stroke="#1B4862" strokeWidth="3"/></g>
+ <g transform={`translate(${lerp(1010,340,pointer)} ${lerp(531,388,pointer)})`}><circle r={9+rip*37} fill="none" stroke="#B7EBFF" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path style={cursorOut(f,74)} d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#EEF9FF" stroke="#1B4862" strokeWidth="3"/></g>
  </svg></AbsoluteFill>};

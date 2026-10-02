@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,BODY,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease,lerp} from '../../util';
 const notes=[{x:390,y:6,w:132,n:'A'},{x:546,y:4,w:113,n:'C'},{x:680,y:3,w:152,n:'D'},{x:856,y:1,w:130,n:'F'},{x:1012,y:3,w:132,n:'D'},{x:1170,y:4,w:167,n:'C'}];
 export const World:React.FC=()=>{const f=useSegFrame(),snap=ease.cubicInOut(clamp((f-60)/34)),out=ease.cubicOut(clamp((f-128)/27)),cursor=ease.cubicInOut(clamp((f-30)/30)),rip=clamp((f-60)/20);const px=lerp(560,1284,cursor),py=lerp(600,241,cursor),play=clamp((f-99)/135);
@@ -20,5 +21,5 @@ return <AbsoluteFill style={{background:'#FFF2D7',fontFamily:FONT}}><svg width="
  <text x="117" y="880" fontSize="30" fill="#86623C">{snap>.75?'Notes aligned to pitch lanes':'Raw melody ready for correction'}</text>
  <g transform={`translate(1405 ${504+(1-out)*75})`} opacity={out}><rect width="368" height="302" rx="19" fill="#FFFCF0" stroke="#B68B50" strokeWidth="2"/><text x="25" y="51" fontSize="33" fontWeight="700" fill="#6D421D">Export sketch</text>{['melody.wav','melody.mid'].map((t,i)=><g key={t} transform={`translate(24 ${88+i*82})`}><rect width="319" height="66" rx="10" fill={i?'#F9D299':'#F2E2C7'}/><path d="M15 15H42V49H15Z M34 15V23H42" fill="none" stroke="#A65C27" strokeWidth="2"/><text x="60" y="43" fontFamily={MONO} fontSize="28" fill="#623C18">{t}</text></g>)}</g>
  <text x="85" y="976" fontSize="33" fill="#8F6030">Load a phrase.</text><text x="636" y="976" fontSize="33" fill="#8F6030">Correct the notes.</text><text x="1280" y="976" fontSize="33" fill="#8F6030">Export the idea.</text>
- <circle cx={px} cy={py} r={8+rip*36} fill="none" stroke="#8D4318" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><g transform={`translate(${px} ${py})`}><path d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#553418" stroke="#FFEDCF" strokeWidth="3"/></g>
+ <circle cx={px} cy={py} r={8+rip*36} fill="none" stroke="#8D4318" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><g transform={`translate(${px} ${py})`}><path style={cursorOut(f,74)} d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#553418" stroke="#FFEDCF" strokeWidth="3"/></g>
  </svg></AbsoluteFill>};

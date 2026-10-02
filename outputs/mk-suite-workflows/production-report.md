@@ -37,11 +37,11 @@
 | 1:15.2–1:18.4 | Flock Operations | Open flock records → Log a worker update → Review costs + history |
 | 1:18.4–1:23.2 | MK Factory | Describe the business → Review the AI brief → Approve tasks + releases |
 | 1:23.2–1:28.0 | MK Games | Browse game showcases → Review a signed update → Keep a rollback point |
-| 1:28.0–1:30.0 | MK Suite | One suite. One monthly subscription. |
+| 1:28.0–1:30.0 | MK Suite | One suite. One monthly subscription, with a roll call of all 23 products |
 
 ## Verification
 
-Both MP4s passed a full video and audio decode. The master contains all 5,400 frames and has no detected black intervals. Visual review covered two stills per product, 23 transition frames, the intro and outro, and 25 frames extracted from the finished export. Fixes addressed quotation states and totals, crowded Factory and Marketing labels, Voice button spacing, an overlapping Cake proof caption, and the opening headline transition. These are sampled visual checks, not continuous human viewing.
+Both MP4s passed a full video and audio decode. The master contains all 5,400 frames and has no detected black intervals. Visual review covered two stills per product, 23 transition frames, the intro and outro, and 25 frames extracted from the finished export. Fixes addressed quotation states and totals, crowded Factory and Marketing labels, Voice button spacing, an overlapping Cake proof caption, and the opening headline transition. Revision 2.1 moves the pointer off each control after its last click or drag, so result labels and capability limits (for example “No hiring decision made”) are no longer covered, and turns the end card into a roll call of all 23 products. These are sampled visual checks, not continuous human viewing.
 
 The master's AAC audio measures -14 LUFS integrated and -1.1 dBTP; the share copy measures -14.5 LUFS and -1.2 dBTP. All 53 sound onsets at scene boundaries, impacts and hits pass within ±1 frame of their scheduled timing. The original synthesized soundtrack runs at 150 BPM. **The mix has not been listened to.**
 

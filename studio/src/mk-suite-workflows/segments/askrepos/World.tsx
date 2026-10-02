@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,BODY,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease} from '../../util';
 import {EVENTS} from './timing';
 const T:React.FC<{x:number;y:number;children:React.ReactNode;size?:number;fill?:string;bold?:boolean;mono?:boolean;anchor?:'start'|'middle'|'end'}>=({x,y,children,size=30,fill='#DEE9D5',bold=false,mono=false,anchor='start'})=><text x={x} y={y} fontFamily={mono?MONO:BODY} fontSize={size} fontWeight={bold?600:400} fill={fill} textAnchor={anchor}>{children}</text>;
@@ -38,6 +39,6 @@ export const World:React.FC=()=>{
  <T x={1331} y={855} size={28} mono fill="#9BB491">fixture abc1234</T>
  <T x={1331} y={927} size={29} fill="#91AE87">{inspect?'Cited lines highlighted':'Open citation to inspect'}</T>
  </g>
- <g transform={`translate(${cx} ${cy})`}><circle r={17+clamp((f-(f<100?60:120))/16)*24} stroke="#B4F45E" strokeWidth="4" fill="none" opacity={f>=60&&f<77||f>=120&&f<137?1-clamp((f-(f<100?60:120))/16):0}/><path d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#DFFFAC" stroke="#122414" strokeWidth="3"/></g>
+ <g transform={`translate(${cx} ${cy})`}><circle r={17+clamp((f-(f<100?60:120))/16)*24} stroke="#B4F45E" strokeWidth="4" fill="none" opacity={f>=60&&f<77||f>=120&&f<137?1-clamp((f-(f<100?60:120))/16):0}/><path style={cursorOut(f,134)} d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#DFFFAC" stroke="#122414" strokeWidth="3"/></g>
  </svg></AbsoluteFill>;
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BODY,FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {smooth,clamp,lerp} from '../../util';
 
 export const World:React.FC=()=>{
@@ -37,7 +38,7 @@ export const World:React.FC=()=>{
    <rect x="1100" y="789" width="704" height="147" rx="13" fill="#061F34" stroke="#2E5C72"/><text x="1125" y="831" fontSize="29" fill="#92BDCE">START SCHEDULE</text><text x="1125" y="885" fontSize="35" fill="#E0F7FA">{result>.6?'Tonight · 22:00':'Choose a time'}</text><rect x="1707" y="862" width="67" height="35" rx="18" fill={result>.6?'#43DDF1':'#365568'}/><circle cx={1725+result*30} cy="879" r="13" fill="#EDF9FA"/>
    <text x="408" y="977" fontSize="28" fill="#84B7C9">{resumed?'Queue resumed. Schedule uses your awake PC.':'Review files, then resume the paused download.'}</text>
    {f>=60&&f<82?<circle cx="1680" cy="465" r={15+ripple*50} fill="none" stroke="#B9F9FF" strokeWidth="3" opacity={1-ripple}/>:null}
-   <path d="M 0 0 L 0 48 L 13 36 L 24 61 L 36 55 L 24 32 L 43 30 Z" transform={`translate(${px} ${py})`} fill="#F1FCFF" stroke="#12405B" strokeWidth="3"/>
+   <path style={cursorOut(f,74)} d="M 0 0 L 0 48 L 13 36 L 24 61 L 36 55 L 24 32 L 43 30 Z" transform={`translate(${px} ${py})`} fill="#F1FCFF" stroke="#12405B" strokeWidth="3"/>
   </svg>
  </AbsoluteFill>;
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BODY,FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {smooth,clamp,lerp} from '../../util';
 
 const Phone:React.FC<{x:number;y:number;shade:string}>=({x,y,shade})=><g transform={`translate(${x} ${y})`}><rect width="75" height="122" rx="13" fill={shade} stroke="#DEC781" strokeWidth="3"/><rect x="8" y="10" width="59" height="101" rx="8" fill="#40371C"/><path d="M 24 14H51" stroke={shade} strokeWidth="5" strokeLinecap="round"/></g>;
@@ -26,7 +27,7 @@ export const World:React.FC=()=>{
    <rect x="90" y="918" width="1741" height="71" rx="11" fill="#4A3F20" stroke="#87703C"/><text x="118" y="963" fontSize="29" fill="#C3AB69">{saved?'Two sample offers saved. Review sources before deciding.':'Compare the same model. Keep new and used evidence separate.'}</text>
    <g opacity={compare}><path d="M1718 933h21v39l-10-7-11 7Z" fill={saved?'#F2D277':'none'} stroke="#F2D277" strokeWidth="2"/></g>
    {f>=60&&f<82?<circle cx="1655" cy="290" r={18+(f-60)*2} fill="none" stroke="#FFE3A1" strokeWidth="3" opacity={1-(f-60)/22}/>:null}
-   <path d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${f<82?lerp(905,1655,move):lerp(1655,1730,smooth(82,100,f))} ${f<82?lerp(345,290,move)-Math.sin(move*Math.PI)*55:lerp(290,938,smooth(82,100,f))})`} fill="#FFF5D8" stroke="#7E652F" strokeWidth="3"/>
+   <path style={cursorOut(f,112)} d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${f<82?lerp(905,1655,move):lerp(1655,1730,smooth(82,100,f))} ${f<82?lerp(345,290,move)-Math.sin(move*Math.PI)*55:lerp(290,938,smooth(82,100,f))})`} fill="#FFF5D8" stroke="#7E652F" strokeWidth="3"/>
   </svg>
  </AbsoluteFill>;
 };

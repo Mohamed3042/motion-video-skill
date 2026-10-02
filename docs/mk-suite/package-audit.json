@@ -18,7 +18,7 @@
       "audioModules": 23
     }
   ],
-  "relativeImportsChecked": 617,
+  "relativeImportsChecked": 641,
   "missingImports": [],
   "hygiene": [],
   "dependencies": [
@@ -86,8 +86,8 @@
     },
     {
       "path": "docs/mk-suite/EDITING.md",
-      "bytes": 9678,
-      "sha256": "489d5429ac0d2aacd351ecfe0d84de16779903e92d3716112a890a1e6cd9b028"
+      "bytes": 9841,
+      "sha256": "e62b5472d4831990e235e41fc149f7b355a417dd34dc32cdff20033cb572f433"
     },
     {
       "path": "docs/mk-suite/PRODUCT-FACTS.json",
@@ -96,8 +96,8 @@
     },
     {
       "path": "docs/mk-suite/PRODUCTION.md",
-      "bytes": 5609,
-      "sha256": "9b8c5cf9220016fe315e18e13d87827f8c2dae41f99b9397004eda1cd1b0f257"
+      "bytes": 5889,
+      "sha256": "03b8b3c2dee66a1d121dbd367063a5362d74ef81287fdf89201b12b2d78c0d34"
     },
     {
       "path": "docs/mk-suite/REBUILD-CHECK.md",
@@ -106,13 +106,13 @@
     },
     {
       "path": "docs/mk-suite/RELEASE-NOTES.md",
-      "bytes": 1798,
-      "sha256": "9797dad518247dec6bf69be11bd2040718f0c1814d1f026664fadbf99ad9fb02"
+      "bytes": 2256,
+      "sha256": "cc4a73f0cc31d6e7d7a74d1f50bc824617c102882029565ada2b98e2c223eba6"
     },
     {
       "path": "docs/mk-suite/VALIDATION.json",
       "bytes": 1200,
-      "sha256": "c9b24e6ce8f3938375929ca5926fe36ad5f4136196de3dea566f665f944a41df"
+      "sha256": "54c22668ae353bb83807cb0de70737dace1d73ea32d976f7f96e7fdee010f947"
     },
     {
       "path": "package.json",
@@ -741,13 +741,13 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/outro/Outro.tsx",
-      "bytes": 1928,
-      "sha256": "555950a5d87c59849f186e41880a0577123ce35ff17c8dabcb5300a7cd076ec1"
+      "bytes": 2353,
+      "sha256": "b722bb5a6cd0399e6b1b30ead2b5b055a3920c6120b330ced1635ad96158bc5d"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/askrepos/World.tsx",
-      "bytes": 4848,
-      "sha256": "59be561f2fb17cbfebb7ad6264b0ea6eafb38528cc9b755d23f9af492a060f78"
+      "bytes": 4919,
+      "sha256": "d0abd3eed87fd4da07801d9e9c058a4765a10a9ec31e7557d533b23e23af9610"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/askrepos/timing.ts",
@@ -756,8 +756,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/business/World.tsx",
-      "bytes": 5239,
-      "sha256": "4bc95f1bc2f937bd5458dc3dc6e58adb788d7993b2ffae352d7100ed794e24de"
+      "bytes": 5310,
+      "sha256": "3c9037226bf5bca07a4d6a6bfa3a15fe88a5becec26154f9566055329188a9f4"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/business/timing.ts",
@@ -766,8 +766,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/cake/World.tsx",
-      "bytes": 4884,
-      "sha256": "b59cb5406a9d0b9de7bd7b12835b58f4d28737cec1562fb9a7db9a7d704d55b8"
+      "bytes": 4954,
+      "sha256": "d4394219e87c0412beccfd6db6562886d5c5d843a27ab17136917c0abc2687ed"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/cake/timing.ts",
@@ -776,8 +776,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/charforge/World.tsx",
-      "bytes": 5052,
-      "sha256": "802fe8bc4f55a25486b46ceaee37cecf289ea6c2202fe6e20e40096209e3c2a6"
+      "bytes": 5122,
+      "sha256": "2d74638b7644a0d465a3d786648ed7b214e7231652491e74550a7363a0f52861"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/charforge/timing.ts",
@@ -786,8 +786,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/downloader/World.tsx",
-      "bytes": 5126,
-      "sha256": "d7f61663cb467687292fc2ec11a50d93ad4447f7d30538f52b3454f4d0dba97b"
+      "bytes": 5196,
+      "sha256": "8de3c8ad85f6657e557065ef1e06ed16f6aa6ab1e71b603c69bdffaafdcd7a28"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/downloader/timing.ts",
@@ -796,8 +796,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/editor/World.tsx",
-      "bytes": 4543,
-      "sha256": "0c80297c153b3bae93e530e8c2736b906474bdf4a4cdf4e52069204e9e48a12d"
+      "bytes": 4613,
+      "sha256": "df25cc73c87d6f1c6b7553684e67ad7cfa0825541036ba2dc161c1761d0d04f6"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/editor/timing.ts",
@@ -806,8 +806,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/educate/World.tsx",
-      "bytes": 5482,
-      "sha256": "41de081aae6f3c7c0f59180fb43f2aa65d7f0b6282e62130edd4ca47c3467d23"
+      "bytes": 5552,
+      "sha256": "9d1454eec959d080983131b24755ee6d440775e040a3522407e29c8cd4188972"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/educate/timing.ts",
@@ -816,8 +816,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/factory/World.tsx",
-      "bytes": 5371,
-      "sha256": "0d37723a7faf6e1d5cf0c87afcbf827b76ec99cbbba8d366ad069b2ccd76b37f"
+      "bytes": 5442,
+      "sha256": "43f473dc16e60789600207e4d1f21344907d849b2fe8abc644758c8017d29ae0"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/factory/timing.ts",
@@ -826,8 +826,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/flock/World.tsx",
-      "bytes": 4457,
-      "sha256": "41faa746d4d302885ab1cee1f279ee4b4b6338ebc4b0fdfc81be4935b608b072"
+      "bytes": 4527,
+      "sha256": "a229cc23576504fafe87bb766f34738e63e82ae2ec39beb30f1b534a5e46bfe5"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/flock/timing.ts",
@@ -836,8 +836,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/forgeatlas/World.tsx",
-      "bytes": 5058,
-      "sha256": "64b988382f1fa12dea11fbb53e1df53f9e0653a5f17d02aa8a7622f2da1c4a81"
+      "bytes": 5128,
+      "sha256": "f968a9fd9c49c15fbe26a64eb79a627ff9f206f3ed03068f2f77187a4ae3567a"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/forgeatlas/timing.ts",
@@ -846,8 +846,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/games/World.tsx",
-      "bytes": 5661,
-      "sha256": "b23115a348fdc778034411bee5a82d31dd329c799ccaa591753ad81956c0fbe9"
+      "bytes": 5732,
+      "sha256": "bef7ae681a72258df910a6c712331ea36e719cf4b381b672c9f0c8fc473bf3a1"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/games/timing.ts",
@@ -861,8 +861,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/macroforge/World.tsx",
-      "bytes": 4337,
-      "sha256": "870e6d4cb01539b40dfe26fb821c14b833261e8be2f7e8e2e9d9a4ca2a3051c6"
+      "bytes": 4407,
+      "sha256": "6a14d3c96d9200838708a1a0f78570288749ed10c921a54db5c556e49b33130b"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/macroforge/timing.ts",
@@ -871,8 +871,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/marketing/World.tsx",
-      "bytes": 4563,
-      "sha256": "bc32802c5e746da974182bd6ec4f15ae6efb50f0024e018fb8aaf580563f1888"
+      "bytes": 4633,
+      "sha256": "22f5ae0a73dd18099f1e4ffa6408c43c81fc428eabaa12bdb59404e389f8c817"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/marketing/timing.ts",
@@ -881,8 +881,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/marketplace/World.tsx",
-      "bytes": 4224,
-      "sha256": "b4e6c8d10a5baac2d4807fa2348e3e414743daeab53014b601940f351fe2e78d"
+      "bytes": 4295,
+      "sha256": "8d7308e20877c82946201356dae9eed6bc4b98cd82b3e8f749e9e1d2c22ac72a"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/marketplace/timing.ts",
@@ -891,8 +891,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/montage/World.tsx",
-      "bytes": 4607,
-      "sha256": "79ce6711e8d3c20e6c0cf229164d7aa46a4c1a1b71650753ab1098ec906b3727"
+      "bytes": 4677,
+      "sha256": "b13ea99c1bd0ee97355b7832925f5350a3bfbb042899b7cf6aeecb8a3fae1458"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/montage/timing.ts",
@@ -901,8 +901,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/orbit/World.tsx",
-      "bytes": 4819,
-      "sha256": "97fa87a1b74310042fcfd03a913b315c2e3db5124982cc7d00703fd7d2d95bb8"
+      "bytes": 4889,
+      "sha256": "c169d558913e759317f4caeddae5794aabd077812cec95c5c5bb534b654db27e"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/orbit/timing.ts",
@@ -911,8 +911,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/quotes/World.tsx",
-      "bytes": 5896,
-      "sha256": "033ddc92069ccc76fa747d895f0602c435dcd24ed02cef589fb4f4ebfef17039"
+      "bytes": 5967,
+      "sha256": "74a2901e8aff63ab0858d6d70cf1e15e5aef50026ff4e21fb0f5ee00174011b9"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/quotes/timing.ts",
@@ -921,8 +921,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/reclaim/World.tsx",
-      "bytes": 4531,
-      "sha256": "d75f446dd5aa19b0d3940ba38f2cac654ef6b8a9432bad850e87d7c5445a166a"
+      "bytes": 4601,
+      "sha256": "015f1db593067000fa64a91de5ce604cb27627e2bc6ecfb1d60449cc3e77043f"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/reclaim/timing.ts",
@@ -931,8 +931,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/retail/World.tsx",
-      "bytes": 4797,
-      "sha256": "d74dbc8a9c070b160ef1ca51fbfb20299b460016be702425d3bae5bfa07050d4"
+      "bytes": 4867,
+      "sha256": "be42b20c496e438f2fb7d0dd3a7b5e8616e71550da2d88e23c4a61253f2cf7c7"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/retail/timing.ts",
@@ -941,8 +941,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/talent/World.tsx",
-      "bytes": 5132,
-      "sha256": "89f1ec8866b6c4062357612ac9ec7b6a65d05aef9268298bdbb829589cc1838f"
+      "bytes": 5203,
+      "sha256": "1c8d1c57596d274eff60127553204cb921b85a00db94e3a4d70254d30b9ba0ed"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/talent/timing.ts",
@@ -951,8 +951,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/tones/World.tsx",
-      "bytes": 4529,
-      "sha256": "af5d243e0cf8f58f75adbbcb99d108733fbf5c000d7779fd0f417d678364295c"
+      "bytes": 4599,
+      "sha256": "6cff9c1fbac9ef000555b2e3d2839728b0268d4649003c911ad76d5a0d8d6a4d"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/tones/timing.ts",
@@ -961,8 +961,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/voice/World.tsx",
-      "bytes": 5175,
-      "sha256": "8c1899185d39422a62e9b0abd43f5c47f9801d27f3eb29ecfd66eb4f6d930f8b"
+      "bytes": 5245,
+      "sha256": "ceab99eca09687ac5d388a18f7a1e4ff4cb3845dd4f2f47d9f273b7ff07d2f72"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/voice/timing.ts",
@@ -971,8 +971,8 @@
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/workflows/World.tsx",
-      "bytes": 4751,
-      "sha256": "f359e30f802d113acf0e6894964bbd3f6922206f2878d3dbc68c3203cd5e517c"
+      "bytes": 4821,
+      "sha256": "4366ec2e8b519ce68374e8c31b6c8c16e6b3240f7b9251584fda7187dc6be9f3"
     },
     {
       "path": "studio/src/mk-suite-workflows/segments/workflows/timing.ts",
@@ -983,6 +983,11 @@
       "path": "studio/src/mk-suite-workflows/shell/Mark.tsx",
       "bytes": 383,
       "sha256": "0f5e19e49412c38c08fbac450d2a04e4436e6b6c7612f984852bf3036964a1fa"
+    },
+    {
+      "path": "studio/src/mk-suite-workflows/shell/cursor.ts",
+      "bytes": 456,
+      "sha256": "01cf95484ad01887cae38ff2abcfd53bbdc67ccd6d5fe4e174f849a524dee172"
     },
     {
       "path": "studio/src/mk-suite-workflows/shell/timing.ts",
@@ -1316,8 +1321,8 @@
     },
     {
       "path": "tools/mk-suite/report.mjs",
-      "bytes": 6821,
-      "sha256": "2c798129f4a466abc6fad2c5d750d2ba84c7ecacf69c9b33ca96ac2d2152852c"
+      "bytes": 7101,
+      "sha256": "8a9c01f6dd1357ea0baa07c9c70983a92b49dde2d6efdc5ec3f9b6707e25cc58"
     },
     {
       "path": "tools/mk-suite/review.mjs",
@@ -1331,9 +1336,9 @@
     }
   ],
   "archiveVerification": {
-    "filesVerified": 257,
+    "filesVerified": 258,
     "entryNamesMatchAllowlist": true,
     "allContentHashesMatchSource": true
   },
-  "packagedFileCount": 257
+  "packagedFileCount": 258
 }

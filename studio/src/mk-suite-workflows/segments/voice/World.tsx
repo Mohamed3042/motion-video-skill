@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,BODY,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease,lerp} from '../../util';
 const wave=(x:number,y:number,w:number,h:number,variant=0)=><g>{Array.from({length:132},(_,i)=>{const env=.17+.83*Math.abs(Math.sin(i*.071)*Math.sin(i*.163+.8));const a=(.4+.6*Math.abs(Math.sin(i*(variant?.63:.87)+variant)))*env*h;return <rect key={i} x={x+i*w/132} y={y-a/2} width={Math.max(3,w/132-3)} height={a} rx="2" fill={variant?'#B7FFD0':'#46C6A2'}/>})}</g>;
 export const World:React.FC=()=>{const f=useSegFrame(),action=ease.cubicInOut(clamp((f-34)/26)),converted=ease.cubicOut(clamp((f-62)/47)),preview=clamp((f-125)/120),rip=clamp((f-60)/22);const cx=lerp(660,1569,action),cy=lerp(402,549,action);
@@ -25,5 +26,5 @@ return <AbsoluteFill style={{background:'#061910',fontFamily:FONT,color:'#ECFFF4
  <text x="1438" y="441" fontSize="29" fill="#9BC2AA">Choose a voice model</text>
  <rect x="1423" y="499" width="374" height="93" rx="16" fill={f>=60?'#AAFAC6':'#58DBA1'}/><text x="1610" y="554" textAnchor="middle" fontSize="34" fontWeight="700" fill="#113B25">Preview conversion</text>
  <g opacity={converted}><rect x="1423" y="650" width="374" height="190" rx="16" fill="#275C3C"/><text x="1450" y="700" fontSize="32" fill="#DCFFDD">Ready to compare</text><text x="1450" y="750" fontSize="28" fill="#ACE4BD">Original</text><rect x="1597" y="717" width="171" height="48" rx="24" fill="#A1E9BC"/><text x="1682" y="751" textAnchor="middle" fontSize="28" fill="#194328">Converted</text><text x="1450" y="806" fontSize="28" fill="#B1D7BC">Preview the conversion</text></g>
- <circle cx={cx} cy={cy} r={8+rip*39} fill="none" stroke="#D8FFE8" strokeWidth="3" opacity={f>=60&&f<82?1-rip:0}/><g transform={`translate(${cx} ${cy})`}><path d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#FFFFFF" stroke="#183B2B" strokeWidth="3"/></g>
+ <circle cx={cx} cy={cy} r={8+rip*39} fill="none" stroke="#D8FFE8" strokeWidth="3" opacity={f>=60&&f<82?1-rip:0}/><g transform={`translate(${cx} ${cy})`}><path style={cursorOut(f,74)} d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#FFFFFF" stroke="#183B2B" strokeWidth="3"/></g>
  </svg></AbsoluteFill>};

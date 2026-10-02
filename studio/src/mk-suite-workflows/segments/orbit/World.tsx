@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BODY,FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {smooth,clamp,lerp} from '../../util';
 
 export const World:React.FC=()=>{
@@ -30,7 +31,7 @@ export const World:React.FC=()=>{
    <g opacity={link}><path d="M1328 550V712H1425" stroke="#EDBA72" strokeWidth="3" fill="none"/><circle cx="1328" cy="550" r="8" fill="#EDBA72"/><circle cx="1328" cy="638" r="8" fill="#EDBA72"/><text x="1353" y="561" fontSize="29" fill="#CAD7E0">Report · profile file</text><text x="1353" y="649" fontSize="29" fill="#CAD7E0">Map · portfolio file</text><text x="1353" y="737" fontSize="29" fill="#EDC58B">Gaps stay inspectable</text></g>
    <rect x="508" y="867" width="704" height="117" rx="12" fill="#192E42"/><text x="535" y="911" fontSize="31" fill="#C8D5DC">{compared?'Supported facts, with sources.':'Choose sources + region.'}</text><text x="535" y="954" fontSize="28" fill="#90A9B9">Review the evidence before any application.</text>
    {f>=60&&f<82?<circle cx="884" cy="790" r={18+(f-60)*2} fill="none" stroke="#F9D69D" strokeWidth="3" opacity={1-(f-60)/22}/>:null}
-   <path d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${lerp(217,884,move)} ${lerp(371,790,move)-Math.sin(move*Math.PI)*90})`} fill="#FBF0D7" stroke="#6E562F" strokeWidth="3"/>
+   <path style={cursorOut(f,74)} d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${lerp(217,884,move)} ${lerp(371,790,move)-Math.sin(move*Math.PI)*90})`} fill="#FBF0D7" stroke="#6E562F" strokeWidth="3"/>
   </svg>
  </AbsoluteFill>;
 };

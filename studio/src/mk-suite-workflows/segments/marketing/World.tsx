@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,BODY} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease} from '../../util';
 import {EVENTS} from './timing';
 const T:React.FC<{x:number;y:number;children:React.ReactNode;size?:number;fill?:string;bold?:boolean;anchor?:'start'|'middle'|'end'}>=({x,y,children,size=30,fill='#173047',bold=false,anchor='start'})=><text x={x} y={y} fontFamily={BODY} fontSize={size} fontWeight={bold?650:400} fill={fill} textAnchor={anchor}>{children}</text>;
@@ -34,6 +35,6 @@ export const World:React.FC=()=>{
  <circle cx={Number(x)} cy="842" r={i===0?16:12} fill={follow?'#E96C4F':'#B58C78'}/><T x={Number(x)} y={806} size={30} bold>{String(a)}</T><T x={Number(x)} y={892} size={29}>{String(b)}</T></g>)}
  <T x={695} y={951} size={28} fill="#8B624E">Draft only · follow-ups planned · nothing sent</T>
  </g>
- <g transform={`translate(${505+travel*1140} ${879-travel*633})`}><circle r={17+ripple*27} stroke="#E96C4F" strokeWidth="4" fill="none" opacity={made&&f<80?1-ripple:0}/><path d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#173047" strokeWidth="3"/></g>
+ <g transform={`translate(${505+travel*1140} ${879-travel*633})`}><circle r={17+ripple*27} stroke="#E96C4F" strokeWidth="4" fill="none" opacity={made&&f<80?1-ripple:0}/><path style={cursorOut(f,74)} d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#173047" strokeWidth="3"/></g>
  </svg></AbsoluteFill>;
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BODY,FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {smooth,clamp,lerp} from '../../util';
 
 export const World:React.FC=()=>{
@@ -27,7 +28,7 @@ export const World:React.FC=()=>{
    <rect x="1357" y="788" width="449" height="95" rx="11" fill="#E2CFEE"/><text x="1400" y="829" fontSize="29" fontWeight="600" fill="#694386">{queued?'Sent to human review':'Send to human review'}</text><text x="1427" y="866" fontSize="28" fill="#87629F">{queued?'No hiring decision made':'After evidence review'}</text>
    <rect x="89" y="877" width="1200" height="103" rx="12" fill="#E1D5ED"/><text x="119" y="922" fontSize="31" fill="#674F81">Compare candidate + role</text><text x="119" y="960" fontSize="28" fill="#8D73A2">Keep the source, the uncertainty and the reviewer together.</text>
    {f>=60&&f<82?<circle cx="1070" cy="452" r={16+(f-60)*2} fill="none" stroke="#AA82D3" strokeWidth="3" opacity={1-(f-60)/22}/>:null}
-   <path d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${f<82?lerp(463,1070,move):lerp(1070,1580,smooth(82,96,f))} ${f<82?lerp(450,452,move)-Math.sin(move*Math.PI)*60:lerp(452,827,smooth(82,96,f))})`} fill="#FFFFFF" stroke="#845BA7" strokeWidth="3"/>
+   <path style={cursorOut(f,110)} d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${f<82?lerp(463,1070,move):lerp(1070,1580,smooth(82,96,f))} ${f<82?lerp(450,452,move)-Math.sin(move*Math.PI)*60:lerp(452,827,smooth(82,96,f))})`} fill="#FFFFFF" stroke="#845BA7" strokeWidth="3"/>
   </svg>
  </AbsoluteFill>;
 };

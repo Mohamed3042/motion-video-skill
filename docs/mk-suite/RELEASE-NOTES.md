@@ -4,6 +4,12 @@ A rebuilt 90-second, 1080p60 film showing 23 software workflows. Each scene now 
 
 The closing offer remains **One suite. One monthly subscription.** No subscription price is shown.
 
+## Revision 2.1
+
+- After its last click or drag, the pointer glides off the control and fades. Result labels and capability limits such as “No hiring decision made” are no longer covered. One shared helper, `studio/src/mk-suite-workflows/shell/cursor.ts`, handles this for all 23 scenes.
+- The end card now lists all 23 products, in film order and in their own colours, beneath the closing line.
+- Timing, sound events and the soundtrack are unchanged.
+
 ## Included
 
 - `mk-suite-workflows.mp4`: full-quality H.264/AAC master.

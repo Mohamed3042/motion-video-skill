@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease,lerp} from '../../util';
 export const World:React.FC=()=>{const f=useSegFrame(),reviewed=ease.cubicOut(clamp((f-60)/22)),workspace=ease.cubicOut(clamp((f-98)/25)),pointer=ease.cubicInOut(clamp((f-30)/30)),rip=clamp((f-60)/20),flow=ease.cubicInOut(clamp((f-81)/32));
 return <AbsoluteFill style={{background:'#F2EDD9',fontFamily:FONT}}><svg width="1920" height="1080">
@@ -25,5 +26,5 @@ return <AbsoluteFill style={{background:'#F2EDD9',fontFamily:FONT}}><svg width="
  {workspace<.1&&<g><rect x="1155" y="366" width="648" height="413" rx="15" fill="#F4F2E6" stroke="#D5D8CE" strokeDasharray="7 9"/><text x="1479" y="555" textAnchor="middle" fontSize="33" fill="#9AABA8">Review a source to begin.</text><text x="1479" y="604" textAnchor="middle" fontSize="29" fill="#A4B0AB">Your evidence stays attached.</text></g>}
  {f>81&&f<113&&<g transform={`translate(${lerp(829,1351,flow)} ${lerp(473,430,flow)})`} opacity={Math.sin(flow*Math.PI)}><rect x="-187" y="-39" width="374" height="77" rx="13" fill="#F4DE99" stroke="#B9A265"/><text textAnchor="middle" y="11" fontSize="29" fill="#556E58">Reviewed excerpt</text></g>}
  <text x="85" y="990" fontSize="33" fill="#6E7D95">Choose the curriculum. Review the page. Build the workspace.</text>
- <g transform={`translate(${lerp(768,797,pointer)} ${lerp(489,875,pointer)})`}><circle r={9+rip*38} fill="none" stroke="#426493" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#37568B" stroke="#FFFFFF" strokeWidth="3"/></g>
+ <g transform={`translate(${lerp(768,797,pointer)} ${lerp(489,875,pointer)})`}><circle r={9+rip*38} fill="none" stroke="#426493" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path style={cursorOut(f,74)} d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#37568B" stroke="#FFFFFF" strokeWidth="3"/></g>
  </svg></AbsoluteFill>};

@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BODY,FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {smooth,clamp,lerp} from '../../util';
 
 export const World:React.FC=()=>{
@@ -29,7 +30,7 @@ export const World:React.FC=()=>{
    <text x="902" y="832" fontSize="29" fill="#7F644A">{run>.98?'Sequence replayed in the selected demo window.':'Your own steps, in a chosen window.'}</text>
    <rect x="102" y="911" width="1726" height="75" rx="12" fill="#3E291B" stroke="#785435"/><text x="129" y="959" fontSize="30" fill="#EAC6A6">Record actions</text><text x="650" y="959" fontSize="30" fill="#EAC6A6">Edit steps + hotkey</text><text x="1300" y="959" fontSize="30" fill="#FFAD74">Run the sequence</text>
    {f>=60&&f<83?<circle cx="1690" cy="242" r={18+(f-60)*2} fill="none" stroke="#FFE0B4" strokeWidth="3" opacity={1-(f-60)/23}/>:null}
-   <path d="M0 0V46L13 35L23 59L35 53L23 31L41 29Z" transform={`translate(${lerp(628,1690,move)} ${lerp(572,242,move)-Math.sin(move*Math.PI)*65})`} fill="#FFF4E1" stroke="#5B351F" strokeWidth="3"/>
+   <path style={cursorOut(f,74)} d="M0 0V46L13 35L23 59L35 53L23 31L41 29Z" transform={`translate(${lerp(628,1690,move)} ${lerp(572,242,move)-Math.sin(move*Math.PI)*65})`} fill="#FFF4E1" stroke="#5B351F" strokeWidth="3"/>
   </svg>
  </AbsoluteFill>;
 };

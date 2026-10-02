@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,BODY,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease} from '../../util';
 import {EVENTS} from './timing';
 const T:React.FC<{x:number;y:number;children:React.ReactNode;size?:number;fill?:string;bold?:boolean;anchor?:'start'|'middle'|'end'}>=({x,y,children,size=30,fill='#F2EAFE',bold=false,anchor='start'})=><text x={x} y={y} fontFamily={BODY} fontSize={size} fontWeight={bold?650:400} fill={fill} textAnchor={anchor}>{children}</text>;
@@ -37,6 +38,6 @@ export const World:React.FC=()=>{
  <T x={953} y={887} size={29}>Rollback snapshot</T><T x={1765} y={887} size={31} fill="#B7E792" anchor="end">{update?'demo-001 retained':'Previous version'}</T>
  <T x={953} y={928} size={28} fill="#92A0B2">Review integrity and recovery before changing versions.</T>
  </g>
- <g transform={`translate(${cx} ${cy})`}><circle r={16+clamp((f-(f<100?60:120))/17)*26} stroke="#EB9DFA" strokeWidth="4" fill="none" opacity={f>=60&&f<78||f>=120&&f<138?1-clamp((f-(f<100?60:120))/17):0}/><path d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FAE5FF" stroke="#1D1635" strokeWidth="3"/></g>
+ <g transform={`translate(${cx} ${cy})`}><circle r={16+clamp((f-(f<100?60:120))/17)*26} stroke="#EB9DFA" strokeWidth="4" fill="none" opacity={f>=60&&f<78||f>=120&&f<138?1-clamp((f-(f<100?60:120))/17):0}/><path style={cursorOut(f,134)} d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FAE5FF" stroke="#1D1635" strokeWidth="3"/></g>
  </svg></AbsoluteFill>;
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,BODY,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease} from '../../util';
 import {EVENTS} from './timing';
 const T:React.FC<{x:number;y:number;children:React.ReactNode;size?:number;fill?:string;bold?:boolean;anchor?:'start'|'middle'|'end'}>=({x,y,children,size=30,fill='#E8EBEF',bold=false,anchor='start'})=><text x={x} y={y} fontFamily={BODY} fontSize={size} fontWeight={bold?650:400} fill={fill} textAnchor={anchor}>{children}</text>;
@@ -32,6 +33,6 @@ export const World:React.FC=()=>{
  <rect x="641" y="814" width="599" height="130" rx="9" fill="#1B2331"/><T x={665} y={858} size={31} bold>Implementation + validation</T><T x={665} y={908} size={29} fill="#FFB989">Tasks assigned after review</T>
  <rect x="1264" y="814" width="530" height="130" rx="9" fill="#1B2331"/><T x={1288} y={858} size={31} bold>Release record</T><T x={1288} y={908} size={29} fill="#FFB989">Draft · requires validation</T>
  </g>
- <g transform={`translate(${cx} ${cy})`}><circle r={16+clamp((f-(f<100?60:120))/17)*25} stroke="#FF9250" strokeWidth="4" fill="none" opacity={f>=60&&f<78||f>=120&&f<138?1-clamp((f-(f<100?60:120))/17):0}/><path d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#152536" strokeWidth="3"/></g>
+ <g transform={`translate(${cx} ${cy})`}><circle r={16+clamp((f-(f<100?60:120))/17)*25} stroke="#FF9250" strokeWidth="4" fill="none" opacity={f>=60&&f<78||f>=120&&f<138?1-clamp((f-(f<100?60:120))/17):0}/><path style={cursorOut(f,134)} d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#152536" strokeWidth="3"/></g>
  </svg></AbsoluteFill>;
 };

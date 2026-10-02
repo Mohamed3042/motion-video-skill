@@ -41,11 +41,11 @@ const md=`# MK Suite — See what you can do
 | --- | --- | --- |
 | 0:00.0–0:03.2 | MK Suite | Sound, timeline and document preview |
 ${plan.segments.map(s=>`| ${stamp(s.startFrame)}–${stamp(s.endFrame)} | ${s.name} | ${s.copy.slice(2).join(' → ')} |`).join('\n')}
-| 1:28.0–1:30.0 | MK Suite | One suite. One monthly subscription. |
+| 1:28.0–1:30.0 | MK Suite | One suite. One monthly subscription, with a roll call of all 23 products |
 
 ## Verification
 
-Both MP4s passed a full video and audio decode. The master contains all 5,400 frames and has no detected black intervals. Visual review covered two stills per product, 23 transition frames, the intro and outro, and 25 frames extracted from the finished export. Fixes addressed quotation states and totals, crowded Factory and Marketing labels, Voice button spacing, an overlapping Cake proof caption, and the opening headline transition. These are sampled visual checks, not continuous human viewing.
+Both MP4s passed a full video and audio decode. The master contains all 5,400 frames and has no detected black intervals. Visual review covered two stills per product, 23 transition frames, the intro and outro, and 25 frames extracted from the finished export. Fixes addressed quotation states and totals, crowded Factory and Marketing labels, Voice button spacing, an overlapping Cake proof caption, and the opening headline transition. Revision 2.1 moves the pointer off each control after its last click or drag, so result labels and capability limits (for example “No hiring decision made”) are no longer covered, and turns the end card into a roll call of all 23 products. These are sampled visual checks, not continuous human viewing.
 
 The master's AAC audio measures ${qc.audio.integratedLufs} LUFS integrated and ${qc.audio.truePeakDbTP} dBTP; the share copy measures ${lufs} LUFS and ${tp} dBTP. All 53 sound onsets at scene boundaries, impacts and hits pass within ±1 frame of their scheduled timing. The original synthesized soundtrack runs at 150 BPM. **The mix has not been listened to.**
 

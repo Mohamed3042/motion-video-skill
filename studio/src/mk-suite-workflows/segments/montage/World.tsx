@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease,lerp} from '../../util';
 const peaks=(x:number,y:number,colour:string)=><g>{Array.from({length:79},(_,i)=>{const h=9+Math.abs(Math.sin(i*1.37))*18+Math.exp(-(((i-27)/1.45)**2))*61;return <rect key={i} x={x+i*14} y={y-h/2} width="7" height={h} rx="2" fill={colour}/>})}</g>;
 export const World:React.FC=()=>{const f=useSegFrame(),aligned=ease.cubicInOut(clamp((f-60)/38)),exported=ease.cubicOut(clamp((f-139)/27)),pointer=ease.cubicInOut(clamp((f-29)/31)),rip=clamp((f-60)/20);const active=f>121?1:0;
@@ -18,5 +19,5 @@ return <AbsoluteFill style={{background:'#1B0711',fontFamily:FONT}}><svg width="
  <path d="M875 630V912" stroke="#FFF2D8" strokeWidth="3"/><path d="M862 628H888L875 644Z" fill="#FFF2D8"/>
  <g transform={`translate(${1415+(1-exported)*55} 300)`} opacity={exported}><rect width="381" height="241" rx="17" fill="#FFF2E6" stroke="#E7AABB" strokeWidth="2"/><text x="24" y="51" fontSize="34" fill="#69273D" fontWeight="700">Editing handoff</text><text x="24" y="101" fontFamily={MONO} fontSize="29" fill="#954C63">session.xml</text><text x="24" y="148" fontFamily={MONO} fontSize="28" fill="#954C63">markers.csv</text><path d="M26 190L38 202L62 176" fill="none" stroke="#97576A" strokeWidth="5"/><text x="82" y="203" fontSize="28" fill="#69273D">Export prepared</text></g>
  <text x="88" y="989" fontSize="33" fill="#EBA2B7">Drop recordings. Align the peaks. Choose the angle.</text>
- <g transform={`translate(${lerp(694,1261,pointer)} ${lerp(807,244,pointer)})`}><circle r={9+rip*37} fill="none" stroke="#FFE3E9" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#FFF6F6" stroke="#5D263D" strokeWidth="3"/></g>
+ <g transform={`translate(${lerp(694,1261,pointer)} ${lerp(807,244,pointer)})`}><circle r={9+rip*37} fill="none" stroke="#FFE3E9" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path style={cursorOut(f,74)} d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#FFF6F6" stroke="#5D263D" strokeWidth="3"/></g>
  </svg></AbsoluteFill>};

@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease,lerp,mixHex} from '../../util';
 export const World:React.FC=()=>{const f=useSegFrame(),change=ease.cubicInOut(clamp((f-60)/28)),review=ease.cubicOut(clamp((f-91)/25)),pointer=ease.cubicInOut(clamp((f-29)/31)),rip=clamp((f-60)/20);const col=mixHex('#9B78C8','#E2A072',change),turn=Math.sin(clamp((f-96)/45)*Math.PI)*.1;
 return <AbsoluteFill style={{background:'#150C24',fontFamily:FONT}}><svg width="1920" height="1080">
@@ -26,5 +27,5 @@ return <AbsoluteFill style={{background:'#150C24',fontFamily:FONT}}><svg width="
  <rect x="1330" y="540" width="437" height="80" rx="13" fill="#4B335F"/><text x="1550" y="591" textAnchor="middle" fontSize="34" fill="#EAD4FF">Review the variation</text>
  <g opacity={review} transform={`translate(1330 ${681+(1-review)*20})`}><rect width="437" height="204" rx="16" fill="#3E294D" stroke="#AF86CA"/><text x="24" y="48" fontSize="34" fill="#F7E4FF">Material variant</text><rect x="25" y="76" width="50" height="50" rx="8" fill="#E2A072"/><text x="96" y="111" fontSize="29" fill="#E9CCB4">Warm clay jacket</text><text x="24" y="172" fontSize="28" fill="#B69BCB">Prepared character retained</text></g>
  <text x="86" y="990" fontSize="33" fill="#C6A4E3">Import the character. Change the garment. Inspect the result.</text>
- <g transform={`translate(${lerp(889,1600,pointer)} ${lerp(506,443,pointer)})`}><circle r={9+rip*38} fill="none" stroke="#FFF1E7" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#FFFFFF" stroke="#51316B" strokeWidth="3"/></g>
+ <g transform={`translate(${lerp(889,1600,pointer)} ${lerp(506,443,pointer)})`}><circle r={9+rip*38} fill="none" stroke="#FFF1E7" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path style={cursorOut(f,74)} d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#FFFFFF" stroke="#51316B" strokeWidth="3"/></g>
  </svg></AbsoluteFill>};

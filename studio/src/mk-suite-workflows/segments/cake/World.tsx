@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease,lerp,mixHex} from '../../util';
 const Cake:React.FC<{x:number;y:number;s:number;colour:string;topper:number}>=({x,y,s,colour,topper})=><g transform={`translate(${x} ${y}) scale(${s})`}><ellipse cy="52" rx="235" ry="45" fill="#E6BCC8"/><ellipse cy="39" rx="232" ry="43" fill="#FFF7F0" stroke="#BE8297"/>{[0,1,2].map(i=>{const r=192-i*43,yy=-i*97;return <g key={i} transform={`translate(0 ${yy})`}><path d={`M${-r} -69V10A${r} 38 0 0 0 ${r} 10V-69Z`} fill={colour} stroke="#B76887"/><ellipse cy="-69" rx={r} ry="36" fill="#FFF3F5" stroke="#D19AAF"/>{Array.from({length:13},(_,j)=>{const a=j/12*Math.PI;return <circle key={j} cx={Math.cos(a)*r*.94} cy={-69+Math.sin(a)*32} r="7" fill="#FFF9F7"/>})}</g>})}<g opacity={topper}><path d="M0 -313L9 -287L35 -287L14 -270L22 -245L0 -262L-22 -245L-14 -270L-35 -287L-9 -287Z" fill="#C3984A"/><path d="M0 -253V-223" stroke="#A78244" strokeWidth="3"/></g></g>;
 export const World:React.FC=()=>{const f=useSegFrame(),colour=ease.cubicInOut(clamp((f-60)/24)),proof=ease.cubicOut(clamp((f-85)/22)),pointer=ease.cubicInOut(clamp((f-30)/30)),rip=clamp((f-60)/20),c=mixHex('#D3C1D7','#E698B8',colour);
@@ -22,5 +23,5 @@ return <AbsoluteFill style={{background:'#FCE9ED',fontFamily:FONT}}><svg width="
  <rect x="1236" y="794" width="566" height="94" rx="15" fill={proof>.8?'#F2CCDA':'#F6E7EC'} stroke="#D7A6B9"/>
  <text x="1519" y="831" textAnchor="middle" fontSize="29" fill="#8E4D69">{proof>.8?'Approval draft ready':'Request customer approval'}</text><text x="1519" y="869" textAnchor="middle" fontSize="27" fill="#A86E88">{proof>.8?'Revision-bound design proof':'Review before production'}</text>
  <text x="85" y="989" fontSize="33" fill="#9B5C77">Style the cake. Prepare a proof. Request customer approval.</text>
- <g transform={`translate(${lerp(850,264,pointer)} ${lerp(571,433,pointer)})`}><circle r={9+rip*37} fill="none" stroke="#AB567A" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#8C4564" stroke="#FFF5F6" strokeWidth="3"/></g>
+ <g transform={`translate(${lerp(850,264,pointer)} ${lerp(571,433,pointer)})`}><circle r={9+rip*37} fill="none" stroke="#AB567A" strokeWidth="3" opacity={f>=60&&f<80?1-rip:0}/><path style={cursorOut(f,74)} d="M0 0V39L11 29L23 49L34 42L22 23H39Z" fill="#8C4564" stroke="#FFF5F6" strokeWidth="3"/></g>
  </svg></AbsoluteFill>};

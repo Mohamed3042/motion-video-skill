@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BODY,FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {smooth,clamp,lerp} from '../../util';
 
 export const World:React.FC=()=>{
@@ -29,7 +30,7 @@ export const World:React.FC=()=>{
    <text x="945" y="792" fontSize="29" fill="#CFA280">Change an input. Review the scenario.</text>
    <rect x="945" y="834" width="858" height="120" rx="10" fill="#291D18"/><text x="969" y="880" fontSize="32" fill="#F3C697">{change>.9?'Scenario updated for 24 requests.':'Research first. Model the assumptions.'}</text><text x="969" y="925" fontSize="28" fill="#AC8870">Validate needs, costs and time with the business.</text>
    {[60,120].map(hit=>f>=hit&&f<hit+22?<circle key={hit} cx={hit===60?645:1307} cy={hit===60?565:719} r={16+(f-hit)*2} fill="none" stroke="#FFD6A9" strokeWidth="3" opacity={1-(f-hit)/22}/>:null)}
-   <path d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${pointerX} ${pointerY})`} fill="#FFF0DE" stroke="#6B4229" strokeWidth="3"/>
+   <path style={cursorOut(f,180)} d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${pointerX} ${pointerY})`} fill="#FFF0DE" stroke="#6B4229" strokeWidth="3"/>
   </svg>
  </AbsoluteFill>;
 };

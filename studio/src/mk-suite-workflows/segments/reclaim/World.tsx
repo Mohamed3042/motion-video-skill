@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BODY,FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {smooth,clamp,lerp} from '../../util';
 
 export const World:React.FC=()=>{
@@ -31,7 +32,7 @@ export const World:React.FC=()=>{
    <rect x="827" y="745" width="994" height="70" rx="12" fill={selected?'#527B3F':'#6F9253'}/><text x="1087" y="791" fontSize="34" fontWeight="600" fill="#F8FFF1">{selected?'Cleaning plan prepared':'Build a cleaning plan'}</text>
    <g opacity={action} transform={`translate(0 ${(1-action)*55})`}><rect x="103" y="855" width="1718" height="125" rx="15" fill="#DFE9D1" stroke="#A9BD92" strokeWidth="2"/><text x="128" y="902" fontSize="35" fontWeight="600" fill="#355836">2 files selected for review</text><text x="129" y="948" fontSize="29" fill="#637859">120 MB in this sample plan. No files moved or deleted.</text><rect x="1536" y="885" width="253" height="63" rx="9" fill="#F7FBF1" stroke="#93AB7C"/><text x="1573" y="927" fontSize="30" fill="#486C3A">Review plan</text></g>
    {f>=60&&f<82?<circle cx="1276" cy="780" r={16+(f-60)*2} fill="none" stroke="#ADC892" strokeWidth="3" opacity={1-(f-60)/22}/>:null}
-   <path d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${lerp(524,1276,move)} ${lerp(606,780,move)-Math.sin(move*Math.PI)*70})`} fill="#FBFFF4" stroke="#486F35" strokeWidth="3"/>
+   <path style={cursorOut(f,74)} d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${lerp(524,1276,move)} ${lerp(606,780,move)-Math.sin(move*Math.PI)*70})`} fill="#FBFFF4" stroke="#486F35" strokeWidth="3"/>
   </svg>
  </AbsoluteFill>;
 };

@@ -4,6 +4,7 @@ const ARABIC=loadFont('normal',{weights:['400','600'],subsets:['arabic']}).fontF
 import {AbsoluteFill} from 'remotion';
 import {FONT,BODY,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease} from '../../util';
 import {EVENTS} from './timing';
 
@@ -50,6 +51,6 @@ export const World:React.FC=()=>{
  <path d="M34 525 H588" stroke="#CDC2A6"/><T x={35} y={578} size={28} fill="#74796E">Sample quotation · no company artwork</T>
  <g opacity={exportP}><rect x="27" y="621" width="568" height="80" rx="7" fill="#E3EDDC"/><T x={48} y={672} size={31} bold fill="#375E4D">quotation-demo.pdf</T><path d="M534 651 L546 663 L568 638" stroke="#375E4D" strokeWidth="4" fill="none"/></g>
  </g>
- <g transform={`translate(${cx} ${cy})`}><circle r={15+ripple*23} fill="none" stroke="#D39D39" strokeWidth="4" opacity={pulse?1-ripple:0}/><path d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#172D43" strokeWidth="3"/></g>
+ <g transform={`translate(${cx} ${cy})`}><circle r={15+ripple*23} fill="none" stroke="#D39D39" strokeWidth="4" opacity={pulse?1-ripple:0}/><path style={cursorOut(f,134)} d="M0 0 V36 L10 27 L19 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#172D43" strokeWidth="3"/></g>
  </svg></AbsoluteFill>;
 };

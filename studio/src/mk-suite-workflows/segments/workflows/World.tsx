@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FONT,BODY,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {clamp,ease} from '../../util';
 import {EVENTS} from './timing';
 const T:React.FC<{x:number;y:number;children:React.ReactNode;size?:number;fill?:string;bold?:boolean;anchor?:'start'|'middle'|'end'}>=({x,y,children,size=30,fill='#2F2855',bold=false,anchor='start'})=><text x={x} y={y} fontFamily={BODY} fontSize={size} fontWeight={bold?650:400} fill={fill} textAnchor={anchor}>{children}</text>;
@@ -32,6 +33,6 @@ export const World:React.FC=()=>{
  <rect x="1311" y="482" width="480" height="87" rx="11" fill={approved?'#49673D':'#7053A8'}/><T x={1551} y={539} size={35} bold fill="#FFFFFF" anchor="middle">{approved?'Approval recorded':'Approve request'}</T>
  <T x={1311} y={628} size={30} bold>Outbox + retry policy</T><T x={1311} y={677} size={29}>Delivery: not connected</T><T x={1311} y={724} size={29}>Retries: manual review</T>
  <rect x="1311" y="790" width="480" height="145" rx="10" fill="#E5DEEF"/><T x={1335} y={836} size={29} bold>Human decision retained</T><T x={1335} y={881} size={28}>Approval and delivery</T><T x={1335} y={917} size={28}>have separate audit records.</T>
- <g transform={`translate(${853+cursor*717} ${584-cursor*67})`}><circle r={16+ripple*28} fill="none" stroke="#B294F3" strokeWidth="4" opacity={f>=60&&f<80?1-ripple:0}/><path d="M0 0 V37 L10 27 L20 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#35264F" strokeWidth="3"/></g>
+ <g transform={`translate(${853+cursor*717} ${584-cursor*67})`}><circle r={16+ripple*28} fill="none" stroke="#B294F3" strokeWidth="4" opacity={f>=60&&f<80?1-ripple:0}/><path style={cursorOut(f,74)} d="M0 0 V37 L10 27 L20 45 L28 40 L19 23 H34 Z" fill="#FFFFFF" stroke="#35264F" strokeWidth="3"/></g>
  </svg></AbsoluteFill>;
 };

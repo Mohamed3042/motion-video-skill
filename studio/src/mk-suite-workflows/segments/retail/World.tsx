@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {BODY,FONT,MONO} from '../../brand';
 import {useSegFrame} from '../../frame';
+import {cursorOut} from '../../shell/cursor';
 import {smooth,clamp,lerp} from '../../util';
 
 export const World:React.FC=()=>{
@@ -23,7 +24,7 @@ export const World:React.FC=()=>{
    <rect x="1309" y="477" width="496" height="75" rx="10" fill="#BFE5CF"/><text x="1430" y="527" fontSize="34" fontWeight="600" fill="#286446">{assign?'Stock assigned':'Assign stock'}</text>
    <g opacity={flow} transform={`translate(0 ${(1-flow)*70})`}><rect x="1309" y="605" width="496" height="327" rx="10" fill="#EAF6EF"/><text x="1336" y="652" fontSize="29" fill="#6B997E">REPLENISHMENT DRAFT</text><text x="1336" y="711" fontSize="33" fontWeight="600" fill="#3F7657">Kraft boxes</text><text x="1336" y="762" fontSize="32" fill="#3F7657">Quantity: 20</text><path d="M1336 789H1776" stroke="#B6D7C2"/><text x="1336" y="835" fontSize="29" fill="#749B7E">Status: needs review</text><text x="1336" y="882" fontSize="28" fill="#749B7E">No purchase order sent.</text></g>
    {f>=60&&f<82?<circle cx="1570" cy="522" r={18+(f-60)*2} fill="none" stroke="#C8F2D8" strokeWidth="3" opacity={1-(f-60)/22}/>:null}
-   <path d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${lerp(780,1570,move)} ${lerp(430,522,move)-Math.sin(move*Math.PI)*65})`} fill="#FBFFF8" stroke="#458767" strokeWidth="3"/>
+   <path style={cursorOut(f,74)} d="M0 0V47L13 35L24 60L36 54L24 31L42 29Z" transform={`translate(${lerp(780,1570,move)} ${lerp(430,522,move)-Math.sin(move*Math.PI)*65})`} fill="#FBFFF8" stroke="#458767" strokeWidth="3"/>
   </svg>
  </AbsoluteFill>;
 };
