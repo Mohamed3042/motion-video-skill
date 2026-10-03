@@ -1,0 +1,734 @@
+{
+  "file": "MK-Job-Orbit-v2-1080p60.mp4",
+  "sha256": "4282780d9a70edd04beeb7e274e6e03fffb4a0f34abb1f9965bc484d110bf451",
+  "timingSha256": "055676fc221a8f37713f6d4ffa6f125bfc36de6ed81dd9cf325009eac927b585",
+  "seconds": 120,
+  "decodedSeconds": 120,
+  "video": {
+    "frames": 7200,
+    "fps": 60,
+    "codec": "h264",
+    "pixelFormat": "yuv420p"
+  },
+  "audio": {
+    "codec": "aac",
+    "sampleRate": 48000,
+    "channels": 2,
+    "startTime": 0
+  },
+  "measured": {
+    "lufs": -14,
+    "truePeakDbtp": -1.3
+  },
+  "worldSpreadLu": 0.20000000000000107,
+  "worlds": [
+    {
+      "id": "profile",
+      "lufs": -13.7,
+      "truePeakDbtp": -1.8
+    },
+    {
+      "id": "globe",
+      "lufs": -13.7,
+      "truePeakDbtp": -1.8
+    },
+    {
+      "id": "findings",
+      "lufs": -13.7,
+      "truePeakDbtp": -1.9
+    },
+    {
+      "id": "focus",
+      "lufs": -13.7,
+      "truePeakDbtp": -1.9
+    },
+    {
+      "id": "fit",
+      "lufs": -13.7,
+      "truePeakDbtp": -1.7
+    },
+    {
+      "id": "nextproof",
+      "lufs": -13.9,
+      "truePeakDbtp": -1.3
+    },
+    {
+      "id": "market",
+      "lufs": -13.8,
+      "truePeakDbtp": -1.8
+    },
+    {
+      "id": "employers",
+      "lufs": -13.7,
+      "truePeakDbtp": -1.7
+    },
+    {
+      "id": "engine",
+      "lufs": -13.8,
+      "truePeakDbtp": -1.7
+    },
+    {
+      "id": "anywhere",
+      "lufs": -13.7,
+      "truePeakDbtp": -0.6
+    }
+  ],
+  "declaredBySection": [
+    {
+      "id": "chaos",
+      "count": 66
+    },
+    {
+      "id": "turn",
+      "count": 7
+    },
+    {
+      "id": "profile",
+      "count": 41
+    },
+    {
+      "id": "globe",
+      "count": 5
+    },
+    {
+      "id": "findings",
+      "count": 5
+    },
+    {
+      "id": "focus",
+      "count": 5
+    },
+    {
+      "id": "fit",
+      "count": 5
+    },
+    {
+      "id": "nextproof",
+      "count": 5
+    },
+    {
+      "id": "market",
+      "count": 17
+    },
+    {
+      "id": "employers",
+      "count": 5
+    },
+    {
+      "id": "engine",
+      "count": 18
+    },
+    {
+      "id": "anywhere",
+      "count": 5
+    }
+  ],
+  "impactCount": 65,
+  "maximumAbsoluteOffsetFrames": 0.2571428571428571,
+  "minimumJumpDb": 15.35799238653603,
+  "failedCount": 0,
+  "onsets": [
+    {
+      "frame": 30,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 83.74449097288243,
+      "pass": true,
+      "labels": [
+        "chaos impact @30"
+      ]
+    },
+    {
+      "frame": 120,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 70.6089801118526,
+      "pass": true,
+      "labels": [
+        "chaos hit @120"
+      ]
+    },
+    {
+      "frame": 210,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 67.73096971803699,
+      "pass": true,
+      "labels": [
+        "chaos hit @210"
+      ]
+    },
+    {
+      "frame": 300,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 55.3094836784262,
+      "pass": true,
+      "labels": [
+        "chaos hit @300"
+      ]
+    },
+    {
+      "frame": 360,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 59.85851819084189,
+      "pass": true,
+      "labels": [
+        "chaos hit @360"
+      ]
+    },
+    {
+      "frame": 420,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 55.85961721892147,
+      "pass": true,
+      "labels": [
+        "chaos hit @420"
+      ]
+    },
+    {
+      "frame": 480,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 58.04232655323069,
+      "pass": true,
+      "labels": [
+        "chaos hit @480"
+      ]
+    },
+    {
+      "frame": 570,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 54.08507557253506,
+      "pass": true,
+      "labels": [
+        "chaos impact @570"
+      ]
+    },
+    {
+      "frame": 720,
+      "offsetFrames": -0.2571428571428571,
+      "jumpDb": 18.527984456138963,
+      "pass": true,
+      "labels": [
+        "portal 0 (gravity ignite)",
+        "turn impact @0"
+      ]
+    },
+    {
+      "frame": 840,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 80.24400732900912,
+      "pass": true,
+      "labels": [
+        "turn impact @120"
+      ]
+    },
+    {
+      "frame": 990,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 57.39850644347358,
+      "pass": true,
+      "labels": [
+        "turn hit @270"
+      ]
+    },
+    {
+      "frame": 1080,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 55.20044053417162,
+      "pass": true,
+      "labels": [
+        "turn hit @360"
+      ]
+    },
+    {
+      "frame": 1170,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 54.78034915319342,
+      "pass": true,
+      "labels": [
+        "turn hit @450"
+      ]
+    },
+    {
+      "frame": 1320,
+      "offsetFrames": -0.23537414965986395,
+      "jumpDb": 15.35799238653603,
+      "pass": true,
+      "labels": [
+        "portal 1 (BOOM: satellite dive + white-hot drop)",
+        "profile impact @0"
+      ]
+    },
+    {
+      "frame": 1500,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 57.63840190234128,
+      "pass": true,
+      "labels": [
+        "profile hit @180"
+      ]
+    },
+    {
+      "frame": 1560,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 53.08057688724386,
+      "pass": true,
+      "labels": [
+        "profile hit @240"
+      ]
+    },
+    {
+      "frame": 1620,
+      "offsetFrames": -0.061224489795918366,
+      "jumpDb": 55.65726788050078,
+      "pass": true,
+      "labels": [
+        "profile hit @300"
+      ]
+    },
+    {
+      "frame": 1725,
+      "offsetFrames": -0.017687074829931974,
+      "jumpDb": 55.232500744646316,
+      "pass": true,
+      "labels": [
+        "profile hit @405"
+      ]
+    },
+    {
+      "frame": 1800,
+      "offsetFrames": -0.14829931972789115,
+      "jumpDb": 18.669942500377164,
+      "pass": true,
+      "labels": [
+        "portal 2 (page → sphere)",
+        "globe impact @0"
+      ]
+    },
+    {
+      "frame": 1920,
+      "offsetFrames": -0.017687074829931974,
+      "jumpDb": 56.19830272465319,
+      "pass": true,
+      "labels": [
+        "globe hit @120"
+      ]
+    },
+    {
+      "frame": 2040,
+      "offsetFrames": -0.08299319727891157,
+      "jumpDb": 55.2183836192199,
+      "pass": true,
+      "labels": [
+        "globe hit @240"
+      ]
+    },
+    {
+      "frame": 2160,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 55.30129926287611,
+      "pass": true,
+      "labels": [
+        "globe hit @360"
+      ]
+    },
+    {
+      "frame": 2280,
+      "offsetFrames": -0.14829931972789115,
+      "jumpDb": 19.90957624805857,
+      "pass": true,
+      "labels": [
+        "portal 3 (glowing point → star flare)",
+        "findings impact @0"
+      ]
+    },
+    {
+      "frame": 2400,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 66.93543642333832,
+      "pass": true,
+      "labels": [
+        "findings hit @120"
+      ]
+    },
+    {
+      "frame": 2520,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 69.07275566976783,
+      "pass": true,
+      "labels": [
+        "findings hit @240"
+      ]
+    },
+    {
+      "frame": 2640,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 66.66168239021385,
+      "pass": true,
+      "labels": [
+        "findings hit @360"
+      ]
+    },
+    {
+      "frame": 2760,
+      "offsetFrames": -0.03945578231292517,
+      "jumpDb": 17.308366732995275,
+      "pass": true,
+      "labels": [
+        "portal 4 (green dot → Ebbinghaus circles)",
+        "focus impact @0"
+      ]
+    },
+    {
+      "frame": 2880,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 64.25463367591945,
+      "pass": true,
+      "labels": [
+        "focus hit @120"
+      ]
+    },
+    {
+      "frame": 3000,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 62.15872113290451,
+      "pass": true,
+      "labels": [
+        "focus hit @240"
+      ]
+    },
+    {
+      "frame": 3120,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 62.20990351136925,
+      "pass": true,
+      "labels": [
+        "focus hit @360"
+      ]
+    },
+    {
+      "frame": 3240,
+      "offsetFrames": -0.12653061224489795,
+      "jumpDb": 18.45869262773735,
+      "pass": true,
+      "labels": [
+        "portal 5 (circle → checker tiles)",
+        "fit impact @0"
+      ]
+    },
+    {
+      "frame": 3360,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 81.57205924708244,
+      "pass": true,
+      "labels": [
+        "fit hit @120"
+      ]
+    },
+    {
+      "frame": 3480,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 81.01727491906814,
+      "pass": true,
+      "labels": [
+        "fit hit @240"
+      ]
+    },
+    {
+      "frame": 3600,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 82.19257680281629,
+      "pass": true,
+      "labels": [
+        "fit hit @360"
+      ]
+    },
+    {
+      "frame": 3720,
+      "offsetFrames": -0.08299319727891157,
+      "jumpDb": 19.5364910524896,
+      "pass": true,
+      "labels": [
+        "portal 6 (checker floor tilts → converging rails)",
+        "nextproof impact @0"
+      ]
+    },
+    {
+      "frame": 3840,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 62.263792730617816,
+      "pass": true,
+      "labels": [
+        "nextproof hit @120"
+      ]
+    },
+    {
+      "frame": 3960,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 60.85813595918923,
+      "pass": true,
+      "labels": [
+        "nextproof hit @240"
+      ]
+    },
+    {
+      "frame": 4080,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 60.34753732491743,
+      "pass": true,
+      "labels": [
+        "nextproof hit @360"
+      ]
+    },
+    {
+      "frame": 4200,
+      "offsetFrames": -0.21360544217687075,
+      "jumpDb": 17.273718636858778,
+      "pass": true,
+      "labels": [
+        "portal 7 (rails → matrix grid)"
+      ]
+    },
+    {
+      "frame": 4380,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 59.800781572127406,
+      "pass": true,
+      "labels": [
+        "market impact @180"
+      ]
+    },
+    {
+      "frame": 4440,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 57.600400789804425,
+      "pass": true,
+      "labels": [
+        "market hit @240"
+      ]
+    },
+    {
+      "frame": 4560,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 59.01579595659196,
+      "pass": true,
+      "labels": [
+        "market hit @360"
+      ]
+    },
+    {
+      "frame": 4680,
+      "offsetFrames": -0.17006802721088435,
+      "jumpDb": 18.239918004025867,
+      "pass": true,
+      "labels": [
+        "portal 8 (grid lines → café-wall rows)",
+        "employers impact @0"
+      ]
+    },
+    {
+      "frame": 4800,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 66.31080126832589,
+      "pass": true,
+      "labels": [
+        "employers hit @120"
+      ]
+    },
+    {
+      "frame": 4920,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 67.11921460178687,
+      "pass": true,
+      "labels": [
+        "employers hit @240"
+      ]
+    },
+    {
+      "frame": 5040,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 67.47617944949367,
+      "pass": true,
+      "labels": [
+        "employers hit @360"
+      ]
+    },
+    {
+      "frame": 5160,
+      "offsetFrames": -0.12653061224489795,
+      "jumpDb": 17.669581727995627,
+      "pass": true,
+      "labels": [
+        "portal 9 (rows shear → barber stripes)"
+      ]
+    },
+    {
+      "frame": 5280,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 58.35606718917819,
+      "pass": true,
+      "labels": [
+        "engine impact @120"
+      ]
+    },
+    {
+      "frame": 5400,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 57.1877628882916,
+      "pass": true,
+      "labels": [
+        "engine hit @240"
+      ]
+    },
+    {
+      "frame": 5490,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 56.6930378234526,
+      "pass": true,
+      "labels": [
+        "engine hit @330"
+      ]
+    },
+    {
+      "frame": 5640,
+      "offsetFrames": -0.12653061224489795,
+      "jumpDb": 18.959181383458226,
+      "pass": true,
+      "labels": [
+        "portal 10 (pole collapses → two dots)",
+        "anywhere impact @0"
+      ]
+    },
+    {
+      "frame": 5760,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 61.862010041771775,
+      "pass": true,
+      "labels": [
+        "anywhere hit @120"
+      ]
+    },
+    {
+      "frame": 5880,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 66.46727099756609,
+      "pass": true,
+      "labels": [
+        "anywhere hit @240"
+      ]
+    },
+    {
+      "frame": 6000,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 57.454333696027156,
+      "pass": true,
+      "labels": [
+        "anywhere hit @360"
+      ]
+    },
+    {
+      "frame": 6120,
+      "offsetFrames": -0.08299319727891157,
+      "jumpDb": 15.833370539177453,
+      "pass": true,
+      "labels": [
+        "portal 11 (dots → ten orbit rings + flash)"
+      ]
+    },
+    {
+      "frame": 6150,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 51.58470701320673,
+      "pass": true,
+      "labels": [
+        "montage beat 2"
+      ]
+    },
+    {
+      "frame": 6180,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 54.523060994209914,
+      "pass": true,
+      "labels": [
+        "montage beat 3"
+      ]
+    },
+    {
+      "frame": 6210,
+      "offsetFrames": -0.08299319727891157,
+      "jumpDb": 53.05358710909953,
+      "pass": true,
+      "labels": [
+        "montage beat 4"
+      ]
+    },
+    {
+      "frame": 6240,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 57.589010190958206,
+      "pass": true,
+      "labels": [
+        "montage beat 5"
+      ]
+    },
+    {
+      "frame": 6270,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 51.74905255663028,
+      "pass": true,
+      "labels": [
+        "montage beat 6"
+      ]
+    },
+    {
+      "frame": 6300,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 53.84094729441534,
+      "pass": true,
+      "labels": [
+        "montage beat 7"
+      ]
+    },
+    {
+      "frame": 6330,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 55.52084114505895,
+      "pass": true,
+      "labels": [
+        "montage beat 8"
+      ]
+    },
+    {
+      "frame": 6360,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 57.85642008746878,
+      "pass": true,
+      "labels": [
+        "montage beat 9"
+      ]
+    },
+    {
+      "frame": 6390,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 52.47971915857177,
+      "pass": true,
+      "labels": [
+        "montage beat 10"
+      ]
+    },
+    {
+      "frame": 6480,
+      "offsetFrames": 0.004081632653061225,
+      "jumpDb": 49.90818695721663,
+      "pass": true,
+      "labels": [
+        "logo lock boom"
+      ]
+    }
+  ],
+  "selfTest": {
+    "injectedShiftFrames": 2,
+    "rejected": 65,
+    "total": 65
+  },
+  "listened": false,
+  "pass": true,
+  "scope": "Decoded-audio checks for declared timing events; does not prove listening or visual-frame inspection."
+}

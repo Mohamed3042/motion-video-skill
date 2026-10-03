@@ -1,4 +1,5 @@
-// PLACEHOLDER camera (local = world here: the story acts happen at the planet). The framework builder replaces it.
+// Act 1 camera: the continuous story camera (sections/chaos/story.ts); local = world here (chaos sits at the planet).
 import type {Shot} from '../../engine/math.ts';
+import {storyCam} from './story.ts';
 
-export const shot = (f: number): Shot => ({pos: [0, 400, 5200 - f * 0.8], target: [0, 0, 0], fov: 40});
+export const shot = (f: number): Shot => storyCam(f);

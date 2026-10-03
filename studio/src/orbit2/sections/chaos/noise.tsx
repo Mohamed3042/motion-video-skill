@@ -75,7 +75,7 @@ export const camJitter = (g: number) => {
 };
 
 // ---------------------------------------------------------------- the clutter
-type Kind = 'tab' | 'card' | 'cv' | 'toast' | 'q' | 'chip' | 'pill';
+export type Kind = 'tab' | 'card' | 'cv' | 'toast' | 'q' | 'chip' | 'pill';
 type Item = {
   kind: Kind;
   text: string;
@@ -93,18 +93,18 @@ type Item = {
   hook?: boolean;
 };
 
-const AMBER = C.warning;
-const RED = C.red;
-const GREY = '#a7a9b6';
-const TABS = ['Job search — results', 'Careers | Openings', 'Listing details', 'Apply — step 2 of 5', 'Untitled', 'Role overview', 'Sign in to continue', 'Job alert settings', 'Saved jobs', 'Company careers', 'Similar roles', 'Page not found', 'Opening — details', 'Results · page 7', 'New tab', 'Search results'];
-const ROLES = ['Data Analyst', 'Project Coordinator', 'QA Engineer', 'Operations Lead', 'Product Designer', 'Junior Developer', 'Content Writer', 'Support Specialist', 'Business Analyst', 'Sales Associate'];
-const COMPANY = ['Company confidential', 'Hiring company', 'Recruiter listing', 'Location: unclear'];
-const STATUS: Array<[string, string]> = [['Posted 30+ days ago', AMBER], ['Is this still open?', GREY], ['Closed', RED], ['Reposted', GREY], ['Expired', RED], ['No salary listed', GREY]];
-const PILLS: Array<[string, string]> = [['Is this still open?', GREY], ['Closed', RED], ['Posted 30+ days ago', AMBER], ['Reposted', GREY], ['Expired', RED], ['Still accepting?', GREY], ['Closed', RED], ['Posted 30+ days ago', AMBER], ['Is this still open?', GREY], ['Last checked: ?', AMBER]];
-const QUAL = ['Required?', 'Preferred?', 'Senior?', 'Entry level?', 'Must have?', 'Nice to have?', 'Years: ?', 'Degree?'];
-const CVS = ['CV_final_v7.docx', 'CV_final_FINAL.pdf', 'CV_final_v2_edit.docx', 'resume_NEW(3).pdf', 'CV_final_final.docx', 'CV_copy_copy.pdf', 'CV_v4_USE_THIS.docx', 'CV_FINAL_real.pdf', 'resume_old.docx', 'CV_draft.pdf'];
-const SKILLS = ['Python?', 'SQL?', 'Cloud?', 'Excel?', 'Design?', 'AI?', 'Docker?', 'Data?'];
-const TOASTS: Array<[string, string]> = [['New job alert', 'A listing matches your search'], ['Reminder', 'Did you follow up?'], ['Listing updated', 'Requirements changed'], ['Job alert', 'Similar roles posted'], ['Application portal', 'Session expired'], ['Saved search', 'More results available'], ['Listing closed', 'This posting was removed'], ['Profile reminder', 'Is your CV up to date?']];
+export const AMBER = C.warning;
+export const RED = C.red;
+export const GREY = '#a7a9b6';
+export const TABS = ['Job search — results', 'Careers | Openings', 'Listing details', 'Apply — step 2 of 5', 'Untitled', 'Role overview', 'Sign in to continue', 'Job alert settings', 'Saved jobs', 'Company careers', 'Similar roles', 'Page not found', 'Opening — details', 'Results · page 7', 'New tab', 'Search results'];
+export const ROLES = ['Data Analyst', 'Project Coordinator', 'QA Engineer', 'Operations Lead', 'Product Designer', 'Junior Developer', 'Content Writer', 'Support Specialist', 'Business Analyst', 'Sales Associate'];
+export const COMPANY = ['Company confidential', 'Hiring company', 'Recruiter listing', 'Location: unclear'];
+export const STATUS: Array<[string, string]> = [['Posted 30+ days ago', AMBER], ['Is this still open?', GREY], ['Closed', RED], ['Reposted', GREY], ['Expired', RED], ['No salary listed', GREY]];
+export const PILLS: Array<[string, string]> = [['Is this still open?', GREY], ['Closed', RED], ['Posted 30+ days ago', AMBER], ['Reposted', GREY], ['Expired', RED], ['Still accepting?', GREY], ['Closed', RED], ['Posted 30+ days ago', AMBER], ['Is this still open?', GREY], ['Last checked: ?', AMBER]];
+export const QUAL = ['Required?', 'Preferred?', 'Senior?', 'Entry level?', 'Must have?', 'Nice to have?', 'Years: ?', 'Degree?'];
+export const CVS = ['CV_final_v7.docx', 'CV_final_FINAL.pdf', 'CV_final_v2_edit.docx', 'resume_NEW(3).pdf', 'CV_final_final.docx', 'CV_copy_copy.pdf', 'CV_v4_USE_THIS.docx', 'CV_FINAL_real.pdf', 'resume_old.docx', 'CV_draft.pdf'];
+export const SKILLS = ['Python?', 'SQL?', 'Cloud?', 'Excel?', 'Design?', 'AI?', 'Docker?', 'Data?'];
+export const TOASTS: Array<[string, string]> = [['New job alert', 'A listing matches your search'], ['Reminder', 'Did you follow up?'], ['Listing updated', 'Requirements changed'], ['Job alert', 'Similar roles posted'], ['Application portal', 'Session expired'], ['Saved search', 'More results available'], ['Listing closed', 'This posting was removed'], ['Profile reminder', 'Is your CV up to date?']];
 
 const ITEMS: Item[] = (() => {
   const rnd = mulberry32(90210);
@@ -178,7 +178,7 @@ const Bell: React.FC<{c: string}> = ({c}) => (
   </svg>
 );
 
-const ItemView: React.FC<{it: Item; b: number}> = ({it, b}) => {
+export const ItemView: React.FC<{it: Pick<Item, 'kind' | 'text' | 'sub' | 'tone'>; b: number}> = ({it, b}) => {
   const p = pal(b);
   switch (it.kind) {
     case 'tab':

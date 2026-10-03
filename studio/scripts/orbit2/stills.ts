@@ -19,7 +19,7 @@ if (!frames.length || frames.some((f) => !Number.isInteger(f) || f < 0 || f >= 7
 const root = path.resolve(import.meta.dirname, '../..');
 const serveUrl = await bundle({entryPoint: path.join(root, 'src/orbit2/entry.tsx'), publicDir: path.join(root, 'public')});
 const browser = await openBrowser('chrome', {chromiumOptions: {gl: 'angle'}});
-const composition = await selectComposition({serveUrl, id: 'JobOrbit', puppeteerInstance: browser});
+const composition = await selectComposition({serveUrl, id: 'JobOrbit2', puppeteerInstance: browser});
 for (const frame of frames) {
   const output = path.resolve(root, '../out/stills', `orbit2-f${String(frame).padStart(4, '0')}.png`);
   await renderStill({serveUrl, composition, frame, output, puppeteerInstance: browser, overwrite: true, chromiumOptions: {gl: 'angle'}});

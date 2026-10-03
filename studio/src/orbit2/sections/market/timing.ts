@@ -34,5 +34,5 @@ export const EVENTS: SectionEvent[] = [
   ...T.changes.map((f) => ({f, kind: 'blip' as const})),
   {f: 465, kind: 'whoosh'},
 ];
-// Local frame the finale montage freezes on: the full Zöllner field with the coral pair lit.
-export const HERO_FRAME = 136;
+// Local frame the finale montage revisits: the data city at street level, matrix columns up, all holograms in.
+export const HERO_FRAME = 424;

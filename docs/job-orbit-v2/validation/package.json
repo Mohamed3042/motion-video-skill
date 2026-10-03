@@ -1,0 +1,39 @@
+{
+  "clientDate": "2026-10-03",
+  "nodeVersion": "v24.11.1",
+  "candidateArchiveExtracted": true,
+  "extractedManifestFilesVerified": 174,
+  "cleanLockedDependencyInstall": {
+    "command": "npm ci --ignore-scripts --no-audit --no-fund",
+    "installedPackages": 338,
+    "lifecycleScriptsDisabled": true
+  },
+  "standaloneTypeScript": {
+    "command": "node node_modules/typescript/bin/tsc --noEmit",
+    "exitCode": 0
+  },
+  "standaloneEntryBundle": {
+    "entry": "studio/src/orbit2/entry.tsx",
+    "successful": true,
+    "publicAssetsLimitedTo": "studio/public/orbit2"
+  },
+  "includedSourceScore": {
+    "sha256": "b414ba0e9f178d626e7c48bfb419a89a29ecb6b0c3825985a0d07e13437e664a",
+    "impactCount": 65,
+    "failedCount": 0,
+    "measured": {
+      "lufs": -14,
+      "truePeakDbtp": -1.8
+    },
+    "worldSpreadLu": 0.20000000000000107,
+    "selfTest": {
+      "injectedShiftFrames": 2,
+      "rejected": 65,
+      "total": 65
+    },
+    "pass": true
+  },
+  "sourceAndAssetsChangedDuringPackaging": false,
+  "publicReportsSanitized": true,
+  "scope": "Independent extracted-source compile, bundle and score checks. Finished movie technical and sampled visual review are recorded separately. No continuous playback or listening review is claimed."
+}

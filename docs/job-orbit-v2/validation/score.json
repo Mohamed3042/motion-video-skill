@@ -1,0 +1,604 @@
+{
+  "file": "studio/public/orbit2/music.wav",
+  "sha256": "b414ba0e9f178d626e7c48bfb419a89a29ecb6b0c3825985a0d07e13437e664a",
+  "timingSha256": "055676fc221a8f37713f6d4ffa6f125bfc36de6ed81dd9cf325009eac927b585",
+  "seconds": 120,
+  "sampleRate": 44100,
+  "channels": 2,
+  "bits": 16,
+  "integratedLufs": -14,
+  "truePeakDbtp": -1.8,
+  "worldSpreadLu": 0.24289354976602517,
+  "targetWorldSpreadLu": 1.5,
+  "declaredImpactCount": 65,
+  "centralArrangements": [
+    "chaos",
+    "turn",
+    "profile",
+    "globe",
+    "findings",
+    "focus",
+    "fit",
+    "nextproof",
+    "market",
+    "employers",
+    "engine",
+    "anywhere",
+    "finale"
+  ],
+  "architecture": "Completed centrally authored score with optional section-module compatibility hooks; shared visual timing drives all declared accents.",
+  "sections": [
+    {
+      "id": "chaos",
+      "lufs": -16.1216288467385,
+      "gainDb": 7.184309040694529,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 66
+    },
+    {
+      "id": "turn",
+      "lufs": -14.080205150541541,
+      "gainDb": 4.575722919130921,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 7
+    },
+    {
+      "id": "profile",
+      "lufs": -13.683354427110862,
+      "gainDb": 1.6079866520089727,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 41
+    },
+    {
+      "id": "globe",
+      "lufs": -13.674982808305218,
+      "gainDb": 1.2950520197715452,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 5
+    },
+    {
+      "id": "findings",
+      "lufs": -13.667406541463098,
+      "gainDb": 1.922575780456714,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 5
+    },
+    {
+      "id": "focus",
+      "lufs": -13.672106239714331,
+      "gainDb": -3.6387976215356543,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 5
+    },
+    {
+      "id": "fit",
+      "lufs": -13.719690905456298,
+      "gainDb": 2.7773813607098328,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 5
+    },
+    {
+      "id": "nextproof",
+      "lufs": -13.910300091229123,
+      "gainDb": 3.8994342948393657,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 5
+    },
+    {
+      "id": "market",
+      "lufs": -13.748861148415719,
+      "gainDb": 0.8892033101129091,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 17
+    },
+    {
+      "id": "employers",
+      "lufs": -13.675530785777553,
+      "gainDb": -0.4547226221068693,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 5
+    },
+    {
+      "id": "engine",
+      "lufs": -13.71917512056933,
+      "gainDb": 2.1892865210924626,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 18
+    },
+    {
+      "id": "anywhere",
+      "lufs": -13.669370955963036,
+      "gainDb": 0.2512769601119638,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 5
+    },
+    {
+      "id": "finale",
+      "lufs": -14.202858956334236,
+      "gainDb": 0.07955137695527892,
+      "centralArrangement": true,
+      "arrangementSource": "authored-central-score",
+      "declaredEvents": 0
+    }
+  ],
+  "events": [
+    {
+      "frame": 30,
+      "kind": "impact",
+      "labels": [
+        "chaos impact @30"
+      ]
+    },
+    {
+      "frame": 120,
+      "kind": "hit",
+      "labels": [
+        "chaos hit @120"
+      ]
+    },
+    {
+      "frame": 210,
+      "kind": "hit",
+      "labels": [
+        "chaos hit @210"
+      ]
+    },
+    {
+      "frame": 300,
+      "kind": "hit",
+      "labels": [
+        "chaos hit @300"
+      ]
+    },
+    {
+      "frame": 360,
+      "kind": "hit",
+      "labels": [
+        "chaos hit @360"
+      ]
+    },
+    {
+      "frame": 420,
+      "kind": "hit",
+      "labels": [
+        "chaos hit @420"
+      ]
+    },
+    {
+      "frame": 480,
+      "kind": "hit",
+      "labels": [
+        "chaos hit @480"
+      ]
+    },
+    {
+      "frame": 570,
+      "kind": "impact",
+      "labels": [
+        "chaos impact @570"
+      ]
+    },
+    {
+      "frame": 720,
+      "kind": "impact",
+      "labels": [
+        "portal 0 (gravity ignite)",
+        "turn impact @0"
+      ]
+    },
+    {
+      "frame": 840,
+      "kind": "impact",
+      "labels": [
+        "turn impact @120"
+      ]
+    },
+    {
+      "frame": 990,
+      "kind": "hit",
+      "labels": [
+        "turn hit @270"
+      ]
+    },
+    {
+      "frame": 1080,
+      "kind": "hit",
+      "labels": [
+        "turn hit @360"
+      ]
+    },
+    {
+      "frame": 1170,
+      "kind": "hit",
+      "labels": [
+        "turn hit @450"
+      ]
+    },
+    {
+      "frame": 1320,
+      "kind": "impact",
+      "labels": [
+        "portal 1 (BOOM: satellite dive + white-hot drop)",
+        "profile impact @0"
+      ]
+    },
+    {
+      "frame": 1500,
+      "kind": "hit",
+      "labels": [
+        "profile hit @180"
+      ]
+    },
+    {
+      "frame": 1560,
+      "kind": "hit",
+      "labels": [
+        "profile hit @240"
+      ]
+    },
+    {
+      "frame": 1620,
+      "kind": "hit",
+      "labels": [
+        "profile hit @300"
+      ]
+    },
+    {
+      "frame": 1725,
+      "kind": "hit",
+      "labels": [
+        "profile hit @405"
+      ]
+    },
+    {
+      "frame": 1800,
+      "kind": "impact",
+      "labels": [
+        "portal 2 (page → sphere)",
+        "globe impact @0"
+      ]
+    },
+    {
+      "frame": 1920,
+      "kind": "hit",
+      "labels": [
+        "globe hit @120"
+      ]
+    },
+    {
+      "frame": 2040,
+      "kind": "hit",
+      "labels": [
+        "globe hit @240"
+      ]
+    },
+    {
+      "frame": 2160,
+      "kind": "hit",
+      "labels": [
+        "globe hit @360"
+      ]
+    },
+    {
+      "frame": 2280,
+      "kind": "impact",
+      "labels": [
+        "portal 3 (glowing point → star flare)",
+        "findings impact @0"
+      ]
+    },
+    {
+      "frame": 2400,
+      "kind": "hit",
+      "labels": [
+        "findings hit @120"
+      ]
+    },
+    {
+      "frame": 2520,
+      "kind": "hit",
+      "labels": [
+        "findings hit @240"
+      ]
+    },
+    {
+      "frame": 2640,
+      "kind": "hit",
+      "labels": [
+        "findings hit @360"
+      ]
+    },
+    {
+      "frame": 2760,
+      "kind": "impact",
+      "labels": [
+        "portal 4 (green dot → Ebbinghaus circles)",
+        "focus impact @0"
+      ]
+    },
+    {
+      "frame": 2880,
+      "kind": "hit",
+      "labels": [
+        "focus hit @120"
+      ]
+    },
+    {
+      "frame": 3000,
+      "kind": "hit",
+      "labels": [
+        "focus hit @240"
+      ]
+    },
+    {
+      "frame": 3120,
+      "kind": "hit",
+      "labels": [
+        "focus hit @360"
+      ]
+    },
+    {
+      "frame": 3240,
+      "kind": "impact",
+      "labels": [
+        "portal 5 (circle → checker tiles)",
+        "fit impact @0"
+      ]
+    },
+    {
+      "frame": 3360,
+      "kind": "hit",
+      "labels": [
+        "fit hit @120"
+      ]
+    },
+    {
+      "frame": 3480,
+      "kind": "hit",
+      "labels": [
+        "fit hit @240"
+      ]
+    },
+    {
+      "frame": 3600,
+      "kind": "hit",
+      "labels": [
+        "fit hit @360"
+      ]
+    },
+    {
+      "frame": 3720,
+      "kind": "impact",
+      "labels": [
+        "portal 6 (checker floor tilts → converging rails)",
+        "nextproof impact @0"
+      ]
+    },
+    {
+      "frame": 3840,
+      "kind": "hit",
+      "labels": [
+        "nextproof hit @120"
+      ]
+    },
+    {
+      "frame": 3960,
+      "kind": "hit",
+      "labels": [
+        "nextproof hit @240"
+      ]
+    },
+    {
+      "frame": 4080,
+      "kind": "hit",
+      "labels": [
+        "nextproof hit @360"
+      ]
+    },
+    {
+      "frame": 4200,
+      "kind": "impact",
+      "labels": [
+        "portal 7 (rails → matrix grid)"
+      ]
+    },
+    {
+      "frame": 4380,
+      "kind": "impact",
+      "labels": [
+        "market impact @180"
+      ]
+    },
+    {
+      "frame": 4440,
+      "kind": "hit",
+      "labels": [
+        "market hit @240"
+      ]
+    },
+    {
+      "frame": 4560,
+      "kind": "hit",
+      "labels": [
+        "market hit @360"
+      ]
+    },
+    {
+      "frame": 4680,
+      "kind": "impact",
+      "labels": [
+        "portal 8 (grid lines → café-wall rows)",
+        "employers impact @0"
+      ]
+    },
+    {
+      "frame": 4800,
+      "kind": "hit",
+      "labels": [
+        "employers hit @120"
+      ]
+    },
+    {
+      "frame": 4920,
+      "kind": "hit",
+      "labels": [
+        "employers hit @240"
+      ]
+    },
+    {
+      "frame": 5040,
+      "kind": "hit",
+      "labels": [
+        "employers hit @360"
+      ]
+    },
+    {
+      "frame": 5160,
+      "kind": "impact",
+      "labels": [
+        "portal 9 (rows shear → barber stripes)"
+      ]
+    },
+    {
+      "frame": 5280,
+      "kind": "impact",
+      "labels": [
+        "engine impact @120"
+      ]
+    },
+    {
+      "frame": 5400,
+      "kind": "hit",
+      "labels": [
+        "engine hit @240"
+      ]
+    },
+    {
+      "frame": 5490,
+      "kind": "hit",
+      "labels": [
+        "engine hit @330"
+      ]
+    },
+    {
+      "frame": 5640,
+      "kind": "impact",
+      "labels": [
+        "portal 10 (pole collapses → two dots)",
+        "anywhere impact @0"
+      ]
+    },
+    {
+      "frame": 5760,
+      "kind": "hit",
+      "labels": [
+        "anywhere hit @120"
+      ]
+    },
+    {
+      "frame": 5880,
+      "kind": "hit",
+      "labels": [
+        "anywhere hit @240"
+      ]
+    },
+    {
+      "frame": 6000,
+      "kind": "hit",
+      "labels": [
+        "anywhere hit @360"
+      ]
+    },
+    {
+      "frame": 6120,
+      "kind": "impact",
+      "labels": [
+        "portal 11 (dots → ten orbit rings + flash)"
+      ]
+    },
+    {
+      "frame": 6150,
+      "kind": "hit",
+      "labels": [
+        "montage beat 2"
+      ]
+    },
+    {
+      "frame": 6180,
+      "kind": "hit",
+      "labels": [
+        "montage beat 3"
+      ]
+    },
+    {
+      "frame": 6210,
+      "kind": "hit",
+      "labels": [
+        "montage beat 4"
+      ]
+    },
+    {
+      "frame": 6240,
+      "kind": "hit",
+      "labels": [
+        "montage beat 5"
+      ]
+    },
+    {
+      "frame": 6270,
+      "kind": "hit",
+      "labels": [
+        "montage beat 6"
+      ]
+    },
+    {
+      "frame": 6300,
+      "kind": "hit",
+      "labels": [
+        "montage beat 7"
+      ]
+    },
+    {
+      "frame": 6330,
+      "kind": "hit",
+      "labels": [
+        "montage beat 8"
+      ]
+    },
+    {
+      "frame": 6360,
+      "kind": "hit",
+      "labels": [
+        "montage beat 9"
+      ]
+    },
+    {
+      "frame": 6390,
+      "kind": "hit",
+      "labels": [
+        "montage beat 10"
+      ]
+    },
+    {
+      "frame": 6480,
+      "kind": "impact",
+      "labels": [
+        "logo lock boom"
+      ]
+    }
+  ],
+  "listened": false,
+  "scope": "Numeric audio verification only; sync is checked separately; final MP4 is not claimed here."
+}
