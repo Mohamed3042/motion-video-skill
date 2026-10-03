@@ -1,0 +1,8 @@
+studio/node_modules/
+studio/.remotion/
+studio/.claude/
+studio/public/**/*.wav
+out/*.mp4
+out/.master-*.mp4
+stills/
+*.log

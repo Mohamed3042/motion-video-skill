@@ -1,0 +1,40 @@
+{
+  "name": "mk-suite-launch-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "music": "node scripts/mks/music.ts",
+    "check": "node scripts/mks/check.ts",
+    "render": "remotion render src/index.ts MkSuiteLaunch ../out/MK-Suite-Launch-render.mp4 --codec=h264 --crf=16 --audio-codec=aac --audio-bitrate=320k --concurrency=2 --gl=angle",
+    "master": "node scripts/mks/master-export.mjs",
+    "verify": "node scripts/mks/verify-delivery.mjs",
+    "stills": "node scripts/mks/stills.ts"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/postprocessing": "^2.19.1",
+    "@remotion/cli": "4.0.532",
+    "@remotion/google-fonts": "4.0.532",
+    "@remotion/media-utils": "^4.0.532",
+    "@remotion/motion-blur": "4.0.532",
+    "@remotion/noise": "^4.0.532",
+    "@remotion/paths": "4.0.532",
+    "@remotion/shapes": "4.0.532",
+    "@remotion/three": "4.0.532",
+    "@remotion/transitions": "^4.0.532",
+    "opentype.js": "^1.3.4",
+    "postprocessing": "^6.39.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.532",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/three": "^0.170.0",
+    "typescript": "^5.6.3"
+  }
+}

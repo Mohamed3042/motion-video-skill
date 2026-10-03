@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MK Suite · Launch film</title>
+  <style>
+    :root{color-scheme:dark;font-family:Inter,Segoe UI,sans-serif;background:#07090a;color:#fff}
+    *{box-sizing:border-box}body{margin:0;padding:clamp(20px,4vw,64px)}main{max-width:1240px;margin:auto}
+    header{display:flex;align-items:center;gap:14px;margin-bottom:26px}.mark{border:2px solid #fff;padding:9px;font-weight:800;font-size:22px}
+    h1{font-size:clamp(24px,4vw,42px);letter-spacing:-.04em;margin:0}p{color:#b3b3b3;line-height:1.6;margin:8px 0 24px}
+    video{display:block;width:100%;aspect-ratio:16/9;background:#000;border:1px solid #2a2a2a;border-radius:16px}
+    nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}button,a{font:inherit;font-size:14px;color:#fff;background:#181818;border:1px solid #2a2a2a;border-radius:8px;padding:12px 15px;cursor:pointer;text-decoration:none}
+    button:hover,a:hover{border-color:#1ed760}button[aria-pressed="true"]{background:#1ed760;color:#07090a;border-color:#1ed760;font-weight:600}
+    .chapters button{color:#b3b3b3;background:transparent}.downloads{margin-top:26px}footer{margin-top:26px;color:#858585;font-size:13px}
+  </style>
+</head>
+<body><main>
+  <header><span class="mark">MK</span><div><h1>Your tools. One place.</h1></div></header>
+  <p>MK Suite launch film · Launcher designs for the next update.</p>
+  <video id="film" controls playsinline preload="metadata" poster="out/poster.jpg" src="https://github.com/Mohamed3042/motion-video-skill/releases/download/mk-suite-launch-2026-10-03/MK-Suite-Launch.mp4"></video>
+  <nav aria-label="Film selection">
+    <button id="full" aria-pressed="true">Full film · 2:00</button>
+    <button id="create" aria-pressed="false">Create preview · 0:24</button>
+  </nav>
+  <nav class="chapters" aria-label="Film chapters">
+    <button data-time="0">0:00 · Cold open</button><button data-time="10">0:10 · Reveal</button>
+    <button data-time="24">0:24 · Create</button><button data-time="48">0:48 · Work</button>
+    <button data-time="64">1:04 · Grow</button><button data-time="80">1:20 · Make it yours</button>
+    <button data-time="100">1:40 · Finale</button>
+  </nav>
+  <nav class="downloads" aria-label="Downloads">
+    <a href="https://github.com/Mohamed3042/motion-video-skill/releases/download/mk-suite-launch-2026-10-03/MK-Suite-Launch.mp4" download>Download full film</a>
+    <a href="https://github.com/Mohamed3042/motion-video-skill/releases/download/mk-suite-launch-2026-10-03/MK-Suite-Create-Preview.mp4" download>Download Create preview</a>
+    <a href="README.md">Recovery notes</a>
+  </nav>
+  <footer>The new MK Suite · coming in the next update.</footer>
+</main>
+<script>
+  const film=document.getElementById('film');
+  const full=document.getElementById('full');
+  const create=document.getElementById('create');
+  let current='full';
+  function select(which,time=0){
+    const resume=!film.paused;
+    full.setAttribute('aria-pressed',String(which==='full'));
+    create.setAttribute('aria-pressed',String(which==='create'));
+    const seek=()=>{film.currentTime=time;if(resume)film.play().catch(()=>{});};
+    if(current!==which){
+      current=which;
+      film.addEventListener('loadedmetadata',seek,{once:true});
+      film.src=which==='full'?'https://github.com/Mohamed3042/motion-video-skill/releases/download/mk-suite-launch-2026-10-03/MK-Suite-Launch.mp4':'https://github.com/Mohamed3042/motion-video-skill/releases/download/mk-suite-launch-2026-10-03/MK-Suite-Create-Preview.mp4';
+      film.load();
+    }else seek();
+  }
+  full.addEventListener('click',()=>select('full'));
+  create.addEventListener('click',()=>select('create'));
+  document.querySelectorAll('[data-time]').forEach(button=>button.addEventListener('click',()=>select('full',Number(button.dataset.time))));
+</script>
+</body></html>

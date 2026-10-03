@@ -1,0 +1,12 @@
+[
+  {
+    "path": "out/MK-Suite-Launch.mp4",
+    "bytes": 165485602,
+    "sha256": "d6be692a4554889619468556a62228fc860292d851ab210618b779ff98f9d389"
+  },
+  {
+    "path": "out/MK-Suite-Create-Preview.mp4",
+    "bytes": 31039112,
+    "sha256": "359514cd8c3eeaa9e9adcb85cd1bf8cc3503341921ad0500c179f09cce4d9cf8"
+  }
+]

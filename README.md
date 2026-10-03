@@ -8,6 +8,16 @@
 
 A 1080p60 film with eleven distinct feature worlds, a phase-lock introduction and multicam finale. All 75 declared impact cues pass timing checks within one frame. The release includes the full master and complete standalone source ZIP; [scene source](studio/src/mpw) and [sound source](studio/scripts/mpw) are also committed here. The UI scenes illustrate capabilities, and the verification report records the limits of viewing/listening acceptance.
 
+## MK Suite — launcher launch film
+
+**[Full film, Create preview and editable source ZIP](https://github.com/Mohamed3042/motion-video-skill/releases/tag/mk-suite-launch-2026-10-03)** · [Standalone source and build instructions](films/mk-suite-launch/README.md) · [Sampled visual review](films/mk-suite-launch/evidence/visual-review.md)
+
+[![MK Suite: Your tools. One place.](films/mk-suite-launch/out/poster.jpg)](https://github.com/Mohamed3042/motion-video-skill/releases/tag/mk-suite-launch-2026-10-03)
+
+The completed 120-second 1080p60 launch film presents the reimagined launcher through its 31 design screens. It preserves the existing seven-act direction, with completed Reveal sound cues, corrected Create search framing, and an original score. The closing card identifies the launcher as coming in the next update.
+
+The master decodes through all 7,200 frames; its 67 declared impact/title/key/click onsets pass within one frame. Exported audio measures −14.2 LUFS and −2.3 dBTP. Visual review uses sampled frames and transition strips; continuous human viewing and listening are not claimed. Earlier MK Suite films and the other product projects are preserved.
+
 ## MK Job Orbit — ten feature worlds
 
 **[Watch / download the 120-second film and editable ZIP](https://github.com/Mohamed3042/motion-video-skill/releases/tag/job-orbit-v1.0)** · [Chaptered local player](outputs/job-orbit/index.html) · [Editing guide](docs/job-orbit/EDITING.md) · [Verification](docs/job-orbit/PRODUCTION.md)
