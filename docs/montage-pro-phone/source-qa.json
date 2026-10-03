@@ -1,0 +1,38 @@
+{
+  "testedAt": "2026-10-03T07:21:16.000222+00:00",
+  "file": "montage-pro-phone-source.zip",
+  "bytes": 42599931,
+  "sha256": "b2c5bc1c7c1265e94cb724089d4e88c23e5c6e39dc6ab7d49b1b06a4f0ecec4d",
+  "passed": true,
+  "manifestFilesVerified": 115,
+  "zipMembers": 116,
+  "relativeImportsChecked": 275,
+  "dynamicWorldImportsChecked": 22,
+  "requiredAssets": 18,
+  "portraitHeroImages": 12,
+  "score": {
+    "sampleRate": 44100,
+    "channels": 2,
+    "sampleWidthBytes": 2,
+    "durationSeconds": 164.0
+  },
+  "phoneGainDB": -0.4,
+  "checks": {
+    "zipCRC": true,
+    "manifestExact": true,
+    "allMemberHashes": true,
+    "uniqueMembers": true,
+    "relativeImportsComplete": true,
+    "dynamicWorldImportsComplete": true,
+    "npmLockContainsRuntimePackages": true,
+    "requiredAssetsPresent": true,
+    "heroImagesValid": true,
+    "scoreValid": true,
+    "safeMemberPaths": true,
+    "noPrivateFiles": true,
+    "noSensitiveTextPatterns": true,
+    "phoneGainDocumentedAndApplied": true
+  },
+  "issues": [],
+  "scope": "Archive CRC/hash, static and dynamic world import closure, dependency lock, asset decoding and public-content scan; no clean npm install or new full render."
+}
