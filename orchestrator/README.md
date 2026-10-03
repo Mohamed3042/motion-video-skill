@@ -144,8 +144,8 @@ curl -s -X POST http://127.0.0.1:4317/api/plan_video \
   -d '{"idea": "a 30 second promo for my note app: instant capture, offline sync", "seconds": 30}'
 # → {"id": "run_...", "status": "awaiting-approval", "plan": {...}, "estimate": {...}}
 
-curl -s -X POST http://127.0.0.1:4317/api/approve   -d '{"runId": "run_...", "what": "plan"}'
-curl -s -X POST http://127.0.0.1:4317/api/start_run -d '{"runId": "run_..."}'
+# approving the plan starts the build (start_run does the same)
+curl -s -X POST http://127.0.0.1:4317/api/approve -d '{"runId": "run_...", "what": "plan"}'
 curl -s -X POST http://127.0.0.1:4317/api/run_status -d '{"runId": "run_..."}'
 
 # live events (Server-Sent Events)
@@ -164,22 +164,26 @@ mvo roles --preset economy --director host --budget 3
 mvo models deepseek
 mvo estimate --seconds 45                          # rough cost/time before planning
 mvo plan "a 45 second feature tour for my app" --seconds 45 --format 16:9 --brand "Acme, #ff5a1f, Inter"
-mvo approve run_xxx && mvo start run_xxx          # follows the run until it ends
+mvo approve run_xxx                               # approve the plan: builds and follows the run until it ends
 mvo run "a 20 second logo reveal" --seconds 20     # plan, show the estimate, ask y/N, build, follow
 mvo status [run_xxx]
 mvo ops                                            # list operations
 mvo call run_status '{"runId": "run_xxx"}'         # any operation; '-' reads the JSON from stdin
 ```
 
-Exit codes: `0` ok, `1` the operation or run failed, `2` bad usage or invalid input, `3` the run paused at its budget.
+Exit codes: `0` ok, `1` the operation or run failed, `2` bad usage or invalid input, `3` the run is waiting for a human (budget or final approval).
+
+A run executes inside the process that started it: the MCP server, `mvo serve`, or an `mvo approve`/`start`/`run` command that keeps following it. If you close that process, the run stops. To make runs outlive single commands, keep one `mvo serve` running and pass `--url`.
 
 ## Host agent as builder: use your own subagents
 
 Set any role to `host` and the agent that drives the orchestrator does that work itself. It uses its own subscription and can use its built-in subagents, with no API spend. Assign the builder role to host, then give your agent a prompt like this one:
 
-> Use the motion tools. Plan a 30 second promo for <product> (plan_video), show me the plan and the estimate, and wait for my OK. Then approve and start it. While the run is building, keep claiming jobs with claim_job and hand each one to a subagent. Each subagent reads job.prompt, edits only the files in job.allow (inside the studio folder), then calls submit_job. If any gate fails, it fixes exactly what the gate's details say and submits again, until the job is accepted.
+> Use the motion tools. Plan a 30 second promo for <product> (plan_video), show me the plan and the estimate, and wait for my OK. Then approve it, which starts the build. While the run is building, keep claiming jobs with claim_job and hand each one to a subagent. Each subagent reads job.prompt, edits only the files in job.allow (inside the studio folder), then calls submit_job. If any gate fails, it fixes exactly what the gate's details say and submits again, until the job is accepted.
 
-The protocol, which the `claim_job` tool description also explains to the model:
+If the **director** is `host`, `plan_video` without a `plan` fails, and its error message is the director's full task. The agent writes the Plan JSON and calls `plan_video` again with `plan`.
+
+The builder protocol, which the `claim_job` tool description also explains to the model:
 
 1. `claim_job {runId, worker}` returns the next job waiting for a host, or `null` (poll again in ~15 s).
 2. Read `job.prompt`, the complete task.
@@ -194,8 +198,9 @@ The protocol, which the `claim_job` tool description also explains to the model:
 
 ## Budget
 
-- **Before a run:** `plan_video` returns an estimate per role: jobs, tokens, dollars and minutes. Free and host roles show $0. If a model's price is unknown, its cost shows as `?` and the budget check can't run until you enter the price (dashboard price fields, or `set_roles {models: [{ref, price: {inPerM, outPerM}}]}`). Nothing is spent until you approve the plan.
-- **During a run:** a ledger records real usage from every API response. When spending reaches `budgetUSD`, the run pauses with status `paused-budget`. It continues only after `approve {what: "budget"}` (the dashboard's "Continue past budget" button, or the y/N prompt in `mvo run`). To raise the cap first, use `set_roles {budgetUSD}`.
+- **Before a run:** `plan_video` returns an estimate per role: jobs, tokens, dollars and minutes. Free and host roles show $0. If a model's price is unknown, its cost shows as `?` and the budget check can't run until you enter the price (dashboard price fields, or `set_roles {models: [{ref, price: {inPerM, outPerM}}]}`). Nothing is spent until you approve the plan. If the estimate is over the budget, the start is refused. Raise `budgetUSD`, or `approve {what: "budget"}` to start anyway; the run still pauses at the cap.
+- **During a run:** a ledger records real usage from every API response. When spending reaches `budgetUSD`, the run pauses with status `paused-budget`. To continue, raise the cap with `set_roles {runId, budgetUSD}`, then call `approve {what: "budget"}`. The dashboard's "Continue past budget" button and the `mvo run`/`start` prompt do both steps for you.
+- **Final check:** if the integrated video fails its final check, the run waits and `run.error` starts with "awaiting final approval". Look at the stills, then `approve {what: "final"}` to render, or cancel.
 - Estimates assume no prompt-cache hits, so they're an upper bound.
 
 ## Operations
@@ -205,10 +210,10 @@ The protocol, which the `claim_job` tool description also explains to the model:
 | `get_config` | `{}` | Roles, connections, models and prices, budget, plus `problems` (what to fix first) |
 | `set_roles` | `{runId?, preset?, roles?, budgetUSD?, models?}` | Change who does what, prices and budget |
 | `list_models` | `{connection}` | Model ids on a connection |
-| `plan_video` | `{idea, seconds, format?, brandNotes?, plan?}` | Plan and estimate; the run waits for approval. A host director passes its own `plan` |
+| `plan_video` | `{idea, seconds, format?, brandNotes?, plan?}` | Plan and estimate; the run waits for approval. A `host` director passes its own `plan`: without one, the error message is the director's task |
 | `estimate_cost` | `{runId}` or `{seconds}` | Exact estimate for a planned run, or a rough one before planning |
-| `approve` | `{runId, what: plan \| budget \| final}` | Human-in-the-loop approvals |
-| `start_run` | `{runId}` | Build an approved run |
+| `approve` | `{runId, what: plan \| budget \| final}` | `plan`: approve and start the build. `budget`: start over budget, or resume after raising the cap. `final`: render after a failed final check |
+| `start_run` | `{runId}` | Build a planned run (same as approving the plan) |
 | `run_status` | `{runId}` | Status, spend, every job with its gates, stills and log (prompts left out) |
 | `list_runs` | `{}` | All runs |
 | `claim_job` | `{runId, worker}` | Host worker: take the next job (`null` if none is waiting) |
@@ -230,7 +235,12 @@ The protocol, which the `claim_job` tool description also explains to the model:
 ```bash
 npm test                                    # every test/*.test.ts
 npx tsc --noEmit
-MVO_FAKE=1 node bin/mvo.ts dashboard        # the UI on an in-memory fake orchestrator (no AI, no money)
+npm run demo                               # cross-platform demo dashboard (no AI, no money)
+node bin/mvo.ts serve --demo --port 4318    # same demo without opening a browser
 ```
 
-`MVO_FAKE=1` swaps in `test/fake-orchestrator.ts` for every command (`MVO_FAKE_TICK` sets the simulation speed in ms, `MVO_FAKE_DIR` sets where the fake stills go). `test/interfaces.test.ts` checks every operation over HTTP, MCP (stdio) and the CLI against it.
+`--demo` (or the environment variable `MVO_FAKE=1`) swaps in `test/fake-orchestrator.ts` for every command (`MVO_FAKE_TICK` sets the simulation speed in ms, `MVO_FAKE_DIR` sets where the fake stills go). The dashboard labels all jobs, checks and spending as simulated, and does not try to play the placeholder MP4. Demo runs are in memory and reset when the server stops. `test/interfaces.test.ts` checks every operation over HTTP, MCP (stdio) and the CLI against it.
+
+The pipeline test renders a real 8-second fixture using loopback mock providers, with no external model calls. Its studio source, run state and per-job Git commits live in a disposable `orchestrator/.test-tmp/` repository. It reuses the studio's installed dependencies without editing the working studio or its `Root.tsx`. Node, Git, ffmpeg/ffprobe, studio dependencies and Remotion's browser are required; fonts may be fetched during rendering.
+
+Set `MVO_TEST_KEEP_PROOF=1` when running the suite to retain the verified fixture MP4 and gate report in `.test-tmp/proof/`. The report's usage figures come from mock responses, not real provider spending.

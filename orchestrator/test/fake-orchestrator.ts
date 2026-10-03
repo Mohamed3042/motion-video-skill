@@ -91,7 +91,7 @@ export function createFakeOrchestrator(opts: FakeOptions = {}): Orchestrator {
   const dir = resolve(opts.dir ?? process.env.MVO_FAKE_DIR ?? join(import.meta.dirname, '..', '..', '.motion', 'fake'));
   const tick = opts.tickMs ?? Number(process.env.MVO_FAKE_TICK ?? 400);
   let config = defaultConfig();
-  const runs = new Map<string, Run & {approved?: boolean}>();
+  const runs = new Map<string, Run>();
   const subs = new Map<string, Set<(e: RunEvent) => void>>();
   let seq = 0;
   const id = (p: string) => `${p}_${Date.now().toString(36)}${(seq++).toString(36)}`;
@@ -196,6 +196,8 @@ export function createFakeOrchestrator(opts: FakeOptions = {}): Orchestrator {
   const orch: Orchestrator = {
     async plan(input) {
       const format = input.format ?? '16:9';
+      if (!input.plan && config.roles.director === 'host') // like the real one: a host director gets its task back
+        throw new Error('The director role is "host": write the plan yourself and call plan again with {plan: <Plan JSON>}.\n\n# Task\nWrite a Plan for: ' + input.idea);
       const plan = (input.plan as Plan | undefined) ?? fakePlan(input.idea, input.seconds, format);
       const run: Run = {
         id: id('run'),
@@ -221,7 +223,6 @@ export function createFakeOrchestrator(opts: FakeOptions = {}): Orchestrator {
     },
     async setRoles(input) {
       const target = input.runId ? getRun(input.runId) : undefined;
-      if (target && target.status !== 'awaiting-approval') throw new Error(`Run ${target.id} already started; roles are fixed.`);
       let c = target ? target.config : config;
       if (input.preset) c = applyPreset(c, input.preset);
       if (target) target.config = c;
@@ -246,8 +247,7 @@ export function createFakeOrchestrator(opts: FakeOptions = {}): Orchestrator {
     },
     async start(runId) {
       const run = getRun(runId);
-      if (run.status !== 'awaiting-approval') throw new Error(`Run ${runId} is ${run.status}; only awaiting-approval runs can start.`);
-      if (!run.approved) throw new Error(`Approve the plan first: approve {runId: "${runId}", what: "plan"}.`);
+      if (run.status !== 'awaiting-approval') throw new Error(`Run ${runId} is ${run.status}; only a planned run awaiting approval can start.`);
       run.status = 'building';
       const studioJob = (kind: Job['kind'], segmentId?: string): Job => {
         const assignee = run.config.roles.builder;
@@ -295,10 +295,19 @@ export function createFakeOrchestrator(opts: FakeOptions = {}): Orchestrator {
     async stills(jobId) {
       return findJob(jobId).job.stills;
     },
+    // Same semantics as the real orchestrator: approving the plan (or the budget, before start) starts the run.
     async approve({runId, what}) {
       const run = getRun(runId);
-      if (what === 'plan') run.approved = true;
-      if (what === 'budget' && run.status === 'paused-budget') run.status = 'building';
+      if (run.status === 'awaiting-approval' && what !== 'final') return orch.start(runId);
+      if (what === 'plan') throw new Error(`run ${runId} is ${run.status}, not awaiting plan approval`);
+      if (what === 'budget') {
+        if (run.status !== 'paused-budget') throw new Error(`run ${runId} is ${run.status}, not paused on budget`);
+        if (run.spentUSD >= run.config.budgetUSD) throw new Error('raise budgetUSD first (set_roles with runId and budgetUSD), then approve "budget"');
+        run.status = 'building';
+      } else {
+        if (!run.error?.startsWith('awaiting final approval')) throw new Error(`run ${runId} is ${run.status}, not waiting for final approval`);
+        run.error = undefined;
+      }
       emit(run.id, 'run', `approved ${what}`);
       return run;
     },

@@ -269,6 +269,7 @@ test('config: defaults, merge, validation, save/load, discovery', async () => {
   assert.equal(d.roles.director, 'openai/?');
   assert.deepEqual(d.gates, {retries: 2, reviewMinScore: 7, parallel: 3});
   assert.equal(d.connections['gemini-free'].free, true);
+  assert.match(d.connections['gemini-free'].note ?? '', /edit to match your tier/);
   assert.equal(d.connections.ollama.keyEnv, undefined);
 
   const dir = join(tmp, 'cfg');

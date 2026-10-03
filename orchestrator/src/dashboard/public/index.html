@@ -6,7 +6,7 @@
   <title>Motion Orchestrator</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-demo="false">
   <header>
     <div class="brand">Motion <span>Orchestrator</span></div>
     <nav>
@@ -22,6 +22,7 @@
   </header>
 
   <main>
+    <p id="demo-banner" class="demo-notice" hidden>Demo mode: jobs, checks and spending are simulated. No API calls or finished video. Runs reset when the server stops.</p>
     <section id="setup" class="tab">
       <div class="head">
         <div>
@@ -63,6 +64,7 @@
         </label>
         <button class="primary" type="submit">Plan</button>
       </form>
+      <pre id="plan-error" class="plan-error" role="alert" hidden></pre>
       <div id="plan-view" hidden>
         <h2 id="plan-title"></h2>
         <p id="plan-meta" class="muted"></p>
@@ -84,6 +86,7 @@
           <div>
             <h2 id="board-title"></h2>
             <p class="muted"><span id="board-status" class="pill"></span> <span id="board-id"></span></p>
+            <p id="run-error" class="run-error" hidden></p>
           </div>
           <div class="actions">
             <button id="approve-budget" hidden>Continue past budget</button>
@@ -96,6 +99,7 @@
           <span id="spend-text"></span>
         </div>
         <div id="final-wrap" hidden><video id="final" controls preload="metadata"></video></div>
+        <p id="demo-result" class="demo-notice" hidden>Simulation complete. The demo does not render a playable video.</p>
         <div id="columns" class="columns"></div>
         <h3>Live log</h3>
         <pre id="log" class="log" aria-live="polite"></pre>

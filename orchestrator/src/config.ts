@@ -21,7 +21,7 @@ export const PRESETS: Record<PresetId, Record<RoleId, RoleAssignment>> = {
 const GEMINI = 'https://generativelanguage.googleapis.com/v1beta/openai';
 
 export function defaultConfig(): Config {
-  const connections: Record<string, Connection & {note?: string}> = {
+  const connections: Record<string, Connection> = {
     openai: {id: 'openai', kind: 'openai', baseUrl: 'https://api.openai.com/v1', keyEnv: 'OPENAI_API_KEY'},
     anthropic: {id: 'anthropic', kind: 'anthropic', baseUrl: 'https://api.anthropic.com', keyEnv: 'ANTHROPIC_API_KEY'},
     deepseek: {id: 'deepseek', kind: 'openai', baseUrl: 'https://api.deepseek.com', keyEnv: 'DEEPSEEK_API_KEY'},
@@ -70,6 +70,7 @@ const ConnectionZ = z.looseObject({
   rpd: Pos.optional(),
   tpm: Pos.optional(),
   headers: z.record(z.string(), z.string()).optional(),
+  note: z.string().optional(),
 });
 const ModelZ = z.looseObject({
   ref: z.string().min(3),

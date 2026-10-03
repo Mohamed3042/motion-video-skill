@@ -12,6 +12,7 @@
   },
   "scripts": {
     "mvo": "node bin/mvo.ts",
+    "demo": "node bin/mvo.ts dashboard --demo",
     "test": "node test/run-all.ts"
   },
   "dependencies": {

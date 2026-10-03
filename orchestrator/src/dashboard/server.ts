@@ -30,6 +30,7 @@ const LOOPBACK = new Set(['127.0.0.1', 'localhost', '::1', '[::1]']);
 const MAX_BODY = 4 * 1024 * 1024;
 
 export type ServerOptions = {
+  demo?: boolean; // label simulated jobs and hide the fake MP4 in the dashboard
   token?: string; // bearer token; defaults to env MVO_TOKEN
   fileRoots?: string[]; // folders /api/file may serve from
 };
@@ -127,7 +128,10 @@ export function createServer(orch: Orchestrator, opts: ServerOptions = {}): Serv
         const s = STATIC[url.pathname];
         if (!s || req.method !== 'GET') return send(res, 404, {error: 'Not found'});
         res.writeHead(200, {'content-type': s[1], 'cache-control': 'no-cache'});
-        return res.end(await readFile(join(PUBLIC, s[0])));
+        const content = await readFile(join(PUBLIC, s[0]));
+        return res.end(s[0] === 'index.html' && opts.demo
+          ? content.toString('utf8').replace('data-demo="false"', 'data-demo="true"')
+          : content);
       }
 
       if (!authorized(req)) return send(res, 401, {error: 'Unauthorized: send "Authorization: Bearer <MVO_TOKEN>".'});

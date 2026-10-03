@@ -25,16 +25,18 @@ Make a video
                                         plan + cost estimate; prints the run id
   mvo estimate <runId> | --seconds N    cost/time estimate for a run, or a rough one before planning
   mvo approve <runId> [--what plan|budget|final]
-  mvo start <runId>                     start an approved run and follow it until it ends
+                                        plan (default): approve the plan and start building; then follow the run
+  mvo start <runId>                     start a planned run (same as approving it) and follow it until it ends
   mvo run "<idea>" --seconds N [--format F] [--brand "..."] [--yes]
-                                        plan → estimate → confirm (unless --yes) → start → follow
+                                        plan → estimate → confirm (unless --yes) → build → follow
+  A run executes inside the process that started it: keep "mvo start/run" open, or use "mvo serve" + --url.
   mvo status [runId]                    list runs, or one run's jobs
 
 Drive it from anything
   mvo ops [--json]                      list every operation (same set as MCP tools and HTTP API)
   mvo call <op> '<json>'                call any operation; '-' reads the JSON from stdin
   mvo serve [--port 4317] [--host 127.0.0.1]   HTTP API + dashboard
-  mvo dashboard [--port] [--host]       same, and open the browser
+  mvo dashboard [--port] [--host] [--demo]   same, and open the browser; --demo simulates work without API calls
   mvo mcp                               stdio MCP server (for Claude Code, Codex, Gemini CLI, Cursor, ...)
 
 Global options
@@ -55,7 +57,7 @@ const {values: f, positionals} = (() => {
         seconds: {type: 'string'}, format: {type: 'string'}, brand: {type: 'string'}, yes: {type: 'boolean', short: 'y'},
         preset: {type: 'string'}, director: {type: 'string'}, builder: {type: 'string'}, reviewer: {type: 'string'},
         escalation: {type: 'string'}, budget: {type: 'string'}, what: {type: 'string'},
-        port: {type: 'string'}, host: {type: 'string'}, json: {type: 'boolean'}, help: {type: 'boolean', short: 'h'},
+        port: {type: 'string'}, host: {type: 'string'}, demo: {type: 'boolean'}, json: {type: 'boolean'}, help: {type: 'boolean', short: 'h'},
       },
     });
   } catch (e) {
@@ -65,9 +67,10 @@ const {values: f, positionals} = (() => {
 })();
 const [cmd, ...args] = positionals;
 
+const demo = f.demo || !!process.env.MVO_FAKE;
 let orchP: Promise<Orchestrator> | undefined;
 const orchestrator = (): Promise<Orchestrator> =>
-  (orchP ??= process.env.MVO_FAKE
+  (orchP ??= demo
     ? import('../test/fake-orchestrator.ts').then((m) => m.createFakeOrchestrator())
     : import('../src/pipeline/orchestrator.ts').then((m) => m.createOrchestrator({configPath: f.config ?? process.env.MVO_CONFIG})));
 
@@ -107,22 +110,28 @@ const fmtEvent = (e: RunEvent) => `${e.t.slice(11, 19)}  ${pad(e.type, 5)} ${e.m
 
 async function confirm(q: string): Promise<boolean> {
   if (!process.stdin.isTTY) return false;
+  return /^y(es)?$/i.test(await ask(`${q} [y/N] `));
+}
+async function ask(q: string): Promise<string> {
+  if (!process.stdin.isTTY) return '';
   const rl = createInterface({input: process.stdin, output: process.stdout});
-  const a = await rl.question(`${q} [y/N] `);
+  const a = await rl.question(q);
   rl.close();
-  return /^y(es)?$/i.test(a.trim());
+  return a.trim();
 }
 
-/** Print events until the run ends. Returns the final status. In-process: live events; remote: status polling. */
-async function follow(runId: string): Promise<any> {
-  const off = url ? () => {} : (await orchestrator()).subscribe(runId, (e) => console.log(fmtEvent(e)));
+const awaitingFinal = (run: any) => typeof run.error === 'string' && run.error.startsWith('awaiting final approval');
+
+/** Print events until the run ends or needs a human. In-process: live events; remote: status polling. */
+async function follow(runId: string, log = console.log): Promise<any> {
+  const off = url ? () => {} : (await orchestrator()).subscribe(runId, (e) => log(fmtEvent(e)));
   let last = '';
   try {
     for (;;) {
       const run: any = await call('run_status', {runId});
       const line = `${run.status} · ${run.jobs.filter((j: any) => j.status === 'accepted').length}/${run.jobs.length} jobs accepted · spent ${usd(run.spentUSD)} of ${usd(run.budgetUSD)}`;
-      if (line !== last) console.log(`-- ${(last = line)}`);
-      if (TERMINAL.includes(run.status)) return run;
+      if (line !== last) log(`-- ${(last = line)}`);
+      if (TERMINAL.includes(run.status) || awaitingFinal(run)) return run;
       await new Promise((r) => setTimeout(r, 2000));
     }
   } finally {
@@ -130,7 +139,7 @@ async function follow(runId: string): Promise<any> {
   }
 }
 
-/** Follow a started run; ask about the budget if it pauses. Exit code: 0 done, 1 failed/cancelled, 3 paused. */
+/** Follow a started run, asking when it needs a human. Exit code: 0 done, 1 failed/cancelled, 3 waiting for a human. */
 async function followToEnd(runId: string): Promise<number> {
   for (;;) {
     const run = await follow(runId);
@@ -139,11 +148,22 @@ async function followToEnd(runId: string): Promise<number> {
       return 0;
     }
     if (run.status === 'paused-budget') {
-      if (await confirm(`Budget reached (spent ${usd(run.spentUSD)} of ${usd(run.budgetUSD)}). Continue spending?`)) {
+      const more = Number(await ask(`Budget reached (spent ${usd(run.spentUSD)} of ${usd(run.budgetUSD)}). New budget in USD to continue (empty = stop): `));
+      if (more > run.spentUSD) {
+        await call('set_roles', {runId, budgetUSD: more});
         await call('approve', {runId, what: 'budget'});
         continue;
       }
-      console.log(`Paused at the budget. Resume later with: mvo approve ${runId} --what budget`);
+      console.log(`Paused at the budget. To continue: mvo call set_roles '{"runId":"${runId}","budgetUSD":<more>}' then mvo approve ${runId} --what budget`);
+      return 3;
+    }
+    if (awaitingFinal(run)) {
+      console.log(`\n${run.error}`);
+      if (await confirm('Render anyway?')) {
+        await call('approve', {runId, what: 'final'});
+        continue;
+      }
+      console.log(`Waiting. Look at the stills, then: mvo approve ${runId} --what final (or mvo call cancel_run '{"runId":"${runId}"}')`);
       return 3;
     }
     console.log(`Run ${run.status}${run.error ? `: ${run.error}` : ''}`);
@@ -200,7 +220,7 @@ async function main(): Promise<number | 'stay'> {
       console.log(`Run ${run.id} (${run.status})\n`);
       if (run.plan) printPlan(run.plan);
       if (run.estimate) printEstimate(run.estimate, run.config?.budgetUSD);
-      console.log(`\nNext: mvo approve ${run.id} && mvo start ${run.id}`);
+      console.log(`\nNext: mvo approve ${run.id}   (starts building and follows the run)`);
       return 0;
     }
     case 'estimate': {
@@ -208,9 +228,10 @@ async function main(): Promise<number | 'stay'> {
       return 0;
     }
     case 'approve': {
+      // Approving starts/resumes work, which runs in this process (or the --url server): follow it.
       const run: any = await call('approve', {runId: need(args[0], 'runId'), what: f.what ?? 'plan'});
       console.log(`Approved ${f.what ?? 'plan'} for ${run.id} (${run.status}).`);
-      return 0;
+      return followToEnd(run.id);
     }
     case 'start': {
       const runId = need(args[0], 'runId');
@@ -223,11 +244,10 @@ async function main(): Promise<number | 'stay'> {
       if (run.plan) printPlan(run.plan);
       if (run.estimate) printEstimate(run.estimate, run.config?.budgetUSD);
       if (!f.yes && !(await confirm('\nStart building?'))) {
-        console.log(`Not started. Later: mvo approve ${run.id} && mvo start ${run.id}`);
+        console.log(`Not started. Later: mvo approve ${run.id}`);
         return 0;
       }
-      await call('approve', {runId: run.id, what: 'plan'});
-      await call('start_run', {runId: run.id});
+      await call('approve', {runId: run.id, what: 'plan'}); // starts the build
       return followToEnd(run.id);
     }
     case 'status': {
@@ -259,18 +279,25 @@ async function main(): Promise<number | 'stay'> {
       } catch {
         throw new UsageError(`Input must be JSON, e.g. mvo call run_status '{"runId":"..."}'. Got: ${raw}`);
       }
-      console.log(JSON.stringify(await call(op, input), null, 2));
-      if (op === 'start_run' && !url) {
-        console.error('Run started in this process; it keeps working until it ends (Ctrl+C stops it). Use "mvo start" to follow it, or "mvo serve" + --url to keep runs in one long-lived process.');
-        return 'stay';
+      const result: any = await call(op, input);
+      console.log(JSON.stringify(result, null, 2));
+      if (['start_run', 'approve', 'submit_job'].includes(op) && !url) {
+        console.error('Work continues in this process (Ctrl+C stops it). Use "mvo serve" + --url for a shared, long-lived worker.');
+        // Keep the pipeline alive, including host-job waits. stdout remains the operation's JSON response.
+        const run = await follow(op === 'submit_job' ? result.runId : result.id, console.error);
+        return run.status === 'done' ? 0 : run.status === 'paused-budget' || awaitingFinal(run) ? 3 : 1;
       }
       return 0;
     }
     case 'serve':
     case 'dashboard': {
       const {serve} = await import('../src/dashboard/server.ts');
-      const {url: at} = await serve(await orchestrator(), {port: f.port ? Number(f.port) : undefined, host: f.host});
+      const {url: at} = await serve(await orchestrator(), {
+        port: f.port ? Number(f.port) : undefined, host: f.host, demo,
+        fileRoots: demo && process.env.MVO_FAKE_DIR ? [process.env.MVO_FAKE_DIR] : undefined,
+      });
       console.log(`Motion Orchestrator on ${at}  (API: POST ${at}/api/<op>, discovery: GET ${at}/api/ops)`);
+      if (demo) console.log('DEMO: simulated jobs, gates and spending; no API calls or finished video. Runs reset when this process stops.');
       if (cmd === 'dashboard') {
         const [bin, a] = process.platform === 'win32' ? ['explorer', [at]] : process.platform === 'darwin' ? ['open', [at]] : ['xdg-open', [at]];
         spawn(bin, a, {detached: true, stdio: 'ignore'}).on('error', () => console.log(`Open ${at} in your browser.`)).unref();

@@ -40,10 +40,11 @@ export const OPS: Op[] = [
     name: 'plan_video',
     description:
       'Start a new video. Give the idea and the length in seconds (always required). The director role writes a Plan ' +
-      '(title, format, brand, bar-aligned segments with picture and music briefs) unless you pass your own `plan` object: ' +
-      'do that when YOU are the director (the director role is "host"). Nothing is built and no money is spent yet; the run ' +
-      'waits in status "awaiting-approval". Returns the Run {id, status, plan, estimate, ...}. Next: show the plan and ' +
-      'estimate to the user, then call approve {what:"plan"} and start_run.',
+      '(title, format, brand, bar-aligned segments with picture and music briefs) unless you pass your own `plan` object. ' +
+      'If the director role is "host" (= you) and you pass no plan, the call fails and its error message is the ' +
+      "director's task: write the Plan JSON it describes and call plan_video again with {idea, seconds, plan}. Nothing is " +
+      'built yet; the run waits in status "awaiting-approval". Returns the Run {id, status, plan, estimate, ...}. Next: ' +
+      'show the plan and estimate to the user; when they agree, call approve {what:"plan"}, which starts the build.',
     input: z.object({
       idea: z.string().min(1).describe('What the video is about, in plain words (product, message, style, audience).'),
       seconds: z.number().positive().describe('Video length in seconds. Required: ask the user if you do not know it.'),
@@ -138,10 +139,12 @@ export const OPS: Op[] = [
   {
     name: 'start_run',
     description:
-      'Start building an approved run (call approve {what:"plan"} first). Jobs are created (one framework job plus one ' +
-      'per segment) and run in parallel by their roles: API roles work on their own, "host" jobs wait for you to ' +
-      'claim_job. Paid roles spend money up to budgetUSD, then the run pauses (status "paused-budget"). Returns the Run; ' +
-      'follow progress with run_status.',
+      'Start building a planned run (status "awaiting-approval"); same effect as approve {what:"plan"}. Jobs are created ' +
+      '(one framework job plus one per segment) and run in parallel by their roles: API roles work on their own, "host" ' +
+      'jobs wait for you to claim_job. Fails with the reason if the role setup has problems (see get_config) or the ' +
+      'estimate exceeds budgetUSD (raise it with set_roles, or approve {what:"budget"} to start anyway). Paid roles ' +
+      'spend up to budgetUSD, then the run pauses (status "paused-budget"). The run executes inside the process that ' +
+      'serves these tools. Returns the Run; follow progress with run_status.',
     input: z.object({runId}),
     handler: (o, i) => o.start(i.runId),
   },
@@ -213,9 +216,11 @@ export const OPS: Op[] = [
   {
     name: 'approve',
     description:
-      'Human-in-the-loop approvals. what="plan": accept the plan and estimate so start_run may begin. what="budget": ' +
-      'let a run paused at its budget (status "paused-budget") continue. what="final": accept the final review so the ' +
-      'video is delivered. Only call this when the user agreed, or told you to proceed on your own. Returns the Run.',
+      'Human-in-the-loop approvals. what="plan": accept the plan and estimate and START the build (same as start_run). ' +
+      'what="budget": start a run whose estimate exceeds budgetUSD, or resume a run paused at its budget (status ' +
+      '"paused-budget"; first raise the cap with set_roles {runId, budgetUSD}). what="final": the final check needs a ' +
+      'human (run.error starts with "awaiting final approval"): look at the stills, then approve to render. Only call ' +
+      'this when the user agreed, or told you to proceed on your own. Returns the Run.',
     input: z.object({runId, what: z.enum(['plan', 'budget', 'final'])}),
     handler: (o, i) => o.approve(i),
   },

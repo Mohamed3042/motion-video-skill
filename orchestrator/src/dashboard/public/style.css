@@ -22,6 +22,7 @@ p { margin: .25rem 0; }
 .muted { color: var(--muted); }
 .mono { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: .85em; }
 [hidden] { display: none !important; }
+.demo-notice { padding: .75rem 1rem; margin: 0 0 1rem; border: 1px solid var(--warn); border-radius: var(--radius); color: var(--warn); background: var(--panel); }
 
 header {
   display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
@@ -138,3 +139,7 @@ label { display: flex; flex-direction: column; gap: .3rem; color: var(--muted); 
   .role-pick { flex-wrap: wrap; }
   .table { display: block; overflow-x: auto; }
 }
+.price-set { display: flex; gap: .5rem; align-items: flex-end; flex-wrap: wrap; }
+.role-note.muted { color: var(--muted); }
+.run-error { color: var(--warn); white-space: pre-wrap; margin: .25rem 0 0; }
+.plan-error { white-space: pre-wrap; max-height: 320px; overflow: auto; background: var(--panel); border: 1px solid var(--warn); border-radius: var(--radius); padding: .75rem; font-size: .82rem; max-width: 760px; }

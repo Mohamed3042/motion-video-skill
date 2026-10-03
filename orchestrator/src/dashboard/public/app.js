@@ -22,6 +22,8 @@ const TERMINAL = ['done', 'failed', 'cancelled'];
 
 const state = {config: null, models: {}, modelErrors: {}, run: null, es: null, openGate: '', refreshTimer: 0};
 const $ = (sel, el = document) => el.querySelector(sel);
+const DEMO = document.body.dataset.demo === 'true';
+$('#demo-banner').hidden = !DEMO;
 
 // Tiny DOM builder. Text always goes in as text (plans and logs come from models: never inject HTML).
 function h(tag, props, ...kids) {
@@ -120,7 +122,8 @@ for (const b of document.querySelectorAll('nav button')) b.addEventListener('cli
 const pendingRun = () => (state.run && state.run.status === 'awaiting-approval' ? state.run : null);
 
 async function loadModels(conn) {
-  if (state.models[conn] || state.modelErrors[conn]) return;
+  const kind = state.config && state.config.connections[conn] && state.config.connections[conn].kind;
+  if (!kind || kind === 'mcp-host' || state.models[conn] || state.modelErrors[conn]) return;
   try {
     state.models[conn] = await api('list_models', {connection: conn});
   } catch (e) {
@@ -156,12 +159,15 @@ function roleRow(role) {
   });
   const price = (key, label) => h('label', {className: 'price'}, label,
     h('input', {type: 'number', min: 0, step: 0.01, 'data-k': key, placeholder: '0.00'}));
-  const priceBox = needsPrice ? h('div', {className: 'prices'}, price('inPerM', 'in $/1M'), price('outPerM', 'out $/1M'),
+  const priceBox = needsPrice ? h('div', {className: 'price-set'}, price('inPerM', 'in $/1M'), price('outPerM', 'out $/1M'),
     h('button', {type: 'button', onclick: guard((e) => {
-      const inputs = [...e.target.closest('.prices').querySelectorAll('input')];
+      const inputs = [...e.target.closest('.price-set').querySelectorAll('input')];
       if (inputs.some((i) => i.value === '' || !(Number(i.value) >= 0))) throw new Error('Enter both prices (USD per 1M tokens).');
-      return change({models: [{ref, price: Object.fromEntries(inputs.map((i) => [i.dataset.k, Number(i.value)]))}]});
+      // set_roles replaces the whole model entry: keep its other fields
+      return change({models: [{...info, ref, price: Object.fromEntries(inputs.map((i) => [i.dataset.k, Number(i.value)]))}]});
     })}, 'Set price')) : null;
+  const visionBox = !isHost && model && model !== '?' && !info.vision ? h('label', {className: 'price'},
+    h('input', {type: 'checkbox', onchange: guard(() => change({models: [{...info, ref, vision: true}]}))}), 'this model can see images') : null;
 
   const badges = [];
   if (isHost) badges.push(['host', 'HOST']);
@@ -173,8 +179,9 @@ function roleRow(role) {
     h('div', {className: 'role-name'}, h('b', {}, role), h('span', {className: 'muted'}, ROLE_HINT[role])),
     h('div', {className: 'role-pick'}, connSel, modelIn, h('datalist', {id: 'dl-' + role}, options.map((m) => h('option', {value: m})))),
     h('div', {className: 'badges'}, badges.map(([k, t]) => h('span', {className: 'badge ' + k}, t))),
-    priceBox,
-    state.modelErrors[connId] ? h('div', {className: 'role-note'}, 'Model list unavailable: ' + state.modelErrors[connId]) : null);
+    priceBox || visionBox ? h('div', {className: 'prices'}, priceBox, visionBox) : null,
+    conn.note && !isHost ? h('div', {className: 'role-note muted'}, connId + ': ' + conn.note) : null,
+    state.modelErrors[connId] && !isHost ? h('div', {className: 'role-note'}, 'Model list unavailable: ' + state.modelErrors[connId]) : null);
 }
 
 function renderSetup() {
@@ -244,6 +251,7 @@ $('#plan-form').addEventListener('submit', guard(async (e) => {
   const btn = $('button[type=submit]', e.target);
   btn.disabled = true;
   btn.textContent = 'Planning…';
+  $('#plan-error').hidden = true;
   try {
     const run = await api('plan_video', {
       idea: fd.get('idea').trim(), seconds: Number(fd.get('seconds')), format: fd.get('format'),
@@ -252,6 +260,10 @@ $('#plan-form').addEventListener('submit', guard(async (e) => {
     state.run = run;
     renderPlan(run);
     await refreshEstimate();
+  } catch (err) {
+    // Can be long (a "host" director gets the director's whole task back): show it in full, not as a toast.
+    $('#plan-error').textContent = err.message;
+    $('#plan-error').hidden = false;
   } finally {
     btn.disabled = false;
     btn.textContent = 'Plan';
@@ -261,8 +273,7 @@ $('#plan-form').addEventListener('submit', guard(async (e) => {
 $('#approve-start').addEventListener('click', guard(async () => {
   const run = pendingRun();
   if (!run) throw new Error('No planned run waiting for approval.');
-  await api('approve', {runId: run.id, what: 'plan'});
-  await api('start_run', {runId: run.id});
+  await api('approve', {runId: run.id, what: 'plan'}); // approving the plan starts the build
   openRun(run.id);
 }));
 
@@ -302,10 +313,14 @@ function renderBoard() {
   $('#spend-fill').className = pct >= 100 ? 'fail' : pct > 80 ? 'warn' : 'ok';
   $('#spend-text').textContent = 'spent ' + usd(run.spentUSD) + ' of ' + usd(budget);
   $('#approve-budget').hidden = run.status !== 'paused-budget';
-  $('#approve-final').hidden = !['integrating', 'rendering'].includes(run.status);
+  const awaitingFinal = typeof run.error === 'string' && run.error.startsWith('awaiting final approval');
+  $('#approve-final').hidden = !awaitingFinal;
+  $('#run-error').textContent = run.error || '';
+  $('#run-error').hidden = !run.error;
   $('#cancel-run').hidden = TERMINAL.includes(run.status);
-  $('#final-wrap').hidden = !run.output;
-  if (run.output && $('#final').dataset.src !== run.output) {
+  $('#final-wrap').hidden = DEMO || !run.output;
+  $('#demo-result').hidden = !DEMO || !run.output;
+  if (!DEMO && run.output && $('#final').dataset.src !== run.output) {
     $('#final').dataset.src = run.output;
     $('#final').src = fileUrl(run.output);
   }
@@ -357,7 +372,13 @@ $('#cancel-run').addEventListener('click', guard(async () => {
   await refreshRun();
 }));
 $('#approve-budget').addEventListener('click', guard(async () => {
-  await api('approve', {runId: state.run.id, what: 'budget'});
+  const run = state.run;
+  const answer = prompt('Spent ' + usd(run.spentUSD) + ' of ' + usd(run.budgetUSD) + '. New budget in USD for this run:', String(Math.ceil(run.budgetUSD * 2)));
+  if (answer === null) return;
+  const budgetUSD = Number(answer);
+  if (!(budgetUSD > run.spentUSD)) throw new Error('The new budget must be more than what is already spent.');
+  await api('set_roles', {runId: run.id, budgetUSD});
+  await api('approve', {runId: run.id, what: 'budget'});
   await refreshRun();
 }));
 $('#approve-final').addEventListener('click', guard(async () => {
@@ -372,7 +393,7 @@ const loadRuns = guard(async () => {
     h('tr', {className: 'click', tabIndex: 0, onclick: () => openRun(r.id), onkeydown: (e) => e.key === 'Enter' && openRun(r.id)},
       h('td', {className: 'mono'}, r.id), h('td', {}, r.idea), h('td', {}, h('span', {className: 'pill ' + r.status}, r.status)),
       h('td', {className: 'num'}, usd(r.spentUSD)), h('td', {}, new Date(r.createdAt).toLocaleString()),
-      h('td', {}, r.output ? h('a', {href: fileUrl(r.output), target: '_blank', rel: 'noopener', onclick: (e) => e.stopPropagation()}, 'video') : '')))
+      h('td', {}, r.output ? DEMO ? 'simulated' : h('a', {href: fileUrl(r.output), target: '_blank', rel: 'noopener', onclick: (e) => e.stopPropagation()}, 'video') : '')))
     : [h('tr', {}, h('td', {colSpan: 6, className: 'muted'}, 'No runs yet.'))]));
 });
 

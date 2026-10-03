@@ -18,8 +18,8 @@ export function createMcpServer(call: Caller): McpServer {
     {
       instructions:
         'Motion Orchestrator makes motion-graphics videos with a team of AI agents. Typical flow: get_config → ' +
-        'plan_video {idea, seconds} → show plan + estimate to the user → approve {what:"plan"} → start_run → poll ' +
-        'run_status. If any role is "host", that is you: do those jobs with claim_job → edit files → submit_job.',
+        'plan_video {idea, seconds} → show plan + estimate to the user → approve {what:"plan"} (starts the build) → ' +
+        'poll run_status. If any role is "host", that is you: do those jobs with claim_job → edit files → submit_job.',
     },
   );
   for (const op of OPS) {

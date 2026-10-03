@@ -1,11 +1,11 @@
 // Pipeline proof: `node test/pipeline.test.ts`
 // 1. units: plan validation (bad plans rejected with readable errors), JSON extraction, ownership + determinism
 //    gates on a temp folder, Root.tsx marker registration (idempotent, reversible).
-// 2. end to end on the REAL studio: mock API providers (director, reviewer, escalation) over HTTP + a fake host
+// 2. end to end on an ISOLATED studio: mock API providers (director, reviewer, escalation) over HTTP + a fake host
 //    builder (plain code) → REAL scaffold, REAL gates (a Math.random fails on purpose → retry → escalation),
 //    REAL review loop, REAL integrate and a REAL MP4 render, verified with ffprobe. Cleans up everything after.
 import assert from 'node:assert/strict';
-import {existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
+import {copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -18,10 +18,13 @@ import {createOrchestrator, waitForRun} from '../src/pipeline/orchestrator.ts';
 import {probe} from '../src/pipeline/integrate.ts';
 import {exec} from '../src/pipeline/exec.ts';
 import {startMock, type MockRequest} from './helpers/mock-api.ts';
+import {createPipelineFixture} from './helpers/pipeline-fixture.ts';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const REPO = path.resolve(HERE, '../..');
-const STUDIO = path.join(REPO, 'studio');
+const fixture = await createPipelineFixture(path.resolve(HERE, '../..'), path.resolve(HERE, '../.test-tmp'));
+process.once('exit', fixture.cleanup);
+const REPO = fixture.repo;
+const STUDIO = fixture.studio;
 const PLAN: Plan = JSON.parse(readFileSync(path.join(HERE, 'fixtures/plan-tiny.json'), 'utf8'));
 const clone = <T>(x: T): T => structuredClone(x);
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -122,7 +125,7 @@ console.log('Root.tsx marker registration');
 }
 
 // ── 2. end to end ────────────────────────────────────────────────────────────────────────────────
-console.log('end to end (real studio, mock providers, fake host builder)');
+console.log('end to end (isolated studio, mock providers, fake host builder)');
 
 const reply = (message: unknown, prompt = 1200, completion = 300) => ({body: {choices: [{message}], usage: {prompt_tokens: prompt, completion_tokens: completion}}});
 const textOf = (req: MockRequest) =>
@@ -311,6 +314,17 @@ try {
   const pr = await probe(final.output, PLAN.fps, PLAN.seconds * PLAN.fps);
   assert.ok(pr.ok, pr.details);
   ok(`render: ${path.relative(REPO, final.output)} → ffprobe ${pr.details}`);
+  if (process.env.MVO_TEST_KEEP_PROOF === '1') {
+    const proofDir = path.resolve(HERE, '../.test-tmp/proof');
+    mkdirSync(proofDir, {recursive: true});
+    copyFileSync(final.output, path.join(proofDir, 'mvo-e2e-test.mp4'));
+    writeFileSync(path.join(proofDir, 'render-proof.json'), JSON.stringify({
+      providers: 'Loopback mocks only; no external model calls or real provider spending.',
+      media: pr, mockUsageUSD: final.spentUSD,
+      jobs: final.jobs.map(({kind, segmentId, attempt, status, gates}) => ({kind, segmentId, attempt, status, gates})),
+    }, null, 2));
+    ok('saved optional local render proof under orchestrator/.test-tmp/proof');
+  }
   assert.ok(events.some((e) => /^run: done/.test(e)));
   console.log(`  e2e took ${since()}`);
 
@@ -369,4 +383,5 @@ try {
 const status = await exec('git', ['status', '--porcelain', '--', 'studio', 'outputs'], {cwd: REPO});
 assert.ok(!status.out.includes(SLUG), `generated files left behind:\n${status.out}`);
 ok('cleanup: generated studio files, branch, MP4 and run folder removed; Root.tsx restored');
+fixture.cleanup();
 console.log(`\n${passed} checks passed`);

@@ -1,8 +1,8 @@
 // Interfaces against the fake orchestrator: HTTP API (+ SSE, auth, file serving), MCP over stdio, CLI, dashboard files.
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {execFile, spawnSync} from 'node:child_process';
-import {mkdtempSync, rmSync, writeFileSync} from 'node:fs';
+import {execFile, spawn, spawnSync} from 'node:child_process';
+import {mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
 import {request} from 'node:http';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
@@ -12,6 +12,8 @@ import {StdioClientTransport} from '@modelcontextprotocol/sdk/client/stdio.js';
 import {OPS} from '../src/api/ops.ts';
 import {serve} from '../src/dashboard/server.ts';
 import {createFakeOrchestrator} from './fake-orchestrator.ts';
+import {defaultConfig, saveConfig} from '../src/config.ts';
+import {createOrchestrator} from '../src/pipeline/orchestrator.ts';
 
 const ROOT = join(import.meta.dirname, '..');
 const BIN = join(ROOT, 'bin', 'mvo.ts');
@@ -70,7 +72,7 @@ test('HTTP API: discovery, every op, SSE, files, guards', async (t) => {
   assert.equal(badConn.status, 500);
   assert.match(badConn.body.error, /Unknown connection/);
   assert.equal((await post('set_roles', {preset: 'free'})).body.roles.builder, 'gemini-free/gemini-3.6-flash');
-  const set = await post('set_roles', {roles: {builder: 'host'}, budgetUSD: 3});
+  const set = await post('set_roles', {roles: {director: 'deepseek/deepseek-flash', builder: 'host'}, budgetUSD: 3});
   assert.equal(set.body.roles.builder, 'host');
   assert.equal(set.body.budgetUSD, 3);
   assert.equal((await post('estimate_cost', {seconds: 30})).body.roles.length, 4);
@@ -87,6 +89,16 @@ test('HTTP API: discovery, every op, SSE, files, guards', async (t) => {
   assert.equal(plan.body.plan.format, '9:16');
   assert.equal(typeof (await post('estimate_cost', {runId})).body.totalMinutes, 'number');
 
+  // a "host" director gets its task back, then passes its own plan
+  await post('set_roles', {roles: {director: 'host'}});
+  const task = await post('plan_video', {idea: 'host directed', seconds: 24});
+  assert.equal(task.status, 500);
+  assert.match(task.body.error, /director role is "host"/);
+  const own = await post('plan_video', {idea: 'host directed', seconds: 24, plan: plan.body.plan});
+  assert.equal(own.body.plan.slug, plan.body.plan.slug);
+  assert.equal((await post('start_run', {runId: own.body.id})).body.status, 'building');
+  assert.equal((await post('cancel_run', {runId: own.body.id})).body.status, 'cancelled');
+
   // SSE: subscribe before anything happens on the run
   const ac = new AbortController();
   const sse = await fetch(`${url}/api/events?run=${runId}`, {signal: ac.signal});
@@ -101,9 +113,9 @@ test('HTTP API: discovery, every op, SSE, files, guards', async (t) => {
   t.after(() => ac.abort());
 
   // run + host-worker protocol
-  assert.equal((await post('start_run', {runId})).status, 500, 'start before approve fails');
-  assert.equal((await post('approve', {runId, what: 'plan'})).status, 200);
-  assert.equal((await post('start_run', {runId})).body.status, 'building');
+  assert.equal((await post('approve', {runId, what: 'final'})).status, 500, 'nothing waits for final approval yet');
+  assert.equal((await post('approve', {runId, what: 'plan'})).body.status, 'building', 'approving the plan starts the build');
+  assert.match((await post('start_run', {runId})).body.error, /building/, 'a started run cannot start again');
   const st = await post('run_status', {runId});
   assert.equal(st.body.config, undefined, 'run_status is slim');
   assert.equal(st.body.budgetUSD, 3);
@@ -195,8 +207,7 @@ test('MCP over stdio: tools, calls, image content, errors', async (t) => {
   const run = json(await call('plan_video', {idea: 'MCP test reel', seconds: 16}));
   assert.equal(run.status, 'awaiting-approval');
   assert.equal(json(await call('run_status', {runId: run.id})).status, 'awaiting-approval');
-  await call('approve', {runId: run.id, what: 'plan'});
-  assert.equal(json(await call('start_run', {runId: run.id})).status, 'building');
+  assert.equal(json(await call('approve', {runId: run.id, what: 'plan'})).status, 'building');
   const job = json(await call('claim_job', {runId: run.id, worker: 'mcp-worker'}));
   assert.equal(json(await call('submit_job', {jobId: job.id})).status, 'accepted');
 
@@ -262,4 +273,68 @@ test('CLI: ops, call, plan, roles, run, errors, remote --url', async (t) => {
 test('dashboard app.js parses', () => {
   const r = spawnSync(process.execPath, ['--check', join(ROOT, 'src', 'dashboard', 'public', 'app.js')], {encoding: 'utf8'});
   assert.equal(r.status, 0, r.stderr);
+});
+
+test('CLI call approve keeps local work alive and reports a pipeline failure', async () => {
+  // No installed studio: scaffolding must fail asynchronously. The old CLI exited with success first,
+  // leaving run.json stranded in "scaffolding" instead of saving the failure.
+  const dir = join(TMP, 'cli-lifetime');
+  mkdirSync(join(dir, 'studio'), {recursive: true});
+  const configPath = join(dir, 'motion.config.json');
+  const config = defaultConfig();
+  config.roles = {director: 'host', builder: 'host', reviewer: 'host', escalation: 'host'};
+  await saveConfig(config, configPath);
+  const orch = await createOrchestrator({configPath});
+  const plan = JSON.parse(readFileSync(join(ROOT, 'test', 'fixtures', 'plan-tiny.json'), 'utf8'));
+  const run = await orch.plan({idea: 'CLI lifecycle regression', seconds: plan.seconds, plan});
+  const result = spawnSync(process.execPath, [BIN, 'call', 'approve', JSON.stringify({runId: run.id, what: 'plan'}), '--config', configPath], {
+    encoding: 'utf8', env: {...ENV, MVO_FAKE: '', MVO_URL: ''}, timeout: 15_000,
+  });
+  assert.equal(result.status, 1, result.stdout + result.stderr);
+  assert.equal(JSON.parse(result.stdout).id, run.id, 'stdout stays valid operation JSON');
+  assert.equal((await orch.status(run.id)).status, 'failed', 'pipeline saved its asynchronous failure before exit');
+  assert.match(result.stderr, /failed/);
+});
+
+test('CLI serve --demo starts without shell-specific environment syntax and serves custom demo stills', async (t) => {
+  const child = spawn(process.execPath, [BIN, 'serve', '--demo', '--port', '0'], {
+    env: {...ENV, MVO_FAKE: '', MVO_URL: ''}, stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true,
+  });
+  t.after(() => { child.kill(); });
+  let output = '';
+  let errors = '';
+  child.stderr.on('data', (data) => { errors += data; });
+  const url = await new Promise<string>((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error('Demo did not start: ' + output + errors)), 10_000);
+    const done = (error?: Error, at?: string) => { clearTimeout(timer); error ? reject(error) : resolve(at!); };
+    child.once('error', (error) => done(error));
+    child.once('exit', (code) => done(new Error(`Demo exited (${code}): ${errors}`)));
+    child.stdout.on('data', (data) => {
+      output += data;
+      const at = /Motion Orchestrator on (http:\/\/\S+)/.exec(output)?.[1];
+      if (at) done(undefined, at);
+    });
+  });
+  const html = await (await fetch(url)).text();
+  assert.match(html, /data-demo="true"/);
+  const post = async (op: string, input: unknown) => {
+    const response = await fetch(`${url}/api/${op}`, {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify(input)});
+    assert.equal(response.status, 200);
+    return await response.json() as any;
+  };
+  const run = await post('plan_video', {idea: 'Dashboard startup smoke', seconds: 16});
+  await post('approve', {runId: run.id, what: 'plan'});
+  let status: any;
+  for (let i = 0; i < 100; i++) {
+    status = await post('run_status', {runId: run.id});
+    if (status.status === 'done') break;
+    await new Promise((resolve) => setTimeout(resolve, 25));
+  }
+  assert.equal(status.status, 'done');
+  const still = status.jobs.flatMap((job: any) => job.stills)[0];
+  assert.ok(still.startsWith(TMP));
+  const image = await fetch(`${url}/api/file?path=${encodeURIComponent(still)}`);
+  assert.equal(image.status, 200, 'custom MVO_FAKE_DIR is included in the demo file roots');
+  assert.equal(image.headers.get('content-type'), 'image/png');
+  await image.arrayBuffer();
 });
