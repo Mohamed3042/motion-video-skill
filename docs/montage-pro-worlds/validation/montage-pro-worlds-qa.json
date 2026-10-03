@@ -1,0 +1,59 @@
+{
+  "createdAt": "2026-10-03T01:34:31.758Z",
+  "film": "montage-pro-worlds.mp4",
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "frames": 9840,
+    "duration": 164,
+    "pixelFormat": "yuv420p",
+    "colorSpace": "bt709"
+  },
+  "audio": {
+    "codec": "aac",
+    "sampleRate": 44100,
+    "channels": 2,
+    "integratedLUFS": -14,
+    "truePeakDBTP": -1.5,
+    "completedWorlds": 11
+  },
+  "validation": {
+    "fullDecode": "passed",
+    "impactOnsets": 75,
+    "maxImpactOffsetFrames": 0.27,
+    "typecheck": "passed (src and all mpw audio scripts)",
+    "sampledFrames": 51,
+    "originalFilesVerifiedUnchanged": 93,
+    "browserPlayback": "passed: 13 exact chapter seeks; desktop/phone layout; 0 dropped frames in test",
+    "sourceArchiveEntries": 93
+  },
+  "review": {
+    "sceneAndTransitionSamples": "inspected",
+    "continuousHumanViewingAndListening": "not performed",
+    "liveProductRecording": false
+  },
+  "artifacts": [
+    {
+      "file": "montage-pro-worlds.mp4",
+      "bytes": 89298044,
+      "sha256": "92c62137ba9a7408731fb308d4e857eabc8071ea98e75eb1bea2f684a6a9b5f6"
+    },
+    {
+      "file": "montage-pro-worlds.html",
+      "bytes": 4022,
+      "sha256": "19b6293d09f0f0925ca8e693cca127afedb531af804bfa28deb934c2654a5034"
+    },
+    {
+      "file": "montage-pro-worlds-source.zip",
+      "bytes": 29917389,
+      "sha256": "140067fa9bca0fbb7a43cea15e1cf8fa5cd1f07427af19c4aedaeb3adb904beb"
+    },
+    {
+      "file": "montage-pro-worlds-poster.jpg",
+      "bytes": 110054,
+      "sha256": "9076a2df367b0d33f114a54219770d211e7c106c8ce3762d04b1262eab8b2f13"
+    }
+  ]
+}

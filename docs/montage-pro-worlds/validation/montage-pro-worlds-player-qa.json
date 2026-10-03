@@ -1,0 +1,90 @@
+{
+  "url": "http://127.0.0.1:3098/montage-pro-worlds.html",
+  "viewports": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "overflow": false,
+      "chapters": 13,
+      "duration": 164,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": false,
+      "chapters": 13,
+      "duration": 164,
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "chapterSeeks": [
+    {
+      "start": 0,
+      "currentTime": 0
+    },
+    {
+      "start": 8,
+      "currentTime": 8
+    },
+    {
+      "start": 18,
+      "currentTime": 18
+    },
+    {
+      "start": 34,
+      "currentTime": 34
+    },
+    {
+      "start": 44,
+      "currentTime": 44
+    },
+    {
+      "start": 56,
+      "currentTime": 56
+    },
+    {
+      "start": 66,
+      "currentTime": 66
+    },
+    {
+      "start": 84,
+      "currentTime": 84
+    },
+    {
+      "start": 102,
+      "currentTime": 102
+    },
+    {
+      "start": 116,
+      "currentTime": 116
+    },
+    {
+      "start": 130,
+      "currentTime": 130
+    },
+    {
+      "start": 142,
+      "currentTime": 142
+    },
+    {
+      "start": 150,
+      "currentTime": 150
+    }
+  ],
+  "playback": {
+    "before": 18,
+    "time": 19.520009,
+    "frames": 1567,
+    "dropped": 0,
+    "paused": false,
+    "error": null
+  },
+  "errors": []
+}

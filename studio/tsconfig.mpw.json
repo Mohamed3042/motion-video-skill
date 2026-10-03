@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/mpw-entry.tsx", "src/mpw", "scripts/mpw"]
+}

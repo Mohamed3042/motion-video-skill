@@ -1,5 +1,13 @@
 # motion-video-skill
 
+## Montage Pro — eleven worlds
+
+**[Watch / download the 164-second film and editable source](https://github.com/Mohamed3042/motion-video-skill/releases/tag/montage-pro-worlds-v1.0)** · [Chapter player](outputs/montage-pro-worlds/montage-pro-worlds.html) · [Editing guide](docs/montage-pro-worlds/EDITING.md) · [Verification](docs/montage-pro-worlds/PRODUCTION.md)
+
+[![Montage Pro: Every angle. Every word. Your cut.](outputs/montage-pro-worlds/montage-pro-worlds-poster.jpg)](https://github.com/Mohamed3042/motion-video-skill/releases/download/montage-pro-worlds-v1.0/montage-pro-worlds.mp4)
+
+A 1080p60 film with eleven distinct feature worlds, a phase-lock introduction and multicam finale. All 75 declared impact cues pass timing checks within one frame. The release includes the full master and complete standalone source ZIP; [scene source](studio/src/mpw) and [sound source](studio/scripts/mpw) are also committed here. The UI scenes illustrate capabilities, and the verification report records the limits of viewing/listening acceptance.
+
 ## MK Job Orbit — ten feature worlds
 
 **[Watch / download the 120-second film and editable ZIP](https://github.com/Mohamed3042/motion-video-skill/releases/tag/job-orbit-v1.0)** · [Chaptered local player](outputs/job-orbit/index.html) · [Editing guide](docs/job-orbit/EDITING.md) · [Verification](docs/job-orbit/PRODUCTION.md)

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:,">
+<title>Montage Pro · Eleven Worlds</title>
+<style>
+:root{font-family:"Segoe UI Variable","Segoe UI",sans-serif;color:#ebeae2;background:#101211;color-scheme:dark}*{box-sizing:border-box}body{margin:0}main{max-width:1380px;margin:auto;padding:38px 28px 60px}header{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:22px}.brand{font-size:24px;letter-spacing:.14em;font-weight:450}.brand span{color:#edb654}.eyebrow{font:11px Consolas,monospace;letter-spacing:.12em;color:#a9b2a9;margin-bottom:12px}.meta{color:#a9b2a9;font-size:13px}video{display:block;width:100%;aspect-ratio:16/9;background:#0a0c0b;border:1px solid #343b35;border-radius:9px}.intro{display:flex;justify-content:space-between;align-items:start;gap:24px;margin:22px 0}h1{font-size:clamp(22px,3vw,36px);font-weight:450;margin:0 0 8px}p{color:#a9b2a9;margin:0;line-height:1.6}.links{display:flex;gap:12px;flex-wrap:wrap}a{color:#edb654;text-decoration:none}a:hover{text-decoration:underline}.links a{padding:10px 14px;border:1px solid #343b35;border-radius:6px;font-size:13px;white-space:nowrap}nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}button{font:inherit;color:#ebeae2;background:#1b1f1d;border:1px solid #343b35;border-radius:6px;padding:13px 14px;cursor:pointer;text-align:left;display:flex;gap:12px;align-items:center;min-height:50px}button:hover{background:#252b27}button[aria-current="true"]{border-color:#edb654;color:#edb654}button:focus-visible,a:focus-visible{outline:2px solid #f8ce81;outline-offset:3px}.time{font:12px Consolas,monospace;color:#a9b2a9}footer{font-size:12px;margin-top:22px;color:#a9b2a9}@media(max-width:650px){main{padding:22px 14px 40px}header,.intro{flex-direction:column;gap:12px}.brand{font-size:21px}nav{grid-template-columns:1fr 1fr}button{font-size:12px;padding:10px;gap:8px}.links a{padding:8px 10px}}
+</style>
+<main>
+ <header><div><div class="eyebrow">ELEVEN WORLDS · PRODUCT FILM</div><div class="brand">MONTAGE <span>PRO</span></div></div><div class="meta">2:44 · 1080p · 60 fps</div></header>
+ <video id="film" controls playsinline preload="metadata" poster="montage-pro-worlds-poster.jpg"><source src="https://github.com/Mohamed3042/motion-video-skill/releases/download/montage-pro-worlds-v1.0/montage-pro-worlds.mp4" type="video/mp4">Open the MP4 in your video player.</video>
+ <div class="intro"><div><h1>Every angle. Every word. Your cut.</h1><p>Explore all eleven worlds, or play the complete film.</p></div><div class="links"><a href="https://github.com/Mohamed3042/motion-video-skill/releases/download/montage-pro-worlds-v1.0/montage-pro-worlds.mp4" download>Download film</a><a href="https://github.com/Mohamed3042/motion-video-skill/releases/download/montage-pro-worlds-v1.0/montage-pro-worlds-source.zip" download>Editable source</a></div></div>
+ <nav id="chapters" aria-label="Film chapters"></nav>
+ <footer>Use the chapter buttons to jump to a scene. The video controls include volume and fullscreen.</footer>
+</main>
+<script>
+const chapters=[[0,'Phase lock'],[8,'Ingest'],[18,'Sync'],[34,'Review'],[44,'Captions & markers'],[56,'Handoff'],[66,'Sound Lab'],[84,'Picture Lab'],[102,'Library'],[116,'Edit Room'],[130,'Profile & Intelligence'],[142,'Anywhere, private'],[150,'Finale']];
+const film=document.getElementById('film');
+const stamp=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+const buttons=chapters.map(([start,name],i)=>{const b=document.createElement('button');b.type='button';b.dataset.start=start;b.setAttribute('aria-label',name+' at '+stamp(start));const t=document.createElement('span');t.className='time';t.textContent=stamp(start);const n=document.createElement('span');n.textContent=name;b.append(t,n);b.onclick=()=>{film.currentTime=start;film.play().catch(()=>{});};document.getElementById('chapters').append(b);return b;});
+const update=()=>{let active=0;chapters.forEach(([start],i)=>{if(film.currentTime>=start)active=i;});buttons.forEach((b,i)=>b.setAttribute('aria-current',String(i===active)));};film.addEventListener('timeupdate',update);update();
+</script>
+</html>
