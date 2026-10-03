@@ -36,7 +36,13 @@ Expand the idea into a brief at the quality of `briefs/mk-voice-worlds.md`: bran
 
 Scale scenes to length: about one scene per 2–3 s (≥3 scenes for ≤10 s), or one *world* per 6–9 s for feature tours. Opening hook within the first second; end card in the last 2–3 s. Every cut is a designed 8–14 frame transition (zoom-through, whip-pan with blur, iris wipe, light flash, shape portal, or a continuous camera move for 3D).
 
-**Be truthful about real products:** only features the user or the product's own docs state; no invented stats, prices, testimonials, user counts or "available now"; sample UI content is clearly placeholder; never real people's names, faces or voices.
+**Be truthful about real products:** only features the user or the product's own docs state; no invented stats, prices, testimonials, user counts or "available now"; sample UI content is clearly placeholder; never real people's names, faces or voices. Prefer the real UI: screenshot the running app or site (Playwright) and crop/animate that; redraw a screen only when no real one exists, and keep it faithful.
+
+**A reference beats a description.** If the user gives a reference video or frames, extract one frame every 0.5 s (`ffmpeg -i ref.mp4 -vf fps=2 refs/f_%03d.png`), study them, and put its grammar in the brief: palette (hex), type (family, weight, tracking), shot lengths, transition types, camera moves, how text enters and exits. Take the grammar, never the content, logos or characters.
+
+**Banned defaults** (name them in every brief; add any new default you catch yourself reaching for): centred title on a gradient · everything fading in · corner labels and frame borders · glow on UI chrome · generic particle bursts · bouncy easing (springs settle with at most a tiny overshoot) · dead beats with nothing new for 2+ s · text overlapping during a swap.
+
+**Gates:** show the brief (scene list on the beat grid) before writing code. If the user doesn't answer within ~10 minutes, continue on your best judgement and write down what you assumed. Then stills → critique (§6) → full render.
 
 ## 3. Start from the closest template (copy patterns, don't reinvent)
 
@@ -77,6 +83,16 @@ Copy the closest `studio/scripts/<template>/music.ts` (oscillators, risers, boom
 - Render ≥2 stills per scene plus mid-transition frames (`node scripts/mk/stills.ts <CompId> <frames…>` bundles once and is fastest; or `npx remotion still src/index.ts <Id> out.png --frame=N`). **Look at them** (if you can view images) and fix overlaps, the 72 px safe margin, legibility, spelling and empty frames. Iterate until it looks premium. If you can't view images, at least check sizes/duration with ffprobe and ask the user to look.
 - Contact sheet from an MP4: `ffmpeg -i x.mp4 -vf "select='eq(n\,A)+eq(n\,B)+eq(n\,C)+eq(n\,D)',scale=960:-1,tile=2x2" -frames:v 1 sheet.png`
 - `npx tsc --noEmit` passes.
+
+### 6b. Critique loop (at least 3 rounds; the step that makes it look made, not generated)
+Make four images and look at them properly:
+```
+ffmpeg -i out.mp4 -vf "fps=2,scale=270:-1,tile=6x5" -frames:v 1 review/contact.png   # whole film
+ffmpeg -ss 4.1 -i out.mp4 -vf "scale=320:-1,tile=12x1" -frames:v 1 review/strip.png  # 12 frames round a fast move
+ffmpeg -i out.mp4 -vf "fps=1,scale=360:-1,tile=5x3" -frames:v 1 review/phone.png     # readable at phone size?
+ffmpeg -stream_loop 1 -i out.mp4 -c copy review/loop_check.mp4                         # loops only: watch the seam
+```
+**Be a harsh motion director, not a proud author.** Score 1–10: hook in the first 2 s · readability at 360 px wide · motion quality (springs settle, nothing slides on a fixed curve, no dead frames) · variety (something new every 2–4 s) · composition (not everything centred) · brand accuracy (real UI, real colours) · sound sync (cuts on the frame, not near it). Write the scores and the 3 worst problems, with timestamps, to `briefs/<slug>.review.md`. Fix, re-render only the affected seconds as stills, score again. Ship when every axis is 8+. The loop polishes a good idea; it can't rescue a missing one, so fix the brief first if the hook or story scores low.
 
 ## 7. Render and deliver
 
