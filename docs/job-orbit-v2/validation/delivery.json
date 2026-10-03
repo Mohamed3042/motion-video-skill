@@ -1,0 +1,36 @@
+{
+  "title": "Job Orbit v2 — The Flight",
+  "completed": true,
+  "clientDate": "2026-10-03",
+  "clientTimezone": "Asia/Riyadh",
+  "fingerprint": "a0939540fc2c392e48fc78a3cdb3c28b79c68f24e1942d3b421d0976da6ae45d",
+  "master": {
+    "file": "MK-Job-Orbit-v2-1080p60.mp4",
+    "bytes": 248377465,
+    "sha256": "4282780d9a70edd04beeb7e274e6e03fffb4a0f34abb1f9965bc484d110bf451",
+    "technicalPass": true,
+    "audioPass": true
+  },
+  "share": {
+    "file": "MK-Job-Orbit-v2-Share-1080p60.mp4",
+    "bytes": 97732923,
+    "sha256": "f4f83134a6aeaae83055bd3e658be1d5552bd7080b2dbced7a44efb990bb38a0",
+    "technicalPass": true,
+    "audioPass": true
+  },
+  "durationSeconds": 120,
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "frames": 7200,
+  "reviewedSourceFrames": 151,
+  "reviewedMasterFrames": 20,
+  "listened": false,
+  "continuousPlaybackReviewed": false,
+  "preservation": {
+    "checkedFiles": 130,
+    "changedFiles": [],
+    "sceneAndAssetFilesPreserved": true
+  },
+  "reviewedShareFrames": 4
+}

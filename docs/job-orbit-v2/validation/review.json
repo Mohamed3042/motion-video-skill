@@ -1,0 +1,681 @@
+{
+  "composition": "JobOrbit2",
+  "fingerprint": "a0939540fc2c392e48fc78a3cdb3c28b79c68f24e1942d3b421d0976da6ae45d",
+  "files": [
+    {
+      "path": "public\\orbit2\\brand\\orbit-512.png",
+      "sha256": "3d7c75aae71ff0d50835f789ef4228a26ae4638f603c6a9120ea58fe98f19cc5"
+    },
+    {
+      "path": "public\\orbit2\\brand\\orbit-maskable-512.png",
+      "sha256": "a7bd9a4e4f9a5a33a43051af7e8f43f774d519da0eba6dc69482248160037623"
+    },
+    {
+      "path": "public\\orbit2\\geo\\admin1_EG_simplified.geojson",
+      "sha256": "466817a6c6338ffa9e04d9f7c8fe129300db2372ea24b7178aa237e9b53d6dd2"
+    },
+    {
+      "path": "public\\orbit2\\geo\\admin1_KW_simplified.geojson",
+      "sha256": "97d0a8812b1540e9411a7bae6dc087b687ff9a3642f8bc7c40c5ecc17367cd77"
+    },
+    {
+      "path": "public\\orbit2\\geo\\admin1_SA_simplified.geojson",
+      "sha256": "d75ba9e166014562bf3905ca1d0896d517ddaefd71c6fafa1cc166b9171bb334"
+    },
+    {
+      "path": "public\\orbit2\\grain.png",
+      "sha256": "c2711f9a7009b9bf8e0a822965f7813edb6f74a55d544e39f0915ff49f8232a9"
+    },
+    {
+      "path": "public\\orbit2\\music.wav",
+      "sha256": "b414ba0e9f178d626e7c48bfb419a89a29ecb6b0c3825985a0d07e13437e664a"
+    },
+    {
+      "path": "src\\orbit2\\brand.ts",
+      "sha256": "37e76fe8afb27fc8a63a455f33babef5d8525278cca02d453b71ff672d01fdb7"
+    },
+    {
+      "path": "src\\orbit2\\engine\\camera.ts",
+      "sha256": "26fe7d8a528cf95e9b76fbcd0a597c6074dc86f483a40eb125fbb4e26aff55c9"
+    },
+    {
+      "path": "src\\orbit2\\engine\\gl.tsx",
+      "sha256": "9a5ff14a897d8c7da8b3518f2b0d0c30b448303fcd2304effaf53b5f0ba5e470"
+    },
+    {
+      "path": "src\\orbit2\\engine\\glass.tsx",
+      "sha256": "57d278db732fc6f2ed60bdb59501755978007b3e3f90d257588b502e5117df7b"
+    },
+    {
+      "path": "src\\orbit2\\engine\\glow.tsx",
+      "sha256": "4b6ff15b5a6d3946a0ac09409fac54b5fabbb617526c7d217fe5dc74eb1de1bd"
+    },
+    {
+      "path": "src\\orbit2\\engine\\layout.ts",
+      "sha256": "2f6aced2ca537de1eaf205525d8481a55f651f2d3978e0fd10adadef45291a62"
+    },
+    {
+      "path": "src\\orbit2\\engine\\Legacy.tsx",
+      "sha256": "432f07eb234f47473a84df4653455f8d0853f5a31fceba076519e08d00a47a31"
+    },
+    {
+      "path": "src\\orbit2\\engine\\math.ts",
+      "sha256": "a59c8e201b174d0e9c147a9f6f2d38c1eb48cdf75169ea1a0753a285dc084bf2"
+    },
+    {
+      "path": "src\\orbit2\\engine\\space.tsx",
+      "sha256": "0475d46b8080afb017312c8c76245ff27374228aa3e48f6ec7d1b33de533b231"
+    },
+    {
+      "path": "src\\orbit2\\engine\\Test.tsx",
+      "sha256": "f3c61bdf1e78a0bd59232efc7eb9847097f5edbf918fae64e2977ca272192714"
+    },
+    {
+      "path": "src\\orbit2\\entry.tsx",
+      "sha256": "ed6ddf33cd82c8919bacc76bde27330e55a97ce1d299fe7e805c326563b1810a"
+    },
+    {
+      "path": "src\\orbit2\\finale\\Finale.tsx",
+      "sha256": "b4cf7fcbf0dff2324bd2748cec14e13a586aac39d8359f25c653ba4c3324f1e7"
+    },
+    {
+      "path": "src\\orbit2\\finale\\GL.tsx",
+      "sha256": "e278d350808286041f5522632a3c98d0ca7362e249ce8bec5ce6707e7be9f1c5"
+    },
+    {
+      "path": "src\\orbit2\\finale\\shot.ts",
+      "sha256": "cfb7fe77cdf07146842b7114c957d149b30b2116667ee4adbe15774357f86b16"
+    },
+    {
+      "path": "src\\orbit2\\finale\\timing.ts",
+      "sha256": "adeccbaaf26d03f9bdf0ed1b8a802668e026341ee6edb51d15eeb5ca347c6c4c"
+    },
+    {
+      "path": "src\\orbit2\\finale\\World.tsx",
+      "sha256": "8d7309a7504bb88a188651a255f08b52c807d36d52190091164b5c041d37592a"
+    },
+    {
+      "path": "src\\orbit2\\frame.ts",
+      "sha256": "f7c39a50c149e5b9bb1bdbb27ed3fab4cae3324dc2c82208902fc2099b266bb4"
+    },
+    {
+      "path": "src\\orbit2\\Reel.tsx",
+      "sha256": "9e761847b0d9d9874fcdc9218830b7062f5bc8f0748ac5e1cc86825894ea293e"
+    },
+    {
+      "path": "src\\orbit2\\sections\\anywhere\\GL.tsx",
+      "sha256": "42c1587f26f2b42d16eebaad3bcd9019c093b568be95aff3d58572b695aad5f1"
+    },
+    {
+      "path": "src\\orbit2\\sections\\anywhere\\set.ts",
+      "sha256": "186d0b54c20740ef974d3b9a5db10bb50c96d25a6545d9b90ba4750595431dfb"
+    },
+    {
+      "path": "src\\orbit2\\sections\\anywhere\\shot.ts",
+      "sha256": "568978f839ec8ea68dbc1b44a52dd8e9d94bb9c0f46e9f46d42e639fc58d620e"
+    },
+    {
+      "path": "src\\orbit2\\sections\\anywhere\\timing.ts",
+      "sha256": "890d561f0ebab9feba05ffb1a7d66c2974085d1ec44ecb280dd36ae618f937e5"
+    },
+    {
+      "path": "src\\orbit2\\sections\\anywhere\\World.tsx",
+      "sha256": "93040c0ca5588b94923b642f84d05ef803b0f31a64473dd131e5bf563b809ade"
+    },
+    {
+      "path": "src\\orbit2\\sections\\anywhere\\World2D.tsx",
+      "sha256": "1924c94da05f752ee47d6721bc928aa634b62891bc92a1c42a5ed20364b54dee"
+    },
+    {
+      "path": "src\\orbit2\\sections\\chaos\\GL.tsx",
+      "sha256": "90f16ddc515883ec655ad663b353fa316216738c52ade4c8fa388e5cf55bed7c"
+    },
+    {
+      "path": "src\\orbit2\\sections\\chaos\\noise.tsx",
+      "sha256": "9da63e4751441a8500ad76e18af7a0bdeedc0d6b46cd80701d99490954b85e8d"
+    },
+    {
+      "path": "src\\orbit2\\sections\\chaos\\shot.ts",
+      "sha256": "093853c929cbfa2f3623ec52c4b95d2e418387ab72bbdfb832538760a90d8880"
+    },
+    {
+      "path": "src\\orbit2\\sections\\chaos\\storm.tsx",
+      "sha256": "55fd03b18cff10bc019a239afc8d78f5b54a25dc678a6201fd7b6dbda2c70d35"
+    },
+    {
+      "path": "src\\orbit2\\sections\\chaos\\story.ts",
+      "sha256": "32c79e2e37a734cf9fd48da987862022dcaeab89bec1f1982f389acb331c2008"
+    },
+    {
+      "path": "src\\orbit2\\sections\\chaos\\timing.ts",
+      "sha256": "aa1de8816e2b9d500791d67f61a9bbb4d83d5286c67b6ee21717ad27b72e3dd6"
+    },
+    {
+      "path": "src\\orbit2\\sections\\chaos\\util.ts",
+      "sha256": "234123e8ca172f1a6e7f4941ddbae33bf456118da89fb5473b5fd93a0e711f9d"
+    },
+    {
+      "path": "src\\orbit2\\sections\\chaos\\World.tsx",
+      "sha256": "2d42b3ef4a272ebef39befa618eb5ef692765a259fb879c0939ceadb221cbd3c"
+    },
+    {
+      "path": "src\\orbit2\\sections\\chaos\\World2D.tsx",
+      "sha256": "b9891a109c4d24b5e43911d038ad6c3c30046a2aeac6c7e030228d3c7dde4600"
+    },
+    {
+      "path": "src\\orbit2\\sections\\employers\\geom.ts",
+      "sha256": "1c0c3528ba63c38a02eea7545847001e775cc1106a914fd8db4c4389d5fd9b01"
+    },
+    {
+      "path": "src\\orbit2\\sections\\employers\\GL.tsx",
+      "sha256": "aecbdd157288a9684a5ece787ee5005751f6b99bd69801cffb21765a4d872cb4"
+    },
+    {
+      "path": "src\\orbit2\\sections\\employers\\layout.ts",
+      "sha256": "7975e8d0a6b93ad5e03898c86dbb489f329c82a88c9c7854b3f7c4c1d2778419"
+    },
+    {
+      "path": "src\\orbit2\\sections\\employers\\shot.ts",
+      "sha256": "606c5d34546c93cb1fbd3d8fa62c7b2558eaf3bf9a92b41856eee0650f7fc3a6"
+    },
+    {
+      "path": "src\\orbit2\\sections\\employers\\timing.ts",
+      "sha256": "8c1e0c9adb6f8875b9227962f11110bb5d5935a7ee2850ed8438fc2d7109e01d"
+    },
+    {
+      "path": "src\\orbit2\\sections\\employers\\World.tsx",
+      "sha256": "496900279a9aaa6a6a0c6a94e0448ab5207acbe3b9d04c2166f28c80399459df"
+    },
+    {
+      "path": "src\\orbit2\\sections\\employers\\World2D.tsx",
+      "sha256": "6315392c0d1f9dadebf712d333a2f90ef4a8c85f59736585a4687e4a0b71b7d1"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\cam.ts",
+      "sha256": "93de511ce390b25e9b7e746af5934e2dbe7f6d970f33a6e6b91e8630f531d0ae"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\GL.tsx",
+      "sha256": "2338cedaccb56690b9af85c759bac58c94dd550e4efc85286927b5810f2cd859"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\glkit.tsx",
+      "sha256": "93601cb606a9953da0a696de396f2398a3fcacfc63d6e0faba154f310fc3111b"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\holo.tsx",
+      "sha256": "19457a5856744084e94b68146feaf94e35265d43afae78977199d3db84c29f1a"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\kit.tsx",
+      "sha256": "5bc4a09b9f06832da7c75e28425d7b9ef14fd55d0984fd627501fa889bc75def"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\shot.ts",
+      "sha256": "3eb782c1aa0df6054bb1864c80f2f616baee5b3ec9f74e3959a924076cd46dee"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\spire.ts",
+      "sha256": "b83c6ad4e33643fe8d3ff622697ee65465d5e4bdc58b197a38a7ca6d5e74e97d"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\timing.ts",
+      "sha256": "da4b862d8b593fd179d9f07fdb8b6abf825ef350abb2668a764b844d4f9cff5b"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\World.tsx",
+      "sha256": "390ace318b540c233892c93c858439d222d0c60f6b41eda81acc36efd6613d6b"
+    },
+    {
+      "path": "src\\orbit2\\sections\\engine\\World2D.tsx",
+      "sha256": "e137a6269b29c4227ffa55a5863c33190083e3d65bd38f42ddd935c178ac9974"
+    },
+    {
+      "path": "src\\orbit2\\sections\\findings\\GL.tsx",
+      "sha256": "36de44ef8df0407684bce3326a5e2b749b04d5396abf2a555af806c8be87e1a8"
+    },
+    {
+      "path": "src\\orbit2\\sections\\findings\\scene.ts",
+      "sha256": "d4a7280a6392674a510d67f64529a96c8cf80936ef7b29384dc892a529058698"
+    },
+    {
+      "path": "src\\orbit2\\sections\\findings\\shot.ts",
+      "sha256": "3c1c56ef3c8491b2e99cdde01069850b175adf1e50858e5bd577dfec6fb8e976"
+    },
+    {
+      "path": "src\\orbit2\\sections\\findings\\timing.ts",
+      "sha256": "01da9808f35f4badd24b89d5ef31b0b2c91754262e4075c1c22a189a5c8f06c2"
+    },
+    {
+      "path": "src\\orbit2\\sections\\findings\\World.tsx",
+      "sha256": "1dcd8f8415c9579437676b8547daf2031f8e0ef2e79e45087e89707c23a3fe68"
+    },
+    {
+      "path": "src\\orbit2\\sections\\findings\\World2D.tsx",
+      "sha256": "e548cf5283ea5749a72091018aa67ebbebfa0c865ebf3e84534e8b423bd5a1d8"
+    },
+    {
+      "path": "src\\orbit2\\sections\\fit\\GL.tsx",
+      "sha256": "3461bc08bbe29b4297583d0bb4099800bad14c5683c29d56dc5a962773e9adad"
+    },
+    {
+      "path": "src\\orbit2\\sections\\fit\\shot.ts",
+      "sha256": "e0f5b03129d1b1be1a5ebf39874796fe2a94d9e63227c82d663ad862bf198300"
+    },
+    {
+      "path": "src\\orbit2\\sections\\fit\\stage.ts",
+      "sha256": "c0771d306a55be605a6de1ddf5adc24bd02d49e405855ffd2bae55044d85826a"
+    },
+    {
+      "path": "src\\orbit2\\sections\\fit\\timing.ts",
+      "sha256": "476d57ef57c25dd5802ada3c4290dfcf7234583a113d0b3e401485ae98ef8307"
+    },
+    {
+      "path": "src\\orbit2\\sections\\fit\\World.tsx",
+      "sha256": "ff985240ac6fc44d062033d0ea846767c31875e625ce41b10c415263add41a4a"
+    },
+    {
+      "path": "src\\orbit2\\sections\\fit\\World2D.tsx",
+      "sha256": "8d85957cae9620fd9c654ce51e1af791aefd827bc52f2516c5271d198917d80a"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\cam.ts",
+      "sha256": "00e772ef5d0b92d5bec77f5dbf036b818563872e433aa7cbff49829be244ff77"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\GL.tsx",
+      "sha256": "503b0f59ef4c5851f76e7d3d1c518e094c92fec5711d74ac8c4618b0bd51350d"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\gl3d.tsx",
+      "sha256": "b6e8cd6ca1a1db08f9955472cf378a13e83ab04852c1df9be0c40e265a888fc2"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\holo.tsx",
+      "sha256": "9d67240ca1f058003ab056420b2296508aa008ea7fe045e98c5090efb844e00e"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\kit.tsx",
+      "sha256": "db98c0fd0aad5bc8c52008b684d5845f8d6a577d7694e7824e91c50f934fb8af"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\shot.ts",
+      "sha256": "b6d37f57e0377880a57d877ac2b0098c52d1c720afeda3b71da6b0598c21bf72"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\stage.ts",
+      "sha256": "3600703640c407c4bd03f0eba5a26c9be06b7cf271bcb097a5c46d993c4331a3"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\timing.ts",
+      "sha256": "476d57ef57c25dd5802ada3c4290dfcf7234583a113d0b3e401485ae98ef8307"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\World.tsx",
+      "sha256": "c579a200b1012a69e63fb77cd2d78b91da0b302b1ca9cd24e2c2db5074286aeb"
+    },
+    {
+      "path": "src\\orbit2\\sections\\focus\\World2D.tsx",
+      "sha256": "ff46af89c3195a03bd05472da7699ccd77caf0d48970faef124ce3aff258f796"
+    },
+    {
+      "path": "src\\orbit2\\sections\\globe\\geo.ts",
+      "sha256": "c8282e8b0177df17d4fcddb96ebc0d5dfe31ae1465472b5c4474b5ff6a67922a"
+    },
+    {
+      "path": "src\\orbit2\\sections\\globe\\GL.tsx",
+      "sha256": "4bc8e74e5f0db8358fe36c463ffea413046d1d6ec8d915e6c5db66a0e8571e75"
+    },
+    {
+      "path": "src\\orbit2\\sections\\globe\\scene.ts",
+      "sha256": "cf503f6b85ea5677aa96cae9ad64b6bc10c6df1738419fa02b51412667cdca97"
+    },
+    {
+      "path": "src\\orbit2\\sections\\globe\\shot.ts",
+      "sha256": "1e66375f8018075bd0e6764ea2434a5802d77f2ebb4b7bdbab8f7cab3cb5ee9f"
+    },
+    {
+      "path": "src\\orbit2\\sections\\globe\\timing.ts",
+      "sha256": "7eb55779143c06dfd99f43128dc513509cddedfc0c311cb3ed6bbd0f5dfd3ce6"
+    },
+    {
+      "path": "src\\orbit2\\sections\\globe\\World.tsx",
+      "sha256": "ca4dc5c26611d454d2771c00911d15e7f940d88e99f18bb4cda33afe0a4f1ecd"
+    },
+    {
+      "path": "src\\orbit2\\sections\\globe\\World2D.tsx",
+      "sha256": "3c4fab5d893dae9089d0978ad3d7b4e610126c80e1aafbd0b13f9daa3cd3315e"
+    },
+    {
+      "path": "src\\orbit2\\sections\\index.ts",
+      "sha256": "4c2ca513176835baefe31a646e7dc8bed6df2cc1a64f26ded2fce265c1bfc577"
+    },
+    {
+      "path": "src\\orbit2\\sections\\market\\curve.ts",
+      "sha256": "759d7f15717f13d12485d4c28b1b3e70698b75124b05bf4d84e642007219364d"
+    },
+    {
+      "path": "src\\orbit2\\sections\\market\\geom.ts",
+      "sha256": "51dfea3eb72123cfed951e3417c3042ef94b87fecdc9037194370a060e4913ff"
+    },
+    {
+      "path": "src\\orbit2\\sections\\market\\GL.tsx",
+      "sha256": "5a0a1b8870bec7d5769a1683ec4afdd9529f6e74598091a62e7fbd5082f0d3c7"
+    },
+    {
+      "path": "src\\orbit2\\sections\\market\\holo.tsx",
+      "sha256": "989e3366d6674caaf0ad695b0a6361c30834cf711f3c289b841d50351be4e2eb"
+    },
+    {
+      "path": "src\\orbit2\\sections\\market\\kit.tsx",
+      "sha256": "54990b4844626a40c2b84a952e307b18371310e95d0213adc79c3b2e7b6d83e7"
+    },
+    {
+      "path": "src\\orbit2\\sections\\market\\shot.ts",
+      "sha256": "3a54846d19c3c0db38b12e2e8e8f6cf2325a79fee550ffabf49667c7b5417476"
+    },
+    {
+      "path": "src\\orbit2\\sections\\market\\timing.ts",
+      "sha256": "cc6534d233b3cb61b950c2e9cd9c2a188ae00dba40299cad3b86887315b872c9"
+    },
+    {
+      "path": "src\\orbit2\\sections\\market\\World.tsx",
+      "sha256": "6349d4d4e51c89914b66c7ee11ea3889ae594644482668b539265f360cb7f4db"
+    },
+    {
+      "path": "src\\orbit2\\sections\\market\\World2D.tsx",
+      "sha256": "536091b1cd3d3ce14588cd12c41f79b0ca31f5a80d8ec31691f5dbd7f0467c34"
+    },
+    {
+      "path": "src\\orbit2\\sections\\nextproof\\GL.tsx",
+      "sha256": "69d0c10777928577d8042478e097b401558b9e38a4a83b79b40bce2c40b03dc1"
+    },
+    {
+      "path": "src\\orbit2\\sections\\nextproof\\shot.ts",
+      "sha256": "c1bcdf026cbba8bd1b5387afa3207f4d0341b9662fcec6aa2c5e77d26ee8301f"
+    },
+    {
+      "path": "src\\orbit2\\sections\\nextproof\\stage.ts",
+      "sha256": "d55f39d71afec7e4a84f282e38d5f7d5573b8cba4a3011314f93eb4474dbd7f6"
+    },
+    {
+      "path": "src\\orbit2\\sections\\nextproof\\timing.ts",
+      "sha256": "476d57ef57c25dd5802ada3c4290dfcf7234583a113d0b3e401485ae98ef8307"
+    },
+    {
+      "path": "src\\orbit2\\sections\\nextproof\\World.tsx",
+      "sha256": "80d41208e86e29ed2b63fc59a5a4566da7c34c88b9b385f9c06e22a83bbc8389"
+    },
+    {
+      "path": "src\\orbit2\\sections\\nextproof\\World2D.tsx",
+      "sha256": "e7882cdbd090a29b829ec87e4e876a64748d473f188dc3e264170b2805b537ac"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\cam.ts",
+      "sha256": "8a1bf4a0056bd64c28286fd813147779018dfb49941ad4e112826bdd2fa13c40"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\fraser.tsx",
+      "sha256": "f1a127402515bd170580c27243f8dedf76d8225f17156b795c395cd984c7ed6b"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\GL.tsx",
+      "sha256": "3ad627cb23bdf02bb51123ec4e35bac639a47d3356cc9e10b9de84af9ac9d54e"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\gl3.tsx",
+      "sha256": "8095e661635c3d61a99e4988040aa736bfe3425f2706b571dec4c35363125e4f"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\holo.tsx",
+      "sha256": "cc44873d4082f3fac7905dd9a7338f513274de6fc1783d7b0319fe1000a701a1"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\kit.tsx",
+      "sha256": "e7e5701f3ad3880e7f0d11fec330cbdcd98435c47a0be744b46acbfaae523486"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\shot.ts",
+      "sha256": "e91c967c41fdd4d75cbcf056334a85e034be01f2b03b4849e6d6f9fa984e17e4"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\timing.ts",
+      "sha256": "be444d1a11f1eab863f4170969716734cc700f1d66d0a2d715c9c88721c7dfb1"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\tunnel.ts",
+      "sha256": "a351492c9094b1579659d49f78b22697c1b8c8b1047643f77a6c22dd55a1b7fc"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\World.tsx",
+      "sha256": "e10bc37cd1e94d634c474d3011b913c38642a45b0b19f5917f820d06391d1c6d"
+    },
+    {
+      "path": "src\\orbit2\\sections\\profile\\World2D.tsx",
+      "sha256": "e610ef81373dc91609d0e0e7a1865a3ac981027189bb1488e63045b60cdccda1"
+    },
+    {
+      "path": "src\\orbit2\\sections\\turn\\geom.ts",
+      "sha256": "eea326ae8135a55626615991c4263671c60eecd6f9d7a2ca233379c8385730a0"
+    },
+    {
+      "path": "src\\orbit2\\sections\\turn\\GL.tsx",
+      "sha256": "6f2c94461d7e2d0ccf055713de51efa28a44fd3ccc57792f5f597c6c58ff2d16"
+    },
+    {
+      "path": "src\\orbit2\\sections\\turn\\shot.ts",
+      "sha256": "55cb0d6e4994053d780d24c58e7bf586c42eccdb7fb9b7cc1151009f2a4c6ee6"
+    },
+    {
+      "path": "src\\orbit2\\sections\\turn\\timing.ts",
+      "sha256": "99ee98e81df19e4cd8d74f298759fbd134b5da8ad079f785ad6d37e534443a9c"
+    },
+    {
+      "path": "src\\orbit2\\sections\\turn\\World.tsx",
+      "sha256": "09f2b1388d7152fe3ea5583d51ca721a968b68c574ee49493e01ae18615c8d3a"
+    },
+    {
+      "path": "src\\orbit2\\sections\\turn\\World2D.tsx",
+      "sha256": "b3f077cbd6fc28a56628f7d97d203788b629b1d64e8b289f259af547c0726d7e"
+    },
+    {
+      "path": "src\\orbit2\\shared.tsx",
+      "sha256": "7af12471f41751fdb2991eabec73e394caf0ea43e92ea538e95aa159618bac41"
+    },
+    {
+      "path": "src\\orbit2\\shell\\environment.tsx",
+      "sha256": "1b9973606ef4a8ea8d0a37812309f519e257a90cbd72c32e854d1f27af03f386"
+    },
+    {
+      "path": "src\\orbit2\\shell\\hud.tsx",
+      "sha256": "6f334ebd78509ec62794f2fcb4166a0c3ac58e6060907b141e352e4bb37e1e40"
+    },
+    {
+      "path": "src\\orbit2\\shell\\orbit.ts",
+      "sha256": "c1e11886cbce4ab11d002d8f9907dbdc8f71ce37ffe229d0a9f89f6d1f8ad8dc"
+    },
+    {
+      "path": "src\\orbit2\\shell\\planet.tsx",
+      "sha256": "471a104dbfcb3c5f15c424395b44e57dddfd1322f58ff8b5fed36f66ae3610a9"
+    },
+    {
+      "path": "src\\orbit2\\shell\\portals.tsx",
+      "sha256": "11a2e227f3ac94d52a871f8c3a9ba03e348fab17f39a63817c2dc0cffd199049"
+    },
+    {
+      "path": "src\\orbit2\\shell\\sky.tsx",
+      "sha256": "16e72723f8017c33081d793d83320fdc89bd78de5baf00bb68f2418bedd74a8f"
+    },
+    {
+      "path": "src\\orbit2\\shell\\timing.ts",
+      "sha256": "70cda3e640ec2d6a50311ed47f7e932d0809df5b1038d0ccbf0a34b107848a19"
+    },
+    {
+      "path": "src\\orbit2\\shell\\util.ts",
+      "sha256": "bf82692f6ae0677658e094ad02f01301c3701a0c72606d07fd642be4d4c706e8"
+    },
+    {
+      "path": "src\\orbit2\\shots.ts",
+      "sha256": "83721be3dc5c5ccd7a3fa1479f72a2be7b6eca16b2cd97d066e3ea89657f869c"
+    },
+    {
+      "path": "src\\orbit2\\timing.ts",
+      "sha256": "4dc4410b801718a497f98b97a51deff8e0404738d37e9a92592610695e5294fa"
+    }
+  ],
+  "frames": [
+    0,
+    30,
+    120,
+    210,
+    300,
+    360,
+    420,
+    480,
+    570,
+    690,
+    720,
+    780,
+    840,
+    930,
+    990,
+    1080,
+    1170,
+    1260,
+    1296,
+    1308,
+    1320,
+    1332,
+    1360,
+    1410,
+    1440,
+    1490,
+    1560,
+    1620,
+    1660,
+    1720,
+    1776,
+    1780,
+    1800,
+    1820,
+    1840,
+    1890,
+    1920,
+    1970,
+    2040,
+    2100,
+    2140,
+    2200,
+    2256,
+    2260,
+    2280,
+    2300,
+    2320,
+    2370,
+    2400,
+    2450,
+    2520,
+    2580,
+    2620,
+    2680,
+    2736,
+    2740,
+    2760,
+    2780,
+    2800,
+    2850,
+    2880,
+    2930,
+    3000,
+    3060,
+    3100,
+    3160,
+    3216,
+    3220,
+    3240,
+    3260,
+    3280,
+    3330,
+    3360,
+    3410,
+    3480,
+    3540,
+    3580,
+    3640,
+    3696,
+    3700,
+    3720,
+    3740,
+    3760,
+    3810,
+    3840,
+    3890,
+    3960,
+    4020,
+    4060,
+    4120,
+    4176,
+    4180,
+    4200,
+    4220,
+    4240,
+    4290,
+    4320,
+    4370,
+    4440,
+    4500,
+    4540,
+    4600,
+    4656,
+    4660,
+    4680,
+    4700,
+    4720,
+    4770,
+    4800,
+    4850,
+    4920,
+    4980,
+    5020,
+    5080,
+    5136,
+    5140,
+    5160,
+    5180,
+    5200,
+    5250,
+    5280,
+    5330,
+    5400,
+    5460,
+    5500,
+    5560,
+    5616,
+    5620,
+    5640,
+    5660,
+    5680,
+    5730,
+    5760,
+    5810,
+    5880,
+    5940,
+    5980,
+    6040,
+    6100,
+    6120,
+    6140,
+    6160,
+    6260,
+    6330,
+    6430,
+    6484,
+    6580,
+    6650,
+    6800,
+    7050,
+    7199
+  ],
+  "secondsElapsed": 118.371,
+  "visualReview": "151 integrated source frames inspected; no blocking fault. Sampled review with minor late-motion margin drift retained."
+}

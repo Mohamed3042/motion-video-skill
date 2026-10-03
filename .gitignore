@@ -10,3 +10,6 @@ stills/
 
 # motion orchestrator run state
 .motion/
+
+# Local film render bundles, raw movies and recovery review evidence
+/out/

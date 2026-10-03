@@ -18,6 +18,18 @@ The completed 120-second 1080p60 launch film presents the reimagined launcher th
 
 The master decodes through all 7,200 frames; its 67 declared impact/title/key/click onsets pass within one frame. Exported audio measures −14.2 LUFS and −2.3 dBTP. Visual review uses sampled frames and transition strips; continuous human viewing and listening are not claimed. Earlier MK Suite films and the other product projects are preserved.
 
+## MK Job Orbit v2 — The Flight
+
+**[Watch / download the continuous 3D flight and editable ZIP](https://github.com/Mohamed3042/motion-video-skill/releases/tag/job-orbit-v2.0)** · [Player source](outputs/job-orbit-v2/index.html) · [Editing guide](docs/job-orbit-v2/EDITING.md) · [Verification](docs/job-orbit-v2/PRODUCTION.md)
+
+**[Explore the scrolling Job Orbit software page](https://mohamed3042.github.io/flagship-portfolio-v3/en/work/job-orbit/)** · [العربية](https://mohamed3042.github.io/flagship-portfolio-v3/ar/work/job-orbit/)
+
+[![MK Job Orbit v2 — The Flight](outputs/job-orbit-v2/poster.jpg)](https://github.com/Mohamed3042/motion-video-skill/releases/download/job-orbit-v2.0/MK-Job-Orbit-v2-Share-1080p60.mp4)
+
+A continuous 120-second, 1080p60 camera flight through ten distinct 3D stations. The finished source and illustrated product workflows are preserved; V1 remains available below. The release includes the 248.4 MB master, 97.7 MB sharing copy and standalone editable source with its actual synthesized score.
+
+Both exported movies pass complete decoding and all 65 declared audio-impact checks. Sampled visual review covered 151 source frames, 20 master frames and four sharing frames; minor margin drift during late motion was retained. Audio was measured, not listened to. The interfaces and records are fictional illustrative animation, not live product recordings.
+
 ## MK Job Orbit — ten feature worlds
 
 **[Watch / download the 120-second film and editable ZIP](https://github.com/Mohamed3042/motion-video-skill/releases/tag/job-orbit-v1.0)** · [Chaptered local player](outputs/job-orbit/index.html) · [Editing guide](docs/job-orbit/EDITING.md) · [Verification](docs/job-orbit/PRODUCTION.md)
