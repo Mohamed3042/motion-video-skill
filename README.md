@@ -4,6 +4,8 @@
 
 **[Watch / download the continuous 3D flight and editable ZIP](https://github.com/Mohamed3042/motion-video-skill/releases/tag/job-orbit-v2.0)** · [Player source](outputs/job-orbit-v2/index.html) · [Editing guide](docs/job-orbit-v2/EDITING.md) · [Verification](docs/job-orbit-v2/PRODUCTION.md)
 
+**[Explore the scrolling Job Orbit software page](https://mohamed3042.github.io/flagship-portfolio-v3/en/work/job-orbit/)** · [العربية](https://mohamed3042.github.io/flagship-portfolio-v3/ar/work/job-orbit/)
+
 [![MK Job Orbit v2 — The Flight](outputs/job-orbit-v2/poster.jpg)](https://github.com/Mohamed3042/motion-video-skill/releases/download/job-orbit-v2.0/MK-Job-Orbit-v2-Share-1080p60.mp4)
 
 A continuous 120-second, 1080p60 camera flight through ten distinct 3D stations. The finished source and illustrated product workflows are preserved; V1 remains available below. The release includes the 248.4 MB master, 97.7 MB sharing copy and standalone editable source with its actual synthesized score.
