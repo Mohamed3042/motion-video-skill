@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-03T07:14:42Z",
+  "artifact": "montage-pro-phone.mp4",
+  "status": "passed-sampled-visual-review",
+  "scope": "Independent inspection of 21 representative frames decoded from the encoded native portrait master.",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "durationSeconds": 164,
+    "frames": 9840,
+    "encodedVideoPacketSha256": "27fa4eb0799fb68fb0ec4965de38d9846127db0efc257cf1778c609d1dc9d058",
+    "hashMethod": "FFmpeg SHA-256 of copied video packets only; excludes audio and container metadata."
+  },
+  "samples": [
+    {"timeSeconds": 26, "image": "phone-encoded-sync-lock.png"},
+    {"timeSeconds": 27.6, "image": "phone-encoded-sync-nudge.png"},
+    {"timeSeconds": 51.833333, "image": "phone-encoded-captions.png"},
+    {"timeSeconds": 73.366667, "image": "phone-encoded-sound.png"},
+    {"timeSeconds": 106.5, "image": "phone-encoded-library-catalog.png"},
+    {"timeSeconds": 108, "image": "phone-encoded-library-transcription.png"},
+    {"timeSeconds": 111.5, "image": "phone-encoded-library-qc.png"},
+    {"timeSeconds": 113.3, "image": "phone-encoded-library-proxy.png"},
+    {"timeSeconds": 115.5, "image": "phone-encoded-library-timecode.png"},
+    {"timeSeconds": 121, "image": "phone-encoded-edit-director.png"},
+    {"timeSeconds": 124.6, "image": "phone-encoded-edit-cut-list.png"},
+    {"timeSeconds": 126.7, "image": "phone-encoded-edit-recipe.png"},
+    {"timeSeconds": 128, "image": "phone-encoded-edit-style.png"},
+    {"timeSeconds": 136.5, "image": "phone-encoded-profile-approved.png"},
+    {"timeSeconds": 139.5, "image": "phone-encoded-profile-plan.png"},
+    {"timeSeconds": 141, "image": "phone-encoded-profile-queue.png"},
+    {"timeSeconds": 144.5, "image": "phone-encoded-arabic-sources.png"},
+    {"timeSeconds": 148.5, "image": "phone-encoded-arabic-privacy.png"},
+    {"timeSeconds": 152, "image": "phone-encoded-finale-grid.png"},
+    {"timeSeconds": 158.6, "image": "phone-encoded-finale-logo.png"},
+    {"timeSeconds": 161, "image": "phone-encoded-finale-card.png"}
+  ],
+  "findings": [
+    {"area": "Sync", "result": "The aligned IN SYNC word and subsequent broken-word nudge state remain distinct and readable. Track and nudge labels remain inside portrait safe margins."},
+    {"area": "Sound and Captions", "result": "The encoded spectrogram word is clear. Caption cue text, timing controls, search and waveform are separated without the earlier docking collision."},
+    {"area": "Library", "result": "Catalog search, transcription, QC, proxy zoetrope and aligned timecode layouts have legible labels and no sampled clipping or overlap. Waveforms stay inside their clip bounds."},
+    {"area": "Edit Room", "result": "Director energy bars, explanation and cut strip are separated. Cut list, recipe stages and caption styles remain legible and within the portrait layout."},
+    {"area": "Profile", "result": "Approve/reject, optional API, selected changes and local queue states remain explicit. Human review and local-calibration wording is visible without collisions."},
+    {"area": "Arabic and privacy", "result": "Arabic glyphs are joined and RTL controls fit their panels. The timeline and timecode remain LTR; source labels and privacy rows remain contained."},
+    {"area": "Finale", "result": "The intentionally miniature chapter mosaic, centered wordmark and final call to action decode correctly. The mosaic serves as a recap; its thumbnail text is not treated as feature-reading acceptance."}
+  ],
+  "blockingIssues": [],
+  "limitations": [
+    "Sampled frames only: this is not continuous viewing or proof that every frame is free of defects.",
+    "No continuous listening, audio-mix acceptance or audiovisual synchronization claim.",
+    "No physical-phone, native-device playback performance or user aesthetic acceptance claim.",
+    "This receipt remains applicable after audio-only remuxing only if the encoded video packet hash is unchanged."
+  ]
+}

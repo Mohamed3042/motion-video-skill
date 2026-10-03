@@ -1,0 +1,36 @@
+{
+  "testedAt": "2026-10-03T07:10:41.849Z",
+  "passed": true,
+  "files": [
+    {
+      "file": "scroll-phone.mp4",
+      "bytes": 17493609,
+      "sha256": "b93c32787852cb9ac10a12c4d4363d15900159a137e75e6d691dc242c31a48d0",
+      "width": 720,
+      "height": 1280,
+      "fps": 30,
+      "frames": 4920,
+      "duration": 164,
+      "hasBFrames": 0,
+      "audio": false
+    },
+    {
+      "file": "film-phone.mp4",
+      "bytes": 15469010,
+      "sha256": "8e05c59543b5950171c6ff91c0c3975343dad37963d77160e9e9e3f0ed6948f1",
+      "width": 720,
+      "height": 1280,
+      "fps": 30,
+      "frames": 4920,
+      "duration": 164,
+      "hasBFrames": 2,
+      "audio": true
+    }
+  ],
+  "poster": {
+    "file": "intro-phone.webp",
+    "bytes": 17682,
+    "sha256": "7ec01e993e49145afe950e12c007700171d4f4450b9c2c1860d1174c77238fdc"
+  },
+  "desktopAssetsUnchanged": 16
+}

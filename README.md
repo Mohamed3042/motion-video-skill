@@ -141,3 +141,7 @@ outputs/                       rendered videos + contact sheets
 - **Remotion licence:** Remotion has its own licence. It's free for individuals and small teams; larger companies need a company licence. See [remotion.dev/license](https://www.remotion.dev/license).
 - **Font licences:** fonts load from Google Fonts. `studio/public/opus/fonts/Nunito-Black.ttf` is under the SIL Open Font License.
 - **Code licence:** the code is MIT-licensed (see [LICENSE](LICENSE)). The MK Suite and MK Voice names, brands and the videos in `outputs/` belong to their owner; they're included as examples and aren't licensed for reuse.
+
+## Montage Pro — phone edition
+
+The completed desktop Eleven Worlds film has a native **1080 × 1920, 164-second, 60 fps** companion. All eleven feature worlds, the intro and finale are composed for portrait, with the original score and chapter boundaries. See [the phone editing guide](docs/montage-pro-phone/README.md) and [the master and editable source release](https://github.com/Mohamed3042/motion-video-skill/releases/tag/montage-pro-phone-v1.0). The desktop master and source are preserved.

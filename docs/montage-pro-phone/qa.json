@@ -1,0 +1,28 @@
+{
+  "testedAt": "2026-10-03T07:12:04.616Z",
+  "passed": true,
+  "file": "montage-pro-phone.mp4",
+  "bytes": 45085210,
+  "sha256": "e5a0091a6b49456d97701e907871fd6fb00072fb545218ec4009bae3a746f77f",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "frames": 9840,
+    "duration": 164,
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "colorSpace": "bt709"
+  },
+  "audio": {
+    "codec": "aac",
+    "channels": 2,
+    "sampleRate": 44100,
+    "integratedLUFS": -14.51,
+    "truePeakDBTP": -1.65,
+    "onsets": 75
+  },
+  "fullDecode": true,
+  "desktopFilesUnchanged": 56,
+  "scope": "Native portrait render, sampled visual review and browser emulation; no physical-phone or continuous listening acceptance."
+}
